@@ -1,3 +1,5 @@
+@import "./variables";
+
 //various breakpoints //
 @mixin mobile {
   @media (min-width: $mobile-breakpoint) {
@@ -13,4 +15,11 @@
   @media (min-width: $desktop-breakpoint) {
     @content;
   }
+}
+
+// Fonts mixins  //
+@mixin fonts($size, $line-height, $weight) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
 }
