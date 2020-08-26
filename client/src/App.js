@@ -1,6 +1,8 @@
 import React from "react";
+import "./styles/app.css";
 import Warehouses from "./components/Warehouses";
 import InventoryItems from "./components/InventoryItems";
+import Header from "./components/Header";
 
 import "./styles/app.css";
 
@@ -61,7 +63,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="background">
-        <h1>Test</h1>
+        <Header />
         <Warehouses warehouseList={this.state.warehouses} />
         <InventoryItems inventories={this.state.inventories} />
       </div>
