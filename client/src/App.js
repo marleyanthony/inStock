@@ -64,7 +64,7 @@ class App extends React.Component {
     return (
       <div className="background">
         <Header />
-        <Warehouses warehouseList={this.state.warehouses} />
+        <Warehouses warehouses={this.state.warehouses} />
         <InventoryItems inventories={this.state.inventories} />
       </div>
     );

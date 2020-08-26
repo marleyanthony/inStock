@@ -14,30 +14,11 @@
   }
 
   &__searchbar {
-    width: 100%;
-    height: 2.25rem;
-    border-radius: 1.25rem;
-    border: 1px solid #bdc5d5;
-    padding: 0.5rem 1rem;
-    margin: 1rem 0;
-
-    // @include tablet {
-    //   height: 2.375rem;
-    // }
+    @extend %input;
   }
 
   &__button {
-    width: 100%;
-    height: 2.25rem;
-    border-radius: 1.25rem;
-    border: none;
-    padding: 0 1rem;
-    background: #2e66e6;
-    color: white;
-
-    // @include tablet {
-    //   height: 2.375rem;
-    // }
+    @extend %button;
   }
 
   &__button-text {
@@ -48,12 +29,10 @@
 
   &__item {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
-    border-top: 1px solid #bdc5d5;
     border-top: 1px solid #bdc5d5;
   }
 
