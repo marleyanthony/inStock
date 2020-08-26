@@ -1,8 +1,8 @@
 [
   {
     "warehouseID": "2922c286-16cd-4d43-ab98-c79f698aeab0",
-    "warehouseName": "Manhattan",
-    "itemName": "Television",
+    "warehouse": "Manhattan",
+    "item": "Television",
     "description": "This 50\", 4K LED TV provides a crystal-clear picture and vivid colors.",
     "category": "Electronics",
     "status": "In Stock",
@@ -10,8 +10,8 @@
   },
   {
     "warehouseID": "2922c286-16cd-4d43-ab98-c79f698aeab0",
-    "warehouseName": "Manhattan",
-    "itemName": "Gym Bag",
+    "warehouse": "Manhattan",
+    "item": "Gym Bag",
     "description": "Made out of military-grade synthetic materials, this gym bag is highly durable, water resistant, and easy to clean.",
     "category": "Gear",
     "status": "Out of Stock",
@@ -19,8 +19,8 @@
   },
   {
     "warehouseID": "2922c286-16cd-4d43-ab98-c79f698aeab0",
-    "warehouseName": "Manhattan",
-    "itemName": "Hoodie",
+    "warehouse": "Manhattan",
+    "item": "Hoodie",
     "description": "A simple 100% cotton hoodie, this is an essential piece for any wardrobe.",
     "category": "Apparel",
     "status": "Out of Stock",

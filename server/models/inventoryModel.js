@@ -3,9 +3,9 @@ const path = require('path');
 
 const inventoryFile = path.join(__dirname, '../db/inventories-short.json');
 
-function Inventory(warehouse, item, description, category, status, quantity) {
+function inventory(warehouse, name, description, category, status, quantity) {
   this.warehouseName = warehouse;
-  this.itemName = item;
+  this.itemName = name;
   this.description = description;
   this.category = category;
   this.status = status;

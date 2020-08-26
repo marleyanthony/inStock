@@ -64,7 +64,7 @@ body {
   }
 }
 
-.warehouses__searchbar, .warehouses__button {
+.warehouses__searchbar, .inv__search-bar, .warehouses__button, .inv__search-btn {
   font-size: 0.8125rem;
   line-height: 1.5rem;
   font-weight: bold;
@@ -72,7 +72,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .warehouses__searchbar, .warehouses__button {
+  .warehouses__searchbar, .inv__search-bar, .warehouses__button, .inv__search-btn {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: bold;
@@ -109,7 +109,7 @@ body {
   }
 }
 
-.warehouses__searchbar {
+.warehouses__searchbar, .inv__search-bar {
   font-weight: normal;
   width: 100%;
   height: 2.25rem;
@@ -119,23 +119,23 @@ body {
   margin: 1rem 0;
 }
 
-.warehouses__searchbar::-webkit-input-placeholder {
+.warehouses__searchbar::-webkit-input-placeholder, .inv__search-bar::-webkit-input-placeholder {
   font-family: "Titillium Web";
 }
 
-.warehouses__searchbar:-ms-input-placeholder {
+.warehouses__searchbar:-ms-input-placeholder, .inv__search-bar:-ms-input-placeholder {
   font-family: "Titillium Web";
 }
 
-.warehouses__searchbar::-ms-input-placeholder {
+.warehouses__searchbar::-ms-input-placeholder, .inv__search-bar::-ms-input-placeholder {
   font-family: "Titillium Web";
 }
 
-.warehouses__searchbar::placeholder {
+.warehouses__searchbar::placeholder, .inv__search-bar::placeholder {
   font-family: "Titillium Web";
 }
 
-.warehouses__button {
+.warehouses__button, .inv__search-btn {
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
@@ -233,5 +233,49 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.inv {
+  background-color: white;
+  margin: 0 1rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+          box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+}
+
+.inv__heading {
+  padding: 2rem 12.75rem 1rem 1.5rem;
+}
+
+.inv__search-btn {
+  margin-bottom: 1.5rem;
+}
+
+.inv__item-wrapper {
+  border-top: 1px solid #BDC5D5;
+}
+
+.inv__mobile-first-row-wrapper, .inv__mobile-second-row-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.inv__inv-item-header {
+  margin-top: 1rem;
+}
+
+.inv__item-icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.25rem 1.9rem 1.7rem;
 }
 /*# sourceMappingURL=app.css.map */
