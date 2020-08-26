@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Titillium Web";
   src: url("../assets/fonts/TitilliumWeb-Regular.ttf");
@@ -46,5 +47,28 @@ body {
   font-family: "Titillium Web";
   scroll-behavior: smooth;
   width: 100%;
+=======
+.header {
+  height: 12.5rem;
+  background-color: #232940;
+}
+
+.header__logo {
+  padding: 1.8rem 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.header__wh-btn, .header__inv-btn {
+  color: #fff;
+  border: none;
+  width: 10.2rem;
+  height: 2.25rem;
+  border-radius: 20px;
+  background-color: #232940;
+}
+
+.header__inv-btn {
+  background-color: #13182C;
 }
 /*# sourceMappingURL=app.css.map */
