@@ -49,9 +49,7 @@ body {
   background: #f7f8f9;
 }
 
-<<<<<<< HEAD
 .warehouses__searchbar, .inv__search-bar {
-=======
 .warehouses__heading {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -114,7 +112,6 @@ body {
 
 .warehouses__searchbar {
   font-weight: normal;
->>>>>>> master
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
@@ -123,9 +120,7 @@ body {
   margin: 1rem 0;
 }
 
-<<<<<<< HEAD
 .warehouses__button, .inv__search-btn {
-=======
 .warehouses__searchbar::-webkit-input-placeholder {
   font-family: "Titillium Web";
 }
@@ -143,7 +138,6 @@ body {
 }
 
 .warehouses__button {
->>>>>>> master
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
