@@ -49,7 +49,6 @@ body {
   background: #f7f8f9;
 }
 
-.warehouses__searchbar, .inv__search-bar {
 .warehouses__heading {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -65,7 +64,7 @@ body {
   }
 }
 
-.warehouses__searchbar, .warehouses__button {
+.warehouses__searchbar, .inv__search-bar, .warehouses__button, .inv__search-btn {
   font-size: 0.8125rem;
   line-height: 1.5rem;
   font-weight: bold;
@@ -73,7 +72,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .warehouses__searchbar, .warehouses__button {
+  .warehouses__searchbar, .inv__search-bar, .warehouses__button, .inv__search-btn {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: bold;
@@ -110,7 +109,7 @@ body {
   }
 }
 
-.warehouses__searchbar {
+.warehouses__searchbar, .inv__search-bar {
   font-weight: normal;
   width: 100%;
   height: 2.25rem;
@@ -120,24 +119,23 @@ body {
   margin: 1rem 0;
 }
 
+.warehouses__searchbar::-webkit-input-placeholder, .inv__search-bar::-webkit-input-placeholder {
+  font-family: "Titillium Web";
+}
+
+.warehouses__searchbar:-ms-input-placeholder, .inv__search-bar:-ms-input-placeholder {
+  font-family: "Titillium Web";
+}
+
+.warehouses__searchbar::-ms-input-placeholder, .inv__search-bar::-ms-input-placeholder {
+  font-family: "Titillium Web";
+}
+
+.warehouses__searchbar::placeholder, .inv__search-bar::placeholder {
+  font-family: "Titillium Web";
+}
+
 .warehouses__button, .inv__search-btn {
-.warehouses__searchbar::-webkit-input-placeholder {
-  font-family: "Titillium Web";
-}
-
-.warehouses__searchbar:-ms-input-placeholder {
-  font-family: "Titillium Web";
-}
-
-.warehouses__searchbar::-ms-input-placeholder {
-  font-family: "Titillium Web";
-}
-
-.warehouses__searchbar::placeholder {
-  font-family: "Titillium Web";
-}
-
-.warehouses__button {
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
