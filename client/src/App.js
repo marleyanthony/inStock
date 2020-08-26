@@ -1,8 +1,10 @@
 import React from "react";
-import './styles/app.css';
+import "./styles/app.css";
 import Warehouses from "./components/Warehouses";
 import InventoryItems from "./components/InventoryItems";
-import Header from './components/Header';
+import Header from "./components/Header";
+
+import "./styles/app.css";
 
 class App extends React.Component {
   state = {
@@ -34,35 +36,19 @@ class App extends React.Component {
         },
       },
     ],
-    inventories: [
-      {
-        warehouseID: "2922c286-16cd-4d43-ab98-c79f698aeab0",
-        warehouseName: "Manhattan",
-        itemName: "Television",
-        description:
-          'This 50", 4K LED TV provides a crystal-clear picture and vivid colors.',
-        category: "Electronics",
-        status: "In Stock",
-        quantity: 500,
-      },
-      {
-        warehouseID: "2922c286-16cd-4d43-ab98-c79f698aeab0",
-        warehouseName: "Manhattan",
-        itemName: "Gym Bag",
-        description:
-          "Made out of military-grade synthetic materials, this gym bag is highly durable, water resistant, and easy to clean.",
-        category: "Gear",
-        status: "Out of Stock",
-        quantity: 0,
-      },
-    ],
+    inventories: [],
   };
+
+  // getInvItems() {
+  //   axios
+  //     .get('http://localhost:5000/inv-items')
+  // }
 
   render() {
     return (
-      <div>
+      <div className="background">
         <Header />
-        <Warehouses warehouseList={this.state.warehouses} />
+        <Warehouses warehouses={this.state.warehouses} />
         <InventoryItems inventories={this.state.inventories} />
       </div>
     );
