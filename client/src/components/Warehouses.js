@@ -1,7 +1,7 @@
 import React from "react";
-import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
-import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
-import editIcon from "../assets/Icons/edit-24px.svg";
+import chevronIcon from "../assets/icons/chevron_right-24px.svg";
+import deleteIcon from "../assets/icons/delete_outline-24px.svg";
+import editIcon from "../assets/icons/edit-24px.svg";
 
 const Warehouses = () => {
   return (

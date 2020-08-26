@@ -1,0 +1,51 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header {
+  height: 12.5rem;
+  background-color: #232940;
+}
+
+.header__logo {
+  padding: 1.8rem 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.header__wh-btn, .header__inv-btn {
+  color: #fff;
+  border: none;
+  width: 10.2rem;
+  height: 2.25rem;
+  border-radius: 20px;
+  background-color: #232940;
+}
+
+.header__inv-btn {
+  background-color: #13182C;
+}
+/*# sourceMappingURL=app.css.map */
