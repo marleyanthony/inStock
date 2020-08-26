@@ -1,0 +1,24 @@
+.header {
+  height: 12.5rem;
+  background-color: #232940;
+
+  &__logo {
+    padding: 1.8rem 0;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__wh-btn,
+  &__inv-btn {
+    color: #fff;
+    border: none;
+    width: 10.2rem;
+    height: 2.25rem;
+    border-radius: 20px;
+    background-color: #232940;
+  }
+
+  &__inv-btn {
+    background-color: #13182C;
+  }
+}
