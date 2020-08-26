@@ -2,26 +2,35 @@
   background: white;
   border-radius: 0.1875rem;
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
-  padding: 0 1.5rem;
   margin: 0 1rem;
 
   &__header-container {
+    padding: 0 1.5rem;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
   }
 
   &__heading {
+    @extend %page-header;
+  }
+
+  &__search-label {
+    position: relative;
   }
 
   &__searchbar {
     @extend %input;
   }
 
-  &__button {
-    @extend %button;
+  &__search-icon {
+    position: absolute;
+    top: 0.0625rem;
+    right: 0.75rem;
   }
 
-  &__button-text {
+  &__button {
+    @extend %button;
+    font-weight: normal;
   }
 
   &__list {
@@ -31,6 +40,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     border-top: 1px solid #bdc5d5;
@@ -41,17 +51,29 @@
     width: 33.4375vw;
   }
 
+  &__label {
+    @extend %table-headers;
+    margin-bottom: 0.25rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
   &__link {
     display: flex;
   }
 
   &__text-location {
+    @extend %body-medium;
+    color: $primary-color-indigo;
   }
 
   &__icon {
   }
 
   &__text-address {
+    @extend %body-medium;
   }
 
   &__item-right-container {
@@ -60,12 +82,15 @@
   }
 
   &__text-contact-name {
+    @extend %body-medium;
   }
 
   &__text-contact-phone {
+    @extend %body-medium;
   }
 
   &__text-contact-email {
+    @extend %body-medium;
   }
 
   &__item-icons-container {
