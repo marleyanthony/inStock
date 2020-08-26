@@ -1,5 +1,6 @@
 import React from "react";
 import Warehouses from "./components/Warehouses";
+import InventoryItems from './components/InventoryItems'
 
 class App extends React.Component {
   render() {
@@ -7,6 +8,7 @@ class App extends React.Component {
       <div>
         <h1>Test</h1>
         <Warehouses />
+        <InventoryItems />
       </div>
     );
   }
