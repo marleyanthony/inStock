@@ -1,8 +1,10 @@
 import React from "react";
-import './styles/app.css';
+import "./styles/app.css";
 import Warehouses from "./components/Warehouses";
 import InventoryItems from "./components/InventoryItems";
-import Header from './components/Header';
+import Header from "./components/Header";
+
+import "./styles/app.css";
 
 class App extends React.Component {
   state = {
@@ -60,9 +62,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="background">
         <Header />
-        <Warehouses warehouseList={this.state.warehouses} />
+        <Warehouses warehouses={this.state.warehouses} />
         <InventoryItems inventories={this.state.inventories} />
       </div>
     );

@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Titillium Web";
   src: url("../assets/fonts/TitilliumWeb-Regular.ttf");
@@ -47,28 +46,86 @@ body {
   font-family: "Titillium Web";
   scroll-behavior: smooth;
   width: 100%;
-=======
-.header {
-  height: 12.5rem;
-  background-color: #232940;
+  background: #f7f8f9;
 }
 
-.header__logo {
-  padding: 1.8rem 0;
-  display: block;
-  margin: 0 auto;
-}
-
-.header__wh-btn, .header__inv-btn {
-  color: #fff;
-  border: none;
-  width: 10.2rem;
+.warehouses__searchbar {
+  width: 100%;
   height: 2.25rem;
-  border-radius: 20px;
-  background-color: #232940;
+  border-radius: 1.25rem;
+  border: 1px solid #bdc5d5;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
 }
 
-.header__inv-btn {
-  background-color: #13182C;
+.warehouses__button {
+  width: 100%;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+  border: none;
+  padding: 0 1rem;
+  background: #2e66e6;
+  color: white;
+}
+
+.warehouses {
+  background: white;
+  border-radius: 0.1875rem;
+  -webkit-box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
+          box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
+  padding: 0 1.5rem;
+  margin: 0 1rem;
+}
+
+.warehouses__header-container {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.warehouses__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid #bdc5d5;
+}
+
+.warehouses__item-left-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1;
+          flex: 1 1 1;
+  width: 33.4375vw;
+}
+
+.warehouses__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.warehouses__item-right-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1;
+          flex: 1 1 1;
+  width: 33.4375vw;
+}
+
+.warehouses__item-icons-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=app.css.map */
