@@ -1,0 +1,98 @@
+.warehouses {
+  background: white;
+  border-radius: 0.1875rem;
+  box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
+  padding: 0 1.5rem;
+  margin: 0 1rem;
+
+  &__header-container {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__heading {
+  }
+
+  &__searchbar {
+    width: 100%;
+    height: 2.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid #bdc5d5;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+
+    // @include tablet {
+    //   height: 2.375rem;
+    // }
+  }
+
+  &__button {
+    width: 100%;
+    height: 2.25rem;
+    border-radius: 1.25rem;
+    border: none;
+    padding: 0 1rem;
+    background: #2e66e6;
+    color: white;
+
+    // @include tablet {
+    //   height: 2.375rem;
+    // }
+  }
+
+  &__button-text {
+  }
+
+  &__list {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid #bdc5d5;
+    border-top: 1px solid #bdc5d5;
+  }
+
+  &__item-left-container {
+    flex: 1 1 1;
+    width: 33.4375vw;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__text-location {
+  }
+
+  &__icon {
+  }
+
+  &__text-address {
+  }
+
+  &__item-right-container {
+    flex: 1 1 1;
+    width: 33.4375vw;
+  }
+
+  &__text-contact-name {
+  }
+
+  &__text-contact-phone {
+  }
+
+  &__text-contact-email {
+  }
+
+  &__item-icons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

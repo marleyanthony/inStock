@@ -2,6 +2,8 @@ import React from "react";
 import Warehouses from "./components/Warehouses";
 import InventoryItems from "./components/InventoryItems";
 
+import "./styles/app.css";
+
 class App extends React.Component {
   state = {
     warehouses: [
@@ -58,7 +60,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="background">
         <h1>Test</h1>
         <Warehouses warehouseList={this.state.warehouses} />
         <InventoryItems inventories={this.state.inventories} />
