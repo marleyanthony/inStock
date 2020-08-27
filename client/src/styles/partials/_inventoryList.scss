@@ -1,11 +1,18 @@
 .inv {
+  position: absolute;
+  left: 4.27%;
+  right: 4.27%;
+  // top: 5.85%;
+  top: 7.85%;
+  bottom: 4.13%;
+
   background-color: white;
   margin: 0 1rem;
   border-radius: 4px;
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
 
-  &__heading-container {
-  }
+  // &__heading-container {
+  // }
 
   &__heading {
     padding: 2rem 12.75rem 1rem 1.5rem;
