@@ -1,5 +1,6 @@
 import React from "react";
 import searchIcon from "../assets/Icons/search-24px.svg";
+import sortIcon from "../assets/Icons/sort-24px.svg";
 import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
@@ -12,7 +13,11 @@ const Warehouses = ({ warehouses }) => {
           <p className="warehouses__label">WAREHOUSE</p>
           <a className="warehouses__link">
             <h3 className="warehouses__text-location">{warehouse.name}</h3>
-            <img src={chevronIcon} alt="" className="warehouses__icon" />
+            <img
+              src={chevronIcon}
+              alt=""
+              className="warehouses__icon warehouses__icon--chevron"
+            />
           </a>
           <p className="warehouses__label">ADDRESS</p>
           <p className="warehouses__text-address">
@@ -25,13 +30,15 @@ const Warehouses = ({ warehouses }) => {
           <p className="warehouses__text-contact-name">
             {warehouse.contact.name}
           </p>
-          <p className="warehouses__label">CONTACT INFORMATION</p>
-          <p className="warehouses__text-contact-phone">
-            {warehouse.contact.phone}
-          </p>
-          <p className="warehouses__text-contact-email">
-            {warehouse.contact.email}
-          </p>
+          <div className="warehouses__contact-info-container">
+            <p className="warehouses__label">CONTACT INFORMATION</p>
+            <p className="warehouses__text-contact-phone">
+              {warehouse.contact.phone}
+            </p>
+            <p className="warehouses__text-contact-email">
+              {warehouse.contact.email}
+            </p>
+          </div>
         </div>
 
         <div className="warehouses__item-icons-container">
@@ -46,19 +53,62 @@ const Warehouses = ({ warehouses }) => {
     <main className="warehouses">
       <section className="warehouses__header-container">
         <h1 className="warehouses__heading">Warehouses</h1>
-        <label htmlFor="search" className="warehouses__search-label">
-          <input
-            type="search"
-            className="warehouses__searchbar"
-            name="search"
-            placeholder="Search..."
-          />
-          <img src={searchIcon} alt="" className="warehouses__search-icon" />
-        </label>
-        <button className="warehouses__button">+ Add New Warehouse</button>
+        <div className="warehouses__search-add">
+          <label htmlFor="search" className="warehouses__search-label">
+            <input
+              type="search"
+              className="warehouses__searchbar"
+              name="search"
+              placeholder="Search..."
+            />
+            <img src={searchIcon} alt="" className="warehouses__search-icon" />
+          </label>
+          <button className="warehouses__button">+ Add New Warehouse</button>
+        </div>
       </section>
 
-      <section className="warehouses__list">{warehouseList}</section>
+      <section className="warehouses__list">
+        <div className="warehouses__sort">
+          <div className="warehouses__sort-left">
+            <div className="warehouses__sort-category sort-warehouse">
+              <p className="warehouses__sort-label">WAREHOUSE</p>
+              <img
+                src={sortIcon}
+                alt=""
+                className="warehouses__icon warehouses__icon--sort"
+              />
+            </div>
+            <div className="warehouses__sort-category sort-address">
+              <p className="warehouses__sort-label">ADDRESS</p>
+              <img
+                src={sortIcon}
+                alt=""
+                className="warehouses__icon warehouses__icon--sort"
+              />
+            </div>
+          </div>
+          <div className="warehouses__sort-right">
+            <div className="warehouses__sort-category sort-name">
+              <p className="warehouses__sort-label">CONTACT NAME</p>
+              <img
+                src={sortIcon}
+                alt=""
+                className="warehouses__icon warehouses__icon--sort"
+              />
+            </div>
+            <div className="warehouses__sort-category sort-info">
+              <p className="warehouses__sort-label">CONTACT INFORMATION</p>
+              <img
+                src={sortIcon}
+                alt=""
+                className="warehouses__icon warehouses__icon--sort"
+              />
+            </div>
+          </div>
+          <p className="warehouses__sort-label sort-actions">ACTIONS</p>
+        </div>
+        {warehouseList}
+      </section>
     </main>
   );
 };
