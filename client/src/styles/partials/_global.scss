@@ -26,5 +26,10 @@ body {
   font-family: "Titillium Web";
   scroll-behavior: smooth;
   width: 100%;
-  background: #f7f8f9;
+}
+a {
+  display: flex;
+  text-decoration: none;
+  padding-left: 0;
+  padding-right: 0;
 }

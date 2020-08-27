@@ -10,11 +10,14 @@ function header() {
       </div>
 
       <div className="header__wh-inv-container">
-        <Link to="/">
+        <Link
+          to="/warehouse"
+          className="header__link-btn header__link-btn--bdRadius"
+        >
           <button className="header__wh-btn btn">Warehouses</button>
         </Link>
-        <Link to="/inventory">
-          <button className="header__inv-btn btn">Inventory</button>
+        <Link to="/inventory" className="header__link-btn">
+          <button className="header__inv-btn btn"> Inventory</button>
         </Link>
       </div>
     </section>
