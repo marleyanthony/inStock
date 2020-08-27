@@ -70,16 +70,13 @@
   border-radius: 1.25rem;
   border: 1px solid #bdc5d5;
   padding: 0.5rem 1rem;
-  margin: 1rem 0;
 
   &::placeholder {
     font-family: "Titillium Web";
   }
 
   @include tablet {
-    width: 11.5625rem;
     height: 2.375rem;
-    margin: 0 1rem;
   }
 }
 
