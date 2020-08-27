@@ -1,7 +1,9 @@
 .header {
   @include mobile {
     display: flex;
+    position: absolute;
     flex-direction: column;
+    align-items: center;
     height: 12.5rem;
     width: 100%;
     background-color: $background-color-graphite;
@@ -19,6 +21,7 @@
     &__wh-inv-container {
       display: flex;
       height: 2.25rem;
+      //   padding-top: 0;
     }
     &__link-btn {
       display: flex;
@@ -39,12 +42,12 @@
     &__inv-btn {
       display: flex;
       height: 1.25rem;
-      color: $primary-color-white;
-      background-color: $background-color-graphite;
       border: 0;
       font-family: "Titillium Web";
       @include fonts(0.8125rem, 1.25rem, none);
       font-style: normal;
+      color: $primary-color-white;
+      background-color: $background-color-graphite;
     }
     &__wh-btn {
       background-color: $primary-color-black;
@@ -61,14 +64,9 @@
   }
   &__logo-container {
     width: 20%;
-    // padding: 0;
   }
-  &__wh-inv-container {
-    padding: 1.8rem 0;
-    height: 50%;
-  }
-
-  @include desktop {
-    display: flex;
-  }
+  //   &__wh-inv-container {
+  //     // padding: 1.8rem 0;
+  //     height: 50%;
+  //   }
 }
