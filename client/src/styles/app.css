@@ -49,7 +49,68 @@ body {
   background: #f7f8f9;
 }
 
-.warehouses__searchbar {
+.warehouses__heading {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: bold;
+  color: #13182c;
+}
+
+@media (min-width: 768px) {
+  .warehouses__heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+  }
+}
+
+.warehouses__searchbar, .inv__search-bar, .warehouses__button, .inv__search-btn {
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #13182c;
+}
+
+@media (min-width: 768px) {
+  .warehouses__searchbar, .inv__search-bar, .warehouses__button, .inv__search-btn {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: bold;
+  }
+}
+
+.warehouses__label {
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  font-weight: bold;
+  color: #5c667e;
+}
+
+@media (min-width: 768px) {
+  .warehouses__label {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: bold;
+  }
+}
+
+.warehouses__text-location, .warehouses__text-address, .warehouses__text-contact-name, .warehouses__text-contact-phone, .warehouses__text-contact-email {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: normal;
+  color: #13182c;
+}
+
+@media (min-width: 768px) {
+  .warehouses__text-location, .warehouses__text-address, .warehouses__text-contact-name, .warehouses__text-contact-phone, .warehouses__text-contact-email {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: normal;
+  }
+}
+
+.warehouses__searchbar, .inv__search-bar {
+  font-weight: normal;
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
@@ -58,14 +119,54 @@ body {
   margin: 1rem 0;
 }
 
-.warehouses__button {
+.warehouses__searchbar::-webkit-input-placeholder, .inv__search-bar::-webkit-input-placeholder {
+  font-family: "Titillium Web";
+}
+
+.warehouses__searchbar:-ms-input-placeholder, .inv__search-bar:-ms-input-placeholder {
+  font-family: "Titillium Web";
+}
+
+.warehouses__searchbar::-ms-input-placeholder, .inv__search-bar::-ms-input-placeholder {
+  font-family: "Titillium Web";
+}
+
+.warehouses__searchbar::placeholder, .inv__search-bar::placeholder {
+  font-family: "Titillium Web";
+}
+
+.warehouses__button, .inv__search-btn {
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
   border: none;
   padding: 0 1rem;
   background: #2e66e6;
-  color: white;
+  color: #ffffff;
+}
+
+.header {
+  height: 12.5rem;
+  background-color: #232940;
+}
+
+.header__logo {
+  padding: 1.8rem 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.header__wh-btn, .header__inv-btn {
+  color: #fff;
+  border: none;
+  width: 10.2rem;
+  height: 2.25rem;
+  border-radius: 20px;
+  background-color: #232940;
+}
+
+.header__inv-btn {
+  background-color: #13182C;
 }
 
 .header {
@@ -97,13 +198,27 @@ body {
   border-radius: 0.1875rem;
   -webkit-box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
           box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
-  padding: 0 1.5rem;
   margin: 0 1rem;
 }
 
 .warehouses__header-container {
+  padding: 0 1.5rem;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
+}
+
+.warehouses__search-label {
+  position: relative;
+}
+
+.warehouses__search-icon {
+  position: absolute;
+  top: 0.0625rem;
+  right: 0.75rem;
+}
+
+.warehouses__button {
+  font-weight: normal;
 }
 
 .warehouses__item {
@@ -115,6 +230,7 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 0 1.5rem;
   padding-top: 1rem;
   padding-bottom: 1.5rem;
   border-top: 1px solid #bdc5d5;
@@ -127,10 +243,24 @@ body {
   width: 33.4375vw;
 }
 
+.warehouses__label {
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .warehouses__label {
+    display: none;
+  }
+}
+
 .warehouses__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.warehouses__text-location {
+  color: #2e66e6;
 }
 
 .warehouses__item-right-container {
@@ -151,5 +281,49 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.inv {
+  background-color: white;
+  margin: 0 1rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+          box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+}
+
+.inv__heading {
+  padding: 2rem 12.75rem 1rem 1.5rem;
+}
+
+.inv__search-btn {
+  margin-bottom: 1.5rem;
+}
+
+.inv__item-wrapper {
+  border-top: 1px solid #BDC5D5;
+}
+
+.inv__mobile-first-row-wrapper, .inv__mobile-second-row-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.inv__inv-item-header {
+  margin-top: 1rem;
+}
+
+.inv__item-icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.25rem 1.9rem 1.7rem;
 }
 /*# sourceMappingURL=app.css.map */
