@@ -49,6 +49,9 @@ body {
 }
 
 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
   padding-left: 0;
   padding-right: 0;
@@ -103,51 +106,6 @@ a {
   padding: 0 1rem;
   background: #2e66e6;
   color: #ffffff;
-}
-
-@media (min-width: 320px) {
-  .header {
-    height: 12.5rem;
-    background-color: #232940;
-    position: absolute;
-  }
-  .header__logo {
-    padding: 1.8rem 0;
-    display: block;
-    margin: 0 auto;
-  }
-  .header__wh-inv-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .header__wh-btn, .header__inv-btn {
-    color: #ffffff;
-    border: none;
-    width: 10.25rem;
-    height: 2.25rem;
-    background-color: #232940;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .header__wh-btn {
-    border-radius: 20px;
-    background-color: #13182c;
-  }
-  .header__inv-btn {
-    padding-left: none;
-    margin-left: 1rem;
-  }
 }
 
 .inv {
