@@ -165,6 +165,98 @@ a {
   }
 }
 
+@media (min-width: 320px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 12.5rem;
+    font-family: "Titillium Web";
+    background-color: #232940;
+    border: 1px solid red;
+  }
+  .header__logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1.8rem;
+  }
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 1.05rem;
+    width: 5.61rem;
+    border: 1px dashed cyan;
+  }
+  .header__wh-inv-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .header__wh-btn, .header__inv-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 10.25rem;
+    height: 2.25rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #ffffff;
+    border: 0;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: none;
+    font-style: normal;
+  }
+  .header__wh-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 1.25rem;
+    margin-left: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #13182c;
+  }
+  .header__inv-btn {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #232940;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .warehouses {
   background: white;
   border-radius: 0.1875rem;

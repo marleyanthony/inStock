@@ -1,1 +1,61 @@
+.header {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 12.5rem;
+    font-family: "Titillium Web";
+    background-color: $background-color-graphite;
+    border: 1px solid red;
+    &__logo-container {
+      display: flex;
+      padding: 1.8rem;
+    }
+    &__logo {
+      display: flex;
+      height: 1.05rem;
+      width: 5.61rem;
+      border: 1px dashed cyan;
+    }
+    &__wh-inv-container {
+      display: flex;
+      width: 100%;
+    }
+    &__wh-btn,
+    &__inv-btn {
+      display: flex;
+      justify-content: center;
+      width: 10.25rem;
+      height: 2.25rem;
+      align-items: center;
+      // text-align: center;
+      color: $primary-color-white;
+      border: 0;
+      @include fonts(0.8125rem, 1.25rem, none);
+      font-style: normal;
+    }
+    &__wh-btn {
+      display: flex;
+      border-radius: 1.25rem;
+      margin-left: 1rem;
+      padding-left: 0;
+      padding-right: 0;
 
+      background-color: $primary-color-black;
+    }
+    &__inv-btn {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-left: 0;
+      padding-right: 0;
+      background-color: $background-color-graphite;
+    }
+  }
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    display: flex;
+  }
+}
