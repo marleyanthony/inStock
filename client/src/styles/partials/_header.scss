@@ -1,24 +1,45 @@
 .header {
-  height: 12.5rem;
-  background-color: #232940;
+  @include mobile {
+    height: 12.5rem;
+    background-color: $background-color-graphite;
+    position: absolute;
 
-  &__logo {
-    padding: 1.8rem 0;
-    display: block;
-    margin: 0 auto;
-  }
+    // &__logo-container {
+    //   border: 1px solid crimson;
+    // }
 
-  &__wh-btn,
-  &__inv-btn {
-    color: #fff;
-    border: none;
-    width: 10.2rem;
-    height: 2.25rem;
-    border-radius: 20px;
-    background-color: #232940;
-  }
+    &__logo {
+      padding: 1.8rem 0;
+      display: block;
+      margin: 0 auto;
+    }
 
-  &__inv-btn {
-    background-color: #13182C;
+    &__wh-inv-container {
+      display: flex;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    &__wh-btn,
+    &__inv-btn {
+      color: $primary-color-white;
+      border: none;
+      width: 10.25rem;
+      height: 2.25rem;
+      background-color: $background-color-graphite;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__wh-btn {
+      border-radius: 20px;
+      background-color: $primary-color-black;
+    }
+    &__inv-btn {
+      padding-left: none;
+      margin-left: 1rem;
+    }
   }
 }
