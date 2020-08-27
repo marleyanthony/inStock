@@ -2,52 +2,57 @@ import React from 'react'
 import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
+import Header from "./Header";
 
-function InventoryItems({ inventories }) {
-  const inventoryList = inventories.map((inventory) => {
-    return (
-      <div className="inv-item">
-        <div className="inv__item-wrapper">
-          {/* Mobile First Row */}
-          <div className="inv__mobile-first-row-wrapper">
-            <div className="inv__inv-item">
-              <h5 className="inv__inv-item-header">Inventory Item</h5>
-              <p className="inv__inv-item-info">{inventory.item}</p>
-            </div>
-            <div className="inv__inv-status">
-              <h5 className="inv__inv-status-header">Status</h5>
-              <p className="inv__inv-status-info">{inventory.status}</p>
-            </div>
-          </div>
+function InventoryItems(props) {
+  console.log(props);
+  // const inventoryList = inventories.map((inventory) => {
+  //   return (
+  //     <>
+  //       <Header />
+  //       <div className="inv-item">
+  //         <div className="inv__item-wrapper">
+  //           {/* Mobile First Row */}
+  //           <div className="inv__mobile-first-row-wrapper">
+  //             <div className="inv__inv-item">
+  //               <h5 className="inv__inv-item-header">Inventory Item</h5>
+  //               <p className="inv__inv-item-info">{inventory.item}</p>
+  //             </div>
+  //             <div className="inv__inv-status">
+  //               <h5 className="inv__inv-status-header">Status</h5>
+  //               <p className="inv__inv-status-info">{inventory.status}</p>
+  //             </div>
+  //           </div>
 
-          {/* Mobile Second Row */}
-          <div className="inv__mobile-second-row-wrapper">
-            <div className="inv__inv-category">
-              <h5 className="inv__inv-category-header">Category</h5>
-              <p className="inv__inv-category-info">{inventory.category}</p>
-            </div>
-            <div className="inv__inv-qty">
-              <h5 className="inv__inv-qty-header">QTY</h5>
-              <p className="inv__inv-qty-info">{inventory.quantity}</p>
-            </div>
-          </div>
+  //           {/* Mobile Second Row */}
+  //           <div className="inv__mobile-second-row-wrapper">
+  //             <div className="inv__inv-category">
+  //               <h5 className="inv__inv-category-header">Category</h5>
+  //               <p className="inv__inv-category-info">{inventory.category}</p>
+  //             </div>
+  //             <div className="inv__inv-qty">
+  //               <h5 className="inv__inv-qty-header">QTY</h5>
+  //               <p className="inv__inv-qty-info">{inventory.quantity}</p>
+  //             </div>
+  //           </div>
 
-          {/* Mobile Third Row */}
-          <div className="inv__mobile-third-row-wrapper">
-            <div className="inv__inv-warehouse">
-              <h5 className="inv__inv-warehouse-header">Warehouse</h5>
-              <p className="inv__inv-warehouse-info">{inventory.warehouse}</p>
-            </div>
-          </div>
+  //           {/* Mobile Third Row */}
+  //           <div className="inv__mobile-third-row-wrapper">
+  //             <div className="inv__inv-warehouse">
+  //               <h5 className="inv__inv-warehouse-header">Warehouse</h5>
+  //               <p className="inv__inv-warehouse-info">{inventory.warehouse}</p>
+  //             </div>
+  //           </div>
 
-          <div className="inv__item-icons-container">
-            <img src={deleteIcon} alt="" className="inv__icon" />
-            <img src={editIcon} alt="" className="inv__icon" />
-          </div>
-        </div>
-      </div>
-    );
-  });
+  //           <div className="inv__item-icons-container">
+  //             <img src={deleteIcon} alt="" className="inv__icon" />
+  //             <img src={editIcon} alt="" className="inv__icon" />
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </>
+  //   );
+  // });
 
   return (
     <main className="inv">
@@ -63,9 +68,9 @@ function InventoryItems({ inventories }) {
         />
         <button className="inv__search-btn">&#x2B; Add New Item</button>
       </form>
-      <section className="warehouses__list">{inventoryList}</section>
+      {/* <section className="warehouses__list">{inventoryList}</section> */}
     </main>
-  );
+  )
 }
 
 export default InventoryItems;

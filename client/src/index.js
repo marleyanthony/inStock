@@ -4,15 +4,17 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import App from './App';
 import InventoryItems from './components/InventoryItems';
 import Warehouses from './components/Warehouses';
+import Header from './components/Header';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <Header />
       <Switch>
-        <Redirect path="/home" to="/" />
+        <Redirect path="/warehouse" to="/" />
         <Route path="/" component={App} exact />
         <Route path="/inventory" component={InventoryItems} />
-        <Route path="/warehouse" component={Warehouses} />
+        {/* <Route path="/warehouse" component={Warehouses} /> */}
       </Switch>
     </Router>
   </React.StrictMode>,
