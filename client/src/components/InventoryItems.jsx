@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
+import Header from "./Header";
 
-function InventoryItems({ inventories }) {
+const InventoryItems = ({ inventories }) => {
+  console.log("inventories:", inventories);
   const inventoryList = inventories.map((inventory) => {
     return (
       <div className="inv-item">
@@ -18,31 +20,31 @@ function InventoryItems({ inventories }) {
               <h5 className="inv__inv-status-header">Status</h5>
               <p className="inv__inv-status-info">{inventory.status}</p>
             </div>
-          </div>
 
-          {/* Mobile Second Row */}
-          <div className="inv__mobile-second-row-wrapper">
-            <div className="inv__inv-category">
-              <h5 className="inv__inv-category-header">Category</h5>
-              <p className="inv__inv-category-info">{inventory.category}</p>
+            {/* Mobile Second Row */}
+            <div className="inv__mobile-second-row-wrapper">
+              <div className="inv__inv-category">
+                <h5 className="inv__inv-category-header">Category</h5>
+                <p className="inv__inv-category-info">{inventory.category}</p>
+              </div>
+              <div className="inv__inv-qty">
+                <h5 className="inv__inv-qty-header">QTY</h5>
+                <p className="inv__inv-qty-info">{inventory.quantity}</p>
+              </div>
             </div>
-            <div className="inv__inv-qty">
-              <h5 className="inv__inv-qty-header">QTY</h5>
-              <p className="inv__inv-qty-info">{inventory.quantity}</p>
-            </div>
-          </div>
 
-          {/* Mobile Third Row */}
-          <div className="inv__mobile-third-row-wrapper">
-            <div className="inv__inv-warehouse">
-              <h5 className="inv__inv-warehouse-header">Warehouse</h5>
-              <p className="inv__inv-warehouse-info">{inventory.warehouse}</p>
+            {/* Mobile Third Row */}
+            <div className="inv__mobile-third-row-wrapper">
+              <div className="inv__inv-warehouse">
+                <h5 className="inv__inv-warehouse-header">Warehouse</h5>
+                <p className="inv__inv-warehouse-info">{inventory.warehouse}</p>
+              </div>
             </div>
-          </div>
 
-          <div className="inv__item-icons-container">
-            <img src={deleteIcon} alt="" className="inv__icon" />
-            <img src={editIcon} alt="" className="inv__icon" />
+            <div className="inv__item-icons-container">
+              <img src={deleteIcon} alt="" className="inv__icon" />
+              <img src={editIcon} alt="" className="inv__icon" />
+            </div>
           </div>
         </div>
       </div>
@@ -66,6 +68,6 @@ function InventoryItems({ inventories }) {
       <section className="warehouses__list">{inventoryList}</section>
     </main>
   );
-}
+};
 
 export default InventoryItems;

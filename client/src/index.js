@@ -1,20 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import App from './App';
-import InventoryItems from './components/InventoryItems';
-import Warehouses from './components/Warehouses';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import Header from "./components/Header";
+import App from "./App";
+import Footer from "./components/Footer";
+
+import "./styles/app.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Switch>
-        <Redirect path="/home" to="/" />
-        <Route path="/" component={App} exact />
-        <Route path="/inventory" component={InventoryItems} />
-        <Route path="/warehouse" component={Warehouses} />
-      </Switch>
+      <Header />
+      <Route path="/" exact>
+        <Redirect to="/warehouse" />
+      </Route>
+      <App />
+      <Footer />
     </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

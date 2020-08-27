@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import searchIcon from "../assets/Icons/search-24px.svg";
 import sortIcon from "../assets/Icons/sort-24px.svg";
 import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
@@ -6,19 +8,23 @@ import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
 
 const Warehouses = ({ warehouses }) => {
+  console.log("warehouses:", warehouses);
   const warehouseList = warehouses.map((warehouse) => {
     return (
       <div className="warehouses__item" key={warehouse.id}>
         <div className="warehouses__item-left-container">
           <p className="warehouses__label">WAREHOUSE</p>
-          <a className="warehouses__link">
+          <Link
+            to={`/warehouse/${warehouse.name}`}
+            className="warehouses__link"
+          >
             <h3 className="warehouses__text-location">{warehouse.name}</h3>
             <img
               src={chevronIcon}
               alt=""
               className="warehouses__icon warehouses__icon--chevron"
             />
-          </a>
+          </Link>
           <p className="warehouses__label">ADDRESS</p>
           <p className="warehouses__text-address">
             {warehouse.address}, {warehouse.city}, {warehouse.country}

@@ -74,7 +74,7 @@
   }
 
   &__button {
-    @extend %button;
+    @extend %button-primary;
     font-weight: normal;
   }
 
@@ -267,6 +267,10 @@
 
   &__text-contact-email {
     @extend %body-medium;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__item-icons-container {
