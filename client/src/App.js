@@ -3,9 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 
 import Warehouses from "./components/Warehouses";
+import WarehouseDetails from "./components/WarehouseDetails";
 import InventoryItems from "./components/InventoryItems";
-
-import "./styles/app.css";
 
 class App extends React.Component {
   state = {
@@ -48,6 +47,17 @@ class App extends React.Component {
             render={(renderProps) => {
               return (
                 <Warehouses
+                  {...renderProps}
+                  warehouses={this.state.warehouses}
+                />
+              );
+            }}
+          />
+          <Route
+            path="/warehouse/:name"
+            render={(renderProps) => {
+              return (
+                <WarehouseDetails
                   {...renderProps}
                   warehouses={this.state.warehouses}
                 />
