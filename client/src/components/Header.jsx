@@ -1,3 +1,7 @@
+
+import React from "react";
+import logo from "../assets/Logo/logo.svg";
+import { Link } from "react-router-dom";
 import React from 'react'
 import logo from '../assets/Logo/logo.svg';
 // import InventoryItem from './InventoryItems';
@@ -19,7 +23,7 @@ function header() {
         </Link>
       </div>
     </section>
-  )
+  );
 }
 
-export default header
+export default header;

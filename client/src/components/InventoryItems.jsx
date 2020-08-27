@@ -1,9 +1,26 @@
-import React from 'react'
+import React from "react";
 import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
 import Header from "./Header";
 
+const InventoryItems = ({ inventories }) => {
+  console.log("inventories:", inventories);
+  const inventoryList = inventories.map((inventory) => {
+    return (
+      <div className="inv-item">
+        <div className="inv__item-wrapper">
+          {/* Mobile First Row */}
+          <div className="inv__mobile-first-row-wrapper">
+            <div className="inv__inv-item">
+              <h5 className="inv__inv-item-header">Inventory Item</h5>
+              <p className="inv__inv-item-info">{inventory.item}</p>
+            </div>
+            <div className="inv__inv-status">
+              <h5 className="inv__inv-status-header">Status</h5>
+              <p className="inv__inv-status-info">{inventory.status}</p>
+            </div>
+          </div>
 function InventoryItems(props) {
   console.log(props);
   // const inventoryList = inventories.map((inventory) => {
@@ -23,6 +40,7 @@ function InventoryItems(props) {
   //               <p className="inv__inv-status-info">{inventory.status}</p>
   //             </div>
   //           </div>
+
 
   //           {/* Mobile Second Row */}
   //           <div className="inv__mobile-second-row-wrapper">
@@ -70,6 +88,8 @@ function InventoryItems(props) {
       </form>
       {/* <section className="warehouses__list">{inventoryList}</section> */}
     </main>
+  );
+};
   )
 }
 

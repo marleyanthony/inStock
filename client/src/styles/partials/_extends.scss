@@ -68,7 +68,7 @@
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
-  border: 1px solid #bdc5d5;
+  border: 1px solid $secondary-color-cloud;
   padding: 0.5rem 1rem;
 
   &::placeholder {
@@ -80,15 +80,42 @@
   }
 }
 
-%button {
+%button-primary {
   @extend %labels-links-buttons;
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
-  border: none;
+  border: 1px solid $primary-color-indigo;
   padding: 0 1rem;
   background: $primary-color-indigo;
   color: $primary-color-white;
+
+  &:hover,
+  &:focus {
+    border-color: $background-color-graphite;
+    background: $background-color-graphite;
+  }
+
+  @include tablet {
+    width: unset;
+    height: 2.375rem;
+  }
+}
+
+%button-secondary {
+  width: 100%;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+  border: 1px solid $secondary-color-cloud;
+  padding: 0 1rem;
+  background: $primary-color-white;
+  color: $secondary-color-slate;
+
+  &:hover,
+  &:focus {
+    border-color: $primary-color-indigo;
+    color: $primary-color-indigo;
+  }
 
   @include tablet {
     width: unset;
