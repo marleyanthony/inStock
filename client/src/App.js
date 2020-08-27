@@ -76,6 +76,8 @@ class App extends React.Component {
             }}
           />
         </Switch>
+        <Warehouses warehouses={this.state.warehouses} />
+        <InventoryItems inventories={this.state.inventories} />
       </div>
     );
   }

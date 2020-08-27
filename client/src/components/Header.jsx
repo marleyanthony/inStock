@@ -1,6 +1,11 @@
+
 import React from "react";
 import logo from "../assets/Logo/logo.svg";
 import { Link } from "react-router-dom";
+import React from 'react'
+import logo from '../assets/Logo/logo.svg';
+// import InventoryItem from './InventoryItems';
+import { Link } from 'react-router-dom';
 
 function header() {
   return (
@@ -10,7 +15,7 @@ function header() {
       </div>
 
       <div className="header__wh-inv-container">
-        <Link to="/warehouse">
+        <Link to="/">
           <button className="header__wh-btn btn">Warehouses</button>
         </Link>
         <Link to="/inventory">
