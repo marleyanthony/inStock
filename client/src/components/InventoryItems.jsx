@@ -1,7 +1,7 @@
-import React from 'react'
-import chevronIcon from "../assets/icons/chevron_right-24px.svg";
-import deleteIcon from "../assets/icons/delete_outline-24px.svg";
-import editIcon from "../assets/icons/edit-24px.svg";
+import React from "react";
+import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
+import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
+import editIcon from "../assets/Icons/edit-24px.svg";
 
 function InventoryItems({ inventories }) {
   const inventoryList = inventories.map((inventory) => {
@@ -46,7 +46,7 @@ function InventoryItems({ inventories }) {
           </div>
         </div>
       </div>
-    )
+    );
   });
 
   return (
@@ -55,7 +55,12 @@ function InventoryItems({ inventories }) {
         <h1 className="inv__heading">Inventory</h1>
       </div>
       <form className="inv__search-form">
-        <input className="inv__search-bar" type="text" name="search" placeholder="Search... &#128269;" />
+        <input
+          className="inv__search-bar"
+          type="text"
+          name="search"
+          placeholder="Search... &#128269;"
+        />
         <button className="inv__search-btn">&#x2B; Add New Item</button>
       </form>
       <section className="warehouses__list">{inventoryList}</section>
@@ -63,4 +68,4 @@ function InventoryItems({ inventories }) {
   );
 }
 
-export default InventoryItems
+export default InventoryItems;

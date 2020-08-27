@@ -4,14 +4,29 @@
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
 
+  @include tablet {
+    margin: 0 2rem;
+  }
+
   &__header-container {
     padding: 0 1.5rem;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
+
+    @include tablet {
+      padding: 0 2rem;
+      padding-top: 2rem;
+      padding-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__heading {
     @extend %page-header;
+  }
+
+  &__search-add {
   }
 
   &__search-label {
@@ -26,6 +41,10 @@
     position: absolute;
     top: 0.0625rem;
     right: 0.75rem;
+
+    @include tablet {
+      right: 2rem;
+    }
   }
 
   &__button {
@@ -36,6 +55,43 @@
   &__list {
   }
 
+  &__sort {
+    display: none;
+
+    @include tablet {
+      width: 100%;
+      height: 2.5rem;
+      background: $background-color-lightGrey;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+  }
+
+  &__sort-left {
+    @include tablet {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__sort-right {
+    @include tablet {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__sort-category {
+    display: flex;
+    align-items: center;
+  }
+
+  &__sort-label {
+    @extend %table-headers;
+  }
+
   &__item {
     display: flex;
     justify-content: space-between;
@@ -44,16 +100,39 @@
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     border-top: 1px solid #bdc5d5;
+
+    &:nth-child(2) {
+      @include tablet {
+        border-top: none;
+      }
+    }
+
+    @include tablet {
+      padding: 1rem 2rem;
+      justify-content: space-between;
+    }
   }
 
   &__item-left-container {
-    flex: 1 1 1;
     width: 33.4375vw;
+
+    @include tablet {
+      // width: 16.875rem;
+      width: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
   }
 
   &__label {
     @extend %table-headers;
     margin-bottom: 0.25rem;
+
+    &:nth-child(n + 2) {
+      margin-top: 1rem;
+    }
 
     @include tablet {
       display: none;
@@ -62,6 +141,12 @@
 
   &__link {
     display: flex;
+    align-items: flex-end;
+
+    @include tablet {
+      width: 9.375rem;
+      flex-grow: 1;
+    }
   }
 
   &__text-location {
@@ -72,17 +157,65 @@
   &__icon {
   }
 
+  &__icon--sort {
+    height: 75%;
+    margin-left: 0.25rem;
+  }
+
+  &__icon--chevron {
+    margin-left: 0.25rem;
+    height: 1.2rem;
+
+    @include tablet {
+      height: 1.3rem;
+    }
+  }
+
   &__text-address {
     @extend %body-medium;
+
+    @include tablet {
+      width: 7.5625rem;
+      padding-right: 1rem;
+      flex-grow: 1;
+    }
   }
 
   &__item-right-container {
-    flex: 1 1 1;
     width: 33.4375vw;
+
+    @include tablet {
+      // width: 19.375rem;
+      width: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
   }
 
   &__text-contact-name {
     @extend %body-medium;
+
+    @include tablet {
+      width: 7.5rem;
+      flex-grow: 1;
+    }
+  }
+
+  &__contact-info-container {
+    & .warehouses__label {
+      margin-top: 1rem;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      width: 11.8125rem;
+      flex-grow: 1;
+    }
   }
 
   &__text-contact-phone {
@@ -98,5 +231,46 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1.25rem;
+
+    @include tablet {
+      width: 3.75rem;
+      margin-top: 0;
+    }
+  }
+}
+
+.sort-warehouse {
+  @include tablet {
+    width: 9.375rem;
+    flex-grow: 1;
+  }
+}
+
+.sort-address {
+  @include tablet {
+    width: 7.5625rem;
+    flex-grow: 1;
+  }
+}
+
+.sort-name {
+  @include tablet {
+    width: 7.5625rem;
+    flex-grow: 1;
+  }
+}
+
+.sort-info {
+  @include tablet {
+    width: 11.8125rem;
+    flex-grow: 1;
+  }
+}
+
+.sort-actions {
+  @include tablet {
+    width: 3.75rem;
+    text-align: right;
   }
 }

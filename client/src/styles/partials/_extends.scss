@@ -75,9 +75,12 @@
   &::placeholder {
     font-family: "Titillium Web";
   }
-  // @include tablet {
-  //   height: 2.375rem;
-  // }
+
+  @include tablet {
+    width: 11.5625rem;
+    height: 2.375rem;
+    margin: 0 1rem;
+  }
 }
 
 %button {
@@ -90,7 +93,8 @@
   background: $primary-color-indigo;
   color: $primary-color-white;
 
-  // @include tablet {
-  //   height: 2.375rem;
-  // }
+  @include tablet {
+    width: unset;
+    height: 2.375rem;
+  }
 }
