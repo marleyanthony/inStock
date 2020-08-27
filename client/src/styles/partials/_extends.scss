@@ -103,7 +103,6 @@
 }
 
 %button-secondary {
-  @extend %labels-links-buttons;
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
@@ -116,28 +115,6 @@
   &:focus {
     border-color: $primary-color-indigo;
     color: $primary-color-indigo;
-  }
-
-  @include tablet {
-    width: unset;
-    height: 2.375rem;
-  }
-}
-
-%button-delete {
-  @extend %labels-links-buttons;
-  width: 100%;
-  height: 2.25rem;
-  border-radius: 1.25rem;
-  border: 1px solid $supporting-color-red;
-  padding: 0 1rem;
-  background: $supporting-color-red;
-  color: $primary-color-white;
-
-  &:hover,
-  &:focus {
-    border-color: $background-color-graphite;
-    background: $background-color-graphite;
   }
 
   @include tablet {

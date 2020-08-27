@@ -15,25 +15,25 @@ class App extends React.Component {
   componentDidMount() {
     this.getWarehouses();
     this.getInvItems();
-    // console.log("component did mount:", this.state);
+    console.log("component did mount:", this.state);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // console.log("component updated");
-    // console.log("prevProps:", prevProps);
-    // console.log("prevState:", prevState);
+    console.log("component updated");
+    console.log("prevProps:", prevProps);
+    console.log("prevState:", prevState);
   }
 
   getInvItems() {
     axios.get("http://localhost:8080/inventory").then((res) => {
-      // console.log("get inventories:", res.data);
+      console.log("get inventories:", res.data);
       this.setState({ inventories: res.data });
     });
   }
 
   getWarehouses() {
     axios.get("http://localhost:8080/warehouse").then((res) => {
-      // console.log("get warehouses:", res.data);
+      console.log("get warehouses:", res.data);
       this.setState({ warehouses: res.data });
     });
   }
