@@ -46,7 +46,15 @@ body {
   font-family: "Titillium Web";
   scroll-behavior: smooth;
   width: 100%;
-  background: #f7f8f9;
+}
+
+a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .warehouses__heading {
@@ -183,28 +191,107 @@ body {
   }
 }
 
-.header {
-  height: 12.5rem;
-  background-color: #232940;
+@media (min-width: 375px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 12.5rem;
+    width: 100%;
+    background-color: #232940;
+  }
+  .header__logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding: 1.89rem 0;
+  }
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 1.05rem;
+    width: 5.61rem;
+  }
+  .header__wh-inv-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.25rem;
+  }
+  .header__link-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 10.25rem;
+    height: 100%;
+    margin-right: 1rem;
+  }
+  .header__link-btn--bdRadius {
+    border-radius: 1.25rem;
+    width: 10.25rem;
+    height: 100%;
+    background: #13182c;
+    margin-left: 1rem;
+  }
+  .header__wh-btn, .header__inv-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 1.25rem;
+    border: 0;
+    font-family: "Titillium Web";
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: none;
+    font-style: normal;
+    color: #ffffff;
+    background-color: #232940;
+  }
+  .header__wh-btn {
+    background-color: #13182c;
+  }
+  .header__inv-btn {
+    background-color: #232940;
+  }
 }
 
-.header__logo {
-  padding: 1.8rem 0;
-  display: block;
-  margin: 0 auto;
+@media (min-width: 768px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 11.625rem;
+  }
 }
 
-.header__wh-btn, .header__inv-btn {
-  color: #fff;
-  border: none;
-  width: 10.2rem;
-  height: 2.25rem;
-  border-radius: 20px;
-  background-color: #232940;
-}
-
-.header__inv-btn {
-  background-color: #13182C;
+.header__logo-container {
+  width: 20%;
 }
 
 .warehouses {
@@ -605,6 +692,11 @@ body {
 }
 
 .inv {
+  position: absolute;
+  left: 4.27%;
+  right: 4.27%;
+  top: 7.85%;
+  bottom: 4.13%;
   background-color: white;
   margin: 0 1rem;
   border-radius: 4px;
