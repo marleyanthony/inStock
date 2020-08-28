@@ -5,7 +5,7 @@
   top: 7.85%;
   bottom: 4.13%;
   background-color: white;
-  margin: 0 1rem;
+  margin: 6.5rem 1rem 0;
   border-radius: 4px;
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
 
@@ -39,7 +39,11 @@
     padding: 1rem 1.5rem;
   }
 
-  &__inv-item-header {
+  &__inv-item-header,
+  &__inv-status-header,
+  &__inv-warehouse-header,
+  &__inv-category-header,
+  &__inv-qty-header {
     margin-top: 1rem;
     font-family: Titillium Web;
     font-style: normal;
@@ -48,6 +52,31 @@
     line-height: 1rem;
     color: #5C667E;
     text-transform: uppercase;
+  }
+
+  &__inv-category-info,
+  &__inv-qty-info,
+  &__inv-warehouse-info {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    color: #13182C;
+  }
+
+  &__inv-item-info {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    color: #2E66E6;
+  }
+
+  &__inv-item-icon {
+    width: 1rem;
+    height: 1rem;
   }
 
   &__item-icons-container {

@@ -13,7 +13,10 @@ const InventoryItems = ({ inventories }) => {
           <div className="inv__mobile-first-row-wrapper">
             <div className="inv__inv-item">
               <h5 className="inv__inv-item-header">Inventory Item</h5>
-              <p className="inv__inv-item-info">{inventory.item}</p>
+              <p className="inv__inv-item-info">
+                {inventory.item}
+                <img src={chevronIcon} alt="chevronIcon" className="inv__inv-item-icon" />
+              </p>
             </div>
             <div className="inv__inv-status">
               <h5 className="inv__inv-status-header">Status</h5>
