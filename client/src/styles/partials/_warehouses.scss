@@ -1,14 +1,15 @@
-.warehouses {
+.warehouses,
+.inv {
   position: absolute;
-  left: 4.27%;
-  right: 4.27%;
-  top: 7.53%;
-  bottom: 5.31%;
+  // left: 4.27%;
+  // right: 4.27%;
+  // top: 7.53%;
+  // bottom: 5.31%;
 
   background: white;
   border-radius: 0.1875rem;
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
-  margin: 0 1rem;
+  margin: 9.3rem 1rem 0;
 
   @include tablet {
     margin: 0 2rem;

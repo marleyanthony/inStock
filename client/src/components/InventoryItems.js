@@ -8,7 +8,7 @@ const InventoryItems = ({ inventories }) => {
   console.log("inventories:", inventories);
   const inventoryList = inventories.map((inventory) => {
     return (
-      <div className="inv-item">
+      <div className="inv__item">
         <div className="inv__item-wrapper">
           {/* Mobile First Row */}
           <div className="inv__mobile-first-row-wrapper">
@@ -63,7 +63,7 @@ const InventoryItems = ({ inventories }) => {
           name="search"
           placeholder="Search... &#128269;"
         />
-        <button className="inv__search-btn">&#x2B; Add New Item</button>
+        <button className="inv__search-btn btn">&#x2B; Add New Item</button>
       </form>
       <section className="warehouses__list">{inventoryList}</section>
     </main>
