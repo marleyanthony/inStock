@@ -14,7 +14,6 @@
   z-index: 10;
 
   @include tablet {
-    // top: 5.75rem;
     margin: 0 2rem;
   }
 
@@ -128,7 +127,7 @@
 
   &__item {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 1.5rem;
     padding-top: 1rem;
@@ -230,10 +229,12 @@
 
   &__item-right-container {
     width: 33.4375vw;
+    margin-left: 1.5rem;
 
     @include tablet {
       // width: 19.375rem;
       width: unset;
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -271,10 +272,10 @@
 
   &__text-contact-email {
     @extend %body-medium;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    // width: 100%;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
   }
 
   &__item-icons-container {

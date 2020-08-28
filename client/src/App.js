@@ -52,6 +52,7 @@ class App extends React.Component {
                 />
               );
             }}
+            exact
           />
           <Route
             path="/warehouse/:name"
