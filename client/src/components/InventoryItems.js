@@ -57,11 +57,11 @@ const InventoryItems = ({ inventories }) => {
     <main className="inv">
       <div className="inv__heading-container">
         <h1 className="inv__heading">Inventory</h1>
+        <form className="inv__search-form">
+          <input className="inv__search-bar" type="text" name="search" placeholder="Search... &#128269;" />
+          <button className="inv__search-btn btn">&#x2B; Add New Item</button>
+        </form>
       </div>
-      <form className="inv__search-form">
-        <input className="inv__search-bar" type="text" name="search" placeholder="Search... &#128269;" />
-        <button className="inv__search-btn btn">&#x2B; Add New Item</button>
-      </form>
       <section className="warehouses__list">{inventoryList}</section>
     </main>
   );

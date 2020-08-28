@@ -1,15 +1,25 @@
 .inv {
   position: absolute;
   z-index: 10;
-  left: 4.27%;
-  right: 4.27%;
-  top: 7.85%;
   background-color: white;
-  margin: 6.5rem 0 0;
+  margin: 0 1rem;
   border-radius: 4px;
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
-  width: 343px;
+  width: 21.4rem;
   height: auto;
+
+  @include tablet {
+    width: 44rem;
+    margin: 0 2rem;
+  }
+
+  &__heading-container {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 
   &__heading {
     padding: 0 1.5rem;
@@ -20,16 +30,31 @@
 
   &__search-form {
     padding: 0 1.5rem;
+
+    @include tablet {
+      display: flex;
+    }
   }
 
   &__search-bar {
     @extend %input;
     margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0;
+      margin-right: 1rem;
+      width: 11.6rem;
+    }
   }
 
   &__search-btn {
     @extend %button-primary;
     margin-bottom: 1.5rem;
+
+    @include tablet {
+      margin-bottom: 0;
+      width: 8rem;
+    }
   }
 
   &__item-wrapper {
