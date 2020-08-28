@@ -822,6 +822,13 @@ a {
 
 .inv__inv-item-header {
   margin-top: 1rem;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  color: #5C667E;
+  text-transform: uppercase;
 }
 
 .inv__item-icons-container {

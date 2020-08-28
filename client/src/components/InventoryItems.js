@@ -19,31 +19,31 @@ const InventoryItems = ({ inventories }) => {
               <h5 className="inv__inv-status-header">Status</h5>
               <p className="inv__inv-status-info">{inventory.status}</p>
             </div>
+          </div>
 
-            {/* Mobile Second Row */}
-            <div className="inv__mobile-second-row-wrapper">
-              <div className="inv__inv-category">
-                <h5 className="inv__inv-category-header">Category</h5>
-                <p className="inv__inv-category-info">{inventory.category}</p>
-              </div>
-              <div className="inv__inv-qty">
-                <h5 className="inv__inv-qty-header">QTY</h5>
-                <p className="inv__inv-qty-info">{inventory.quantity}</p>
-              </div>
+          {/* Mobile Second Row */}
+          <div className="inv__mobile-second-row-wrapper">
+            <div className="inv__inv-category">
+              <h5 className="inv__inv-category-header">Category</h5>
+              <p className="inv__inv-category-info">{inventory.category}</p>
             </div>
+            <div className="inv__inv-qty">
+              <h5 className="inv__inv-qty-header">QTY</h5>
+              <p className="inv__inv-qty-info">{inventory.quantity}</p>
+            </div>
+          </div>
 
-            {/* Mobile Third Row */}
-            <div className="inv__mobile-third-row-wrapper">
-              <div className="inv__inv-warehouse">
-                <h5 className="inv__inv-warehouse-header">Warehouse</h5>
-                <p className="inv__inv-warehouse-info">{inventory.warehouse}</p>
-              </div>
+          {/* Mobile Third Row */}
+          <div className="inv__mobile-third-row-wrapper">
+            <div className="inv__inv-warehouse">
+              <h5 className="inv__inv-warehouse-header">Warehouse</h5>
+              <p className="inv__inv-warehouse-info">{inventory.warehouse}</p>
             </div>
+          </div>
 
-            <div className="inv__item-icons-container">
-              <img src={deleteIcon} alt="" className="inv__icon" />
-              <img src={editIcon} alt="" className="inv__icon" />
-            </div>
+          <div className="inv__item-icons-container">
+            <img src={deleteIcon} alt="" className="inv__icon" />
+            <img src={editIcon} alt="" className="inv__icon" />
           </div>
         </div>
       </div>

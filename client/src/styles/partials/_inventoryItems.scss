@@ -2,7 +2,6 @@
   position: absolute;
   left: 4.27%;
   right: 4.27%;
-  // top: 5.85%;
   top: 7.85%;
   bottom: 4.13%;
   background-color: white;
@@ -42,6 +41,13 @@
 
   &__inv-item-header {
     margin-top: 1rem;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #5C667E;
+    text-transform: uppercase;
   }
 
   &__item-icons-container {
