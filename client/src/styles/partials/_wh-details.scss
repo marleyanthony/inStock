@@ -24,7 +24,7 @@
     @include tablet {
       padding: 0 2rem;
       padding-top: 2rem;
-      padding-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
     }
 
     @include desktop {
@@ -47,11 +47,13 @@
   }
 
   &__icon--edit {
-    text-align: center;
-    position: absolute;
-    top: 18%;
-    left: 20%;
+    flex-shrink: 0;
     filter: brightness(100);
+
+    @include tablet {
+      height: 1.15rem;
+      margin-right: 0.25rem;
+    }
   }
 
   &__icon--chevron {
@@ -63,18 +65,38 @@
     }
   }
 
+  &__icon--delete {
+    @include tablet {
+      margin-right: 0.75rem;
+    }
+  }
+
   &__heading {
     @extend %page-header;
   }
 
   &__button {
     @extend %button-primary;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+
+    @include tablet {
+      width: unset;
+    }
+  }
+
+  &__button-text {
+    display: none;
+    @extend %labels-links-buttons;
+    color: $primary-color-white;
+    font-weight: normal;
+
+    @include tablet {
+      display: inline-block;
+    }
   }
 
   &__details {
@@ -91,7 +113,7 @@
     // }
 
     @include tablet {
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       // justify-content: space-between;
     }
 
@@ -102,16 +124,29 @@
 
   &__address {
     width: 100%;
+
+    @include tablet {
+      width: 15.375rem;
+      // flex-grow: 1;
+      border-right: 1px solid $secondary-color-cloud;
+      margin-right: 2.5rem;
+    }
   }
 
   &__contact {
     width: 100%;
     margin-top: 1rem;
     display: flex;
+
+    @include tablet {
+      width: unset;
+      flex-grow: 1;
+      margin: 0;
+    }
   }
 
   &__contact-name {
-    width: 50%;
+    width: 47.5%;
     padding-right: 1rem;
   }
 
@@ -132,6 +167,13 @@
     }
   }
 
+  &__label--perm {
+    @include tablet {
+      display: block;
+    }
+  }
+
+  // text modifiers
   &__text {
     @extend %body-medium;
   }
@@ -144,6 +186,35 @@
     @extend %status-in-stock;
   }
 
+  // text adjustments starting at tablet
+  &__link--item {
+    @include tablet {
+      width: 9.375rem;
+      flex-grow: 1;
+    }
+  }
+
+  &__text--category {
+    @include tablet {
+      width: 7.5rem;
+      flex-grow: 1;
+    }
+  }
+
+  &__span--status {
+    @include tablet {
+      width: 11.375rem;
+      flex-grow: 1;
+    }
+  }
+
+  &__text--qty {
+    @include tablet {
+      width: 5.875rem;
+      flex-grow: 1;
+    }
+  }
+
   &__inv-list {
   }
 
@@ -152,6 +223,17 @@
     border-top: 1px solid $secondary-color-cloud;
     display: flex;
     flex-wrap: wrap;
+
+    &:nth-child(2) {
+      @include tablet {
+        border-top: none;
+      }
+    }
+
+    @include tablet {
+      padding: 1.125rem 2rem;
+      justify-content: space-between;
+    }
   }
 
   &__link {
@@ -161,22 +243,120 @@
 
   &__left-container {
     width: 50%;
+
+    @include tablet {
+      width: unset;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__right-container {
     width: 50%;
+
+    @include tablet {
+      width: unset;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__icons-container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-top: 1.25rem;
 
     @include tablet {
-      width: 3.75rem;
+      width: 5.75rem;
       margin-top: 0;
+    }
+  }
+
+  // category sort bar, only displays on tablet & desktop
+  &__sort {
+    display: none;
+
+    @include tablet {
+      width: 100%;
+      height: 2.5rem;
+      background: $background-color-lightGrey;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+
+    @include desktop {
+      padding: 0 2.5rem;
+    }
+  }
+
+  &__sort-left {
+    @include tablet {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__sort-right {
+    @include tablet {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__sort-category-bar {
+    display: flex;
+    align-items: center;
+  }
+
+  &__sort-label {
+    @extend %table-headers;
+  }
+
+  &__icon--sort {
+    height: 75%;
+    margin-left: 0.25rem;
+  }
+
+  .sort-inv-item {
+    @include tablet {
+      width: 9.375rem;
+      flex-grow: 1;
+    }
+  }
+
+  .sort-category {
+    @include tablet {
+      width: 7.5rem;
+      flex-grow: 1;
+    }
+
+    @include desktop {
+      width: 14.375rem;
+    }
+  }
+
+  .sort-status {
+    @include tablet {
+      width: 11.375rem;
+      flex-grow: 1;
+    }
+  }
+
+  .sort-qty {
+    @include tablet {
+      width: 5.875rem;
+      flex-grow: 1;
+    }
+  }
+
+  .sort-actions {
+    @include tablet {
+      width: 5.75rem;
+      text-align: right;
     }
   }
 }
