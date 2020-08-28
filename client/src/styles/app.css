@@ -182,6 +182,14 @@ a {
   font-family: "Titillium Web";
 }
 
+.warehouses__searchbar:active,
+.inv__searchbar:active, .inv__search-bar:active, .warehouses__searchbar:focus,
+.inv__searchbar:focus, .inv__search-bar:focus {
+  outline: none;
+  border-color: #2e66e6;
+  color: #13182c;
+}
+
 @media (min-width: 768px) {
   .warehouses__searchbar,
   .inv__searchbar, .inv__search-bar {
@@ -220,7 +228,6 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -228,9 +235,15 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 12.5rem;
     width: 100%;
+    padding-bottom: 1.5rem;
+  }
+  .header__colour-block {
+    position: absolute;
+    z-index: 1;
     background-color: #232940;
+    width: 100%;
+    height: 12.5rem;
   }
   .header__logo-container {
     display: -webkit-box;
@@ -241,6 +254,8 @@ a {
             justify-content: center;
     width: 100%;
     padding: 1.89rem 0;
+    position: relative;
+    z-index: 10;
   }
   .header__logo {
     display: -webkit-box;
@@ -254,6 +269,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     height: 2.25rem;
+    position: relative;
+    z-index: 10;
   }
   .header__link-btn {
     display: -webkit-box;
@@ -320,12 +337,13 @@ a {
 
 .warehouses,
 .inv {
-  position: absolute;
-  background: white;
+  background: #ffffff;
   border-radius: 0.1875rem;
   -webkit-box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
           box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
-  margin: 9.3rem 1rem 0;
+  margin: 0 1rem;
+  position: relative;
+  z-index: 10;
 }
 
 @media (min-width: 768px) {
