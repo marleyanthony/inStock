@@ -7,22 +7,26 @@
     height: 12.5rem;
     width: 100%;
     background-color: $background-color-graphite;
+
     &__logo-container {
       display: flex;
       justify-content: center;
       width: 100%;
       padding: 1.89rem 0;
     }
+
     &__logo {
       display: flex;
-      height: 1.05rem;
-      width: 5.61rem;
+      height: 1.75rem;
+      width: 8rem;
     }
+
     &__wh-inv-container {
       display: flex;
       height: 2.25rem;
       //   padding-top: 0;
     }
+
     &__link-btn {
       display: flex;
       justify-content: center;
@@ -38,6 +42,7 @@
         margin-left: 1rem;
       }
     }
+
     &__wh-btn,
     &__inv-btn {
       display: flex;
@@ -49,19 +54,23 @@
       color: $primary-color-white;
       background-color: $background-color-graphite;
     }
+
     &__wh-btn {
       background-color: $primary-color-black;
     }
+
     &__inv-btn {
       background-color: $background-color-graphite;
     }
   }
+
   @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 11.625rem;
   }
+  
   &__logo-container {
     width: 20%;
   }

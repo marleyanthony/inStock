@@ -15,7 +15,11 @@
   // }
 
   &__heading {
-    padding: 2rem 12.75rem 1rem 1.5rem;
+    padding: 0 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    // padding: 2rem 12.75rem 1rem 1.5rem;
+    @extend %page-header;
   }
 
   &__search-bar {
