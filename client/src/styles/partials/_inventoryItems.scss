@@ -1,14 +1,16 @@
 .inv {
   position: absolute;
+  z-index: 10;
   left: 4.27%;
   right: 4.27%;
   top: 7.85%;
-  bottom: 4.13%;
+  // bottom: 4.13%;
   background-color: white;
   margin: 6.5rem 0 0;
   border-radius: 4px;
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
   width: 343px;
+  height: auto;
 
   &__heading {
     padding: 0 1.5rem;
@@ -32,17 +34,41 @@
     margin-bottom: 1.5rem;
   }
 
+  &__item-wrapper {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #BDC5D5;
+  }
+
 
   &__mobile-first-row-wrapper,
   &__mobile-second-row-wrapper {
     display: flex;
+    width: 80%;
     justify-content: space-between;
-    // padding: 1rem 1.5rem;
+  }
+
+  &__mobile-third-row-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   &__inv-item {
     width: 8.75rem;
     margin-bottom: 1.25rem;
+    // margin-right: 4.6rem;
+  }
+
+  &__inv-qty {
+    padding-right: 2rem;
+  }
+
+  &__inv-qty-header {
+    margin-bottom: 4px;
+  }
+
+  &__inv-qty-info {
+    margin-bottom: 1rem;
   }
 
   &__inv-item-header,
@@ -101,7 +127,8 @@
 
   &__item-icons-container {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    padding: 1.25rem 1.9rem 1.7rem;
+    // padding: 1.25rem 1.9rem 1.7rem;
   }
 }
