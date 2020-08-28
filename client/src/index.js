@@ -16,6 +16,7 @@ ReactDOM.render(
       </Route>
       <App />
       <Footer />
+      <Route path="/*" to="/warehouse" />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

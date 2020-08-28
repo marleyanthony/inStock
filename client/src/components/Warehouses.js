@@ -10,14 +10,16 @@ import editIcon from "../assets/Icons/edit-24px.svg";
 const Warehouses = ({ warehouses }) => {
   // console.log("warehouses:", warehouses);
   const warehouseList = warehouses.map((warehouse) => {
+    // this is a temporary fix for using the name as a URL path
+    // if a name has a space (eg. 'King West'), this removes the space
+    // it would be better to modify the data to include a 'navLink' value
+    const navLink = warehouse.name.split(" ").join("");
+
     return (
       <div className="warehouses__item" key={warehouse.id}>
         <div className="warehouses__item-left-container">
           <p className="warehouses__label">WAREHOUSE</p>
-          <Link
-            to={`/warehouse/${warehouse.name}`}
-            className="warehouses__link"
-          >
+          <Link to={`/warehouse/${navLink}`} className="warehouses__link">
             <h3 className="warehouses__text-location">{warehouse.name}</h3>
             <img
               src={chevronIcon}

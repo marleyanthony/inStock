@@ -62,6 +62,7 @@
   }
 }
 
+// inputs
 %input {
   @extend %labels-links-buttons;
   font-weight: normal;
@@ -87,6 +88,7 @@
   }
 }
 
+// buttons
 %button-primary {
   @extend %labels-links-buttons;
   width: 100%;
@@ -150,4 +152,30 @@
     width: unset;
     height: 2.375rem;
   }
+}
+
+// stock status
+%status-in-stock {
+  font-family: "Titillium Web";
+  font-weight: bold;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: $supporting-color-green;
+  // align-self: center;
+  background: rgba(21, 132, 99, 0.07);
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  display: inline-block;
+
+  @include tablet {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+%status-out-of-stock {
+  @extend %status-in-stock;
+  color: $supporting-color-red;
+  background: rgba(201, 69, 21, 0.07);
 }
