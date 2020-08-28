@@ -60,8 +60,21 @@
   &__item-wrapper {
     padding: 1rem 1.5rem;
     border-top: 1px solid #BDC5D5;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
   }
 
+  &__tablet-header {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 
   &__mobile-first-row-wrapper,
   &__mobile-second-row-wrapper {
@@ -106,6 +119,10 @@
     line-height: 1rem;
     color: #5C667E;
     text-transform: uppercase;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__inv-category-info,

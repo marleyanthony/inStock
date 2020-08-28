@@ -62,6 +62,14 @@ const InventoryItems = ({ inventories }) => {
           <button className="inv__search-btn btn">&#x2B; Add New Item</button>
         </form>
       </div>
+      <div className="inv__tablet-header">
+        <h5 className="inv__tablet-header-heading">Inventory Item</h5>
+        <h5 className="inv__tablet-header-heading">Category</h5>
+        <h5 className="inv__tablet-header-heading">Status</h5>
+        <h5 className="inv__tablet-header-heading">QTY</h5>
+        <h5 className="inv__tablet-header-heading">Warehouse</h5>
+        <h5 className="inv__tablet-header-heading">Actions</h5>
+      </div>
       <section className="warehouses__list">{inventoryList}</section>
     </main>
   );

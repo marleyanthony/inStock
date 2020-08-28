@@ -811,6 +811,32 @@ a {
   border-top: 1px solid #BDC5D5;
 }
 
+@media (min-width: 768px) {
+  .inv__item-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.inv__tablet-header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .inv__tablet-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 .inv__mobile-first-row-wrapper, .inv__mobile-second-row-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -856,6 +882,12 @@ a {
   line-height: 1rem;
   color: #5C667E;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .inv__inv-item-header, .inv__inv-status-header, .inv__inv-warehouse-header, .inv__inv-category-header, .inv__inv-qty-header {
+    display: none;
+  }
 }
 
 .inv__inv-category-info, .inv__inv-qty-info, .inv__inv-warehouse-info {
