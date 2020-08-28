@@ -51,6 +51,16 @@
     position: absolute;
     top: 18%;
     left: 20%;
+    filter: brightness(100);
+  }
+
+  &__icon--chevron {
+    margin-left: 0.25rem;
+    height: 1.2rem;
+
+    @include tablet {
+      height: 1.3rem;
+    }
   }
 
   &__heading {
@@ -101,11 +111,12 @@
   }
 
   &__contact-name {
-    width: 9.75rem;
+    width: 50%;
     padding-right: 1rem;
   }
 
   &__contact__info {
+    width: 50%;
   }
 
   &__label {
@@ -125,11 +136,47 @@
     @extend %body-medium;
   }
 
+  &__text--link {
+    color: $primary-color-indigo;
+  }
+
+  &__text--status {
+    @extend %status-in-stock;
+  }
+
   &__inv-list {
   }
 
   &__inv-item {
     padding: 1rem 1.5rem 1.5rem;
     border-top: 1px solid $secondary-color-cloud;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__left-container {
+    width: 50%;
+  }
+
+  &__right-container {
+    width: 50%;
+  }
+
+  &__icons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+
+    @include tablet {
+      width: 3.75rem;
+      margin-top: 0;
+    }
   }
 }
