@@ -1,0 +1,131 @@
+.inv {
+  position: absolute;
+  z-index: 10;
+  left: 4.27%;
+  right: 4.27%;
+  top: 7.85%;
+  background-color: white;
+  margin: 6.5rem 0 0;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  width: 343px;
+  height: auto;
+
+  &__heading {
+    padding: 0 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    @extend %page-header;
+  }
+
+  &__search-form {
+    padding: 0 1.5rem;
+  }
+
+  &__search-bar {
+    @extend %input;
+    margin-bottom: 1rem;
+  }
+
+  &__search-btn {
+    @extend %button-primary;
+    margin-bottom: 1.5rem;
+  }
+
+  &__item-wrapper {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #BDC5D5;
+  }
+
+
+  &__mobile-first-row-wrapper,
+  &__mobile-second-row-wrapper {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+  }
+
+  &__mobile-third-row-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__inv-item {
+    width: 8.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__inv-qty {
+    padding-right: 2rem;
+  }
+
+  &__inv-qty-header {
+    margin-bottom: 4px;
+  }
+
+  &__inv-qty-info {
+    margin-bottom: 1rem;
+  }
+
+  &__inv-item-header,
+  &__inv-status-header,
+  &__inv-warehouse-header,
+  &__inv-category-header,
+  &__inv-qty-header {
+    // margin-top: 1rem;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #5C667E;
+    text-transform: uppercase;
+  }
+
+  &__inv-category-info,
+  &__inv-qty-info,
+  &__inv-warehouse-info {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    color: #13182C;
+  }
+
+  &__inv-item-info {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    color: #2E66E6;
+  }
+
+  &__inv-item-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &__inv-status-info {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    color: #158463;
+    align-self: center;
+    background: rgba(21,132,99,0.07);
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+  }
+
+  &__item-icons-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    // padding: 1.25rem 1.9rem 1.7rem;
+  }
+}
