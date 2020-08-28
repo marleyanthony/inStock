@@ -1,16 +1,18 @@
 .warehouses {
-  // position: absolute;
+  position: relative;
+  z-index: 10;
+  // top: 8.5rem;
   // left: 4.27%;
   // right: 4.27%;
-  // top: 7.53%;
   // bottom: 5.31%;
 
-  background: white;
+  background: $primary-color-white;
   border-radius: 0.1875rem;
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
 
   @include tablet {
+    top: 5.75rem;
     margin: 0 2rem;
   }
 

@@ -8,7 +8,7 @@ import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
 
 const Warehouses = ({ warehouses }) => {
-  console.log("warehouses:", warehouses);
+  // console.log("warehouses:", warehouses);
   const warehouseList = warehouses.map((warehouse) => {
     return (
       <div className="warehouses__item" key={warehouse.id}>
