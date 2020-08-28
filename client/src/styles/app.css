@@ -245,6 +245,15 @@ a {
     width: 100%;
     height: 12.5rem;
   }
+}
+
+@media (min-width: 375px) and (min-width: 768px) {
+  .header__colour-block {
+    height: 11.625rem;
+  }
+}
+
+@media (min-width: 375px) {
   .header__logo-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -272,6 +281,15 @@ a {
     position: relative;
     z-index: 10;
   }
+}
+
+@media (min-width: 375px) and (min-width: 1280px) {
+  .header__wh-inv-container {
+    padding-right: 3.875rem;
+  }
+}
+
+@media (min-width: 375px) {
   .header__link-btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -327,12 +345,24 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 11.625rem;
+    padding: 0;
   }
 }
 
 .header__logo-container {
   width: 20%;
+}
+
+@media (min-width: 768px) {
+  .header__logo-container {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header__logo-container {
+    padding-left: 8.125rem;
+  }
 }
 
 .warehouses,
