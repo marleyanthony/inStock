@@ -75,6 +75,13 @@
     font-family: "Titillium Web";
   }
 
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $primary-color-indigo;
+    color: $primary-color-black;
+  }
+
   @include tablet {
     height: 2.375rem;
   }

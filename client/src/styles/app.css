@@ -149,6 +149,12 @@ body {
   font-family: "Titillium Web";
 }
 
+.warehouses__searchbar:active, .inv__search-bar:active, .warehouses__searchbar:focus, .inv__search-bar:focus {
+  outline: none;
+  border-color: #2e66e6;
+  color: #13182c;
+}
+
 @media (min-width: 768px) {
   .warehouses__searchbar, .inv__search-bar {
     height: 2.375rem;
