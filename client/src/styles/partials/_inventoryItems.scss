@@ -5,14 +5,10 @@
   // top: 5.85%;
   top: 7.85%;
   bottom: 4.13%;
-
   background-color: white;
   margin: 0 1rem;
   border-radius: 4px;
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
-
-  // &__heading-container {
-  // }
 
   &__heading {
     padding: 0 1.5rem;
@@ -22,8 +18,13 @@
     @extend %page-header;
   }
 
+  &__search-form {
+    padding: 0 1.5rem;
+  }
+
   &__search-bar {
     @extend %input;
+    margin-bottom: 1rem;
   }
 
   &__search-btn {
@@ -32,7 +33,7 @@
   }
 
   &__item-wrapper {
-    border-top: 1px solid #bdc5d5;
+    // border-top: 1px solid #bdc5d5;
   }
 
   &__mobile-first-row-wrapper,

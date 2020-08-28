@@ -780,12 +780,16 @@ a {
   padding-bottom: 1.5rem;
 }
 
-.inv__search-btn {
-  margin-bottom: 1.5rem;
+.inv__search-form {
+  padding: 0 1.5rem;
 }
 
-.inv__item-wrapper {
-  border-top: 1px solid #bdc5d5;
+.inv__search-bar {
+  margin-bottom: 1rem;
+}
+
+.inv__search-btn {
+  margin-bottom: 1.5rem;
 }
 
 .inv__mobile-first-row-wrapper, .inv__mobile-second-row-wrapper {
