@@ -184,7 +184,7 @@
     // }
   }
 
-  &__text-location {
+  &__item-name {
     @extend %body-medium;
     color: $primary-color-indigo;
   }
@@ -206,7 +206,7 @@
     }
   }
 
-  &__text-address {
+  &__category {
     @extend %body-medium;
 
     @include tablet {
@@ -235,7 +235,7 @@
     }
   }
 
-  &__text-contact-name {
+  &__status {
     @extend %body-medium;
 
     @include tablet {
@@ -259,16 +259,9 @@
     }
   }
 
-  &__text-contact-phone {
+  &__quantity,
+  &__warehouse {
     @extend %body-medium;
-  }
-
-  &__text-contact-email {
-    @extend %body-medium;
-    // width: 100%;
-    // white-space: nowrap;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
   }
 
   &__item-icons-container {
