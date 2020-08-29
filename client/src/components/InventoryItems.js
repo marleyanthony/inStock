@@ -15,16 +15,20 @@ const InventoryItems = ({ inventories }) => {
           <p className="inventory__label">
             Inventory Item
           </p>
-          <h3 className="inventory__item-name">
-            {inventory.item}
-          </h3>
-          <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
+          <div className="inventory__item-name-container">
+            <h3 className="inventory__item-name">
+              {inventory.item}
+            </h3>
+            <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
+          </div>
+          {/* <div className="inventory__item-category-container"> */}
           <p className="inventory__label">
             Category
-          </p>
+            </p>
           <p className="inventory__category">
             {inventory.category}
           </p>
+          {/* </div> */}
         </div>
 
         <div className="inventory__item-right-container">
@@ -36,7 +40,7 @@ const InventoryItems = ({ inventories }) => {
               {inventory.status}
             </p>
           </div>
-          <div className="inventory__contact-info-container">
+          <div className="inventory__quantity-container">
             <p className="inventory__label">
               QTY
             </p>
@@ -44,7 +48,7 @@ const InventoryItems = ({ inventories }) => {
               {inventory.quantity}
             </p>
           </div>
-          <div className="inventory__contact-info-container">
+          <div className="inventory__warehouse-container">
             <p className="inventory__label">
               Warehouse
             </p>
@@ -80,13 +84,13 @@ const InventoryItems = ({ inventories }) => {
       <section className="inventory__list">
         <div className="inventory__sort">
           <div className="inventory__sort-left">
-            <div className="inventory__sort-category sort-warehouse">
+            <div className="inventory__sort-category sort-inventory">
               <p className="inventory__sort-label">
                 Inventory Item
               </p>
               <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
             </div>
-            <div className="inventory__sort-category sort-address">
+            <div className="inventory__sort-category sort-category">
               <p className="inventory__sort-label">
                 Category
               </p>
@@ -94,19 +98,19 @@ const InventoryItems = ({ inventories }) => {
             </div>
           </div>
           <div className="inventory__sort-right">
-            <div className="inventory__sort-category sort-name">
+            <div className="inventory__sort-category sort-status">
               <p className="inventory__sort-label">
                 Status
               </p>
               <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
             </div>
-            <div className="inventory__sort-category sort-info">
+            <div className="inventory__sort-category sort-qty">
               <p className="inventory__sort-label">
                 QTY
               </p>
               <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
             </div>
-            <div className="inventory__sort-category sort-info">
+            <div className="inventory__sort-category sort-inventory">
               <p className="inventory__sort-label">
                 Warehouse
               </p>
