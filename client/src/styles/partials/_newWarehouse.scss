@@ -3,26 +3,24 @@
     display: flex;
     flex-direction: column;
     position: absolute;
+    // position: relative;
     left: 4.27%;
     right: 4.27%;
     z-index: 10;
     height: auto;
-
     box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     border-radius: 0.1875rem;
     background: $primary-color-white;
-    align-items: center;
 
-    border: 1px solid red;
     &__arr-heading-container {
       display: flex;
+      align-items: center;
+      justify-content: center;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      border-bottom: 1px solid $secondary-color-cloud;
     }
     &__wh-heading {
       display: flex;
-      align-items: center;
       @include fonts(1.75rem, 2.25rem, 600);
       font-style: normal;
       color: $primary-color-black;
@@ -33,10 +31,9 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 2rem;
-      border: 1px solid black;
-    }
-    &__wh-details-container {
-      border-bottom: 1px solid $secondary-color-cloud;
+      border-top: 1px solid $secondary-color-cloud;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     &__details-heading,
@@ -58,45 +55,51 @@
     }
     &__input-field {
       display: flex;
-      border: 1px solid #bdc5d5;
+      border: 1px solid $secondary-color-cloud;
       box-sizing: border-box;
-      border-radius: 20px;
-      height: 36px;
-      width: 295px;
+      border-radius: 1.25rem;
+      height: 2.25rem;
+      width: 18.4375rem;
       padding-left: 1rem;
       background: $primary-color-white;
     }
-    &__wh-contacts-container {
-      padding-bottom: 2rem;
-    }
-    &__CTAs {
+    &__action-btn-container {
       display: flex;
-      width: 343px;
-      height: 68px;
-      position: relative;
-
+      justify-content: space-between;
+      align-items: center;
+      width: 21.4375rem;
+      height: 4.25rem;
       background: rgba(247, 248, 249, 0.7);
       border-radius: 0px 0px 3px 3px;
-      border: 1px solid lime;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
     &__cancel-btn,
     &__add-wh-btn {
       display: flex;
-
       flex-direction: row;
-      padding: 8px 51px;
+      align-items: center;
+      justify-content: center;
+      width: 8.6875rem;
+      height: 2.25rem;
 
-      //   position: absolute;
-      width: 139px;
-      height: 36px;
-      left: 40px;
-      top: 1006px;
-
-      border: 1px solid #bdc5d5;
+      border: 1px solid $secondary-color-cloud;
       box-sizing: border-box;
-      border-radius: 20px;
-
+      border-radius: 1.25rem;
       background: $primary-color-white;
+      @include fonts(0.8125rem, 1.25rem, 600);
+      font-style: normal;
+
+      &--colorAccent {
+        background: $primary-color-indigo;
+        color: $primary-color-white;
+      }
     }
   }
+  // @include tablet {
+  //   &__tabletDesk {
+  //     display: flex;
+  //     justify-content: space-between;
+  //   }
+  // }
 }

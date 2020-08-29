@@ -750,26 +750,24 @@ a {
             box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     border-radius: 0.1875rem;
     background: #ffffff;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border: 1px solid red;
   }
   .newWarehouse__arr-heading-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #bdc5d5;
   }
   .newWarehouse__wh-heading {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     font-size: 1.75rem;
     line-height: 2.25rem;
     font-weight: 600;
@@ -786,10 +784,9 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 2rem;
-    border: 1px solid black;
-  }
-  .newWarehouse__wh-details-container {
-    border-bottom: 1px solid #bdc5d5;
+    border-top: 1px solid #bdc5d5;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .newWarehouse__details-heading, .newWarehouse__contacts-heading {
     display: -webkit-box;
@@ -824,25 +821,28 @@ a {
     border: 1px solid #bdc5d5;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    border-radius: 20px;
-    height: 36px;
-    width: 295px;
+    border-radius: 1.25rem;
+    height: 2.25rem;
+    width: 18.4375rem;
     padding-left: 1rem;
     background: #ffffff;
   }
-  .newWarehouse__wh-contacts-container {
-    padding-bottom: 2rem;
-  }
-  .newWarehouse__CTAs {
+  .newWarehouse__action-btn-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 343px;
-    height: 68px;
-    position: relative;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 21.4375rem;
+    height: 4.25rem;
     background: rgba(247, 248, 249, 0.7);
     border-radius: 0px 0px 3px 3px;
-    border: 1px solid lime;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .newWarehouse__cancel-btn, .newWarehouse__add-wh-btn {
     display: -webkit-box;
@@ -852,16 +852,27 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 8px 51px;
-    width: 139px;
-    height: 36px;
-    left: 40px;
-    top: 1006px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 8.6875rem;
+    height: 2.25rem;
     border: 1px solid #bdc5d5;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background: #ffffff;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .newWarehouse__cancel-btn--colorAccent, .newWarehouse__add-wh-btn--colorAccent {
+    background: #2e66e6;
+    color: #ffffff;
   }
 }
 
