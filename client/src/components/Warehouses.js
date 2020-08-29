@@ -69,7 +69,9 @@ const Warehouses = ({ warehouses }) => {
             />
             <img src={searchIcon} alt="" className="warehouses__search-icon" />
           </label>
-          <button className="warehouses__button">+ Add New Warehouse</button>
+          <Link to="/newWarehouse" >
+            <button className="warehouses__button">+ Add New Warehouse</button>
+          </Link>
         </div>
       </section>
 

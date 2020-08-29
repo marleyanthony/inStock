@@ -9,19 +9,25 @@ class newWarehouse extends Component {
                 <div className="newWarehouse__detials">
                     <h1 className="newWarehouse__details-heading">Warehouse Details</h1>
                     <p className="newWarehouse__label">Warehouse Name</p>
-                    <input type="text" placeholder="Warehouse Name" />
+                    <input className="newWarehouse__input-field" type="text" placeholder="Warehouse Name" />
                     <p className="newWarehouse__label">Street Name</p>
-                    <input type="text" placeholder="Street Name" />
+                    <input className="newWarehouse__input-field" type="text" placeholder="Street Name" />
                     <p className="newWarehouse__label">City</p>
-                    <input type="text" placeholder="City" />
+                    <input className="newWarehouse__input-field" type="text" placeholder="City" />
                     <p className="newWarehouse__label">Country</p>
-                    <input type="text" placeholder="Country" />
+                    <input className="newWarehouse__input-field" type="text" placeholder="Country" />
                 </div>
 
                 <div className="newWarehouse__contacts">
                     <h1 className="newWarehouse__contacts-heading">Contact Details</h1>
-                    <p className=""></p>
-                    <input type="text" />
+                    <p className="newWarehouse__label">Contact Name</p>
+                    <input className="newWarehouse__input-field" type="text" placeholder="Contact Number" />
+                    <p className="newWarehouse__label">Position</p>
+                    <input className="newWarehouse__input-field" type="text" placeholder="Position" />
+                    <p className="newWarehouse__label">Phone Number</p>
+                    <input className="newWarehouse__input-field" type="text" placeholder="Phone Number" />
+                    <p className="newWarehouse__label">Email</p>
+                    <input className="newWarehouse__input-field" type="text" placeholder="Email" />
                 </div>
 
                 <div className="newWarehouse__CTAs">
