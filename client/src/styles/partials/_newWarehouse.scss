@@ -25,6 +25,7 @@
       font-style: normal;
       color: $primary-color-black;
       height: 2.25rem;
+      padding-left: 0.5rem;
     }
     &__wh-details-container,
     &__wh-contacts-container {
@@ -35,7 +36,6 @@
       padding-left: 1rem;
       padding-right: 1rem;
     }
-
     &__details-heading,
     &__contacts-heading {
       display: flex;
@@ -89,17 +89,49 @@
       background: $primary-color-white;
       @include fonts(0.8125rem, 1.25rem, 600);
       font-style: normal;
-
       &--colorAccent {
         background: $primary-color-indigo;
         color: $primary-color-white;
       }
     }
   }
-  // @include tablet {
-  //   &__tabletDesk {
-  //     display: flex;
-  //     justify-content: space-between;
+  @include tablet {
+    &__tabletDesk {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid $secondary-color-cloud;
+      padding-top: 1.5rem;
+    }
+    &__arr-heading-container {
+      justify-content: flex-start;
+      padding-left: 1rem;
+    }
+    &__wh-details-container {
+      border-right: 1px solid $secondary-color-cloud;
+    }
+    &__wh-contacts-container {
+      margin-left: 1rem;
+    }
+    &__wh-details-container,
+    &__wh-contacts-container {
+      border-top: none;
+      width: 22rem;
+    }
+    &__details-heading,
+    &__contacts-heading {
+      margin-top: 0;
+    }
+    &__action-btn-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 44rem;
+    }
+    &__cancel-btn {
+      width: 4.5rem;
+      margin-right: 1rem;
+    }
+  }
+  //   @include desktop {
+
   //   }
-  // }
 }

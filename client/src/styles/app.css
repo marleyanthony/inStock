@@ -774,6 +774,7 @@ a {
     font-style: normal;
     color: #13182c;
     height: 2.25rem;
+    padding-left: 0.5rem;
   }
   .newWarehouse__wh-details-container, .newWarehouse__wh-contacts-container {
     display: -webkit-box;
@@ -873,6 +874,51 @@ a {
   .newWarehouse__cancel-btn--colorAccent, .newWarehouse__add-wh-btn--colorAccent {
     background: #2e66e6;
     color: #ffffff;
+  }
+}
+
+@media (min-width: 768px) {
+  .newWarehouse__tabletDesk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 1px solid #bdc5d5;
+    padding-top: 1.5rem;
+  }
+  .newWarehouse__arr-heading-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 1rem;
+  }
+  .newWarehouse__wh-details-container {
+    border-right: 1px solid #bdc5d5;
+  }
+  .newWarehouse__wh-contacts-container {
+    margin-left: 1rem;
+  }
+  .newWarehouse__wh-details-container, .newWarehouse__wh-contacts-container {
+    border-top: none;
+    width: 22rem;
+  }
+  .newWarehouse__details-heading, .newWarehouse__contacts-heading {
+    margin-top: 0;
+  }
+  .newWarehouse__action-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 44rem;
+  }
+  .newWarehouse__cancel-btn {
+    width: 4.5rem;
+    margin-right: 1rem;
   }
 }
 
