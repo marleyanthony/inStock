@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Header from "./components/Header";
 import App from "./App";
 import Footer from "./components/Footer";
-
+import newWarehouse from "./components/newWarehouse";
 import "./styles/app.css";
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,9 +15,11 @@ ReactDOM.render(
       <Route path="/" exact>
         <Redirect to="/warehouse" />
       </Route>
+      <Route path="/newwarehouse" component={newWarehouse} />
       <App />
       <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
+
