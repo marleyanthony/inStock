@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import searchIcon from "../assets/Icons/search-24px.svg";
 import sortIcon from "../assets/Icons/sort-24px.svg";
@@ -16,19 +17,19 @@ const InventoryItems = ({ inventories }) => {
             Inventory Item
           </p>
           <div className="inventory__item-name-container">
-            <h3 className="inventory__item-name">
-              {inventory.item}
-            </h3>
+            <Link to={'edit-item'} className="warehouses__link">
+              <h3 className="inventory__item-name">
+                {inventory.item}
+              </h3>
+            </Link>
             <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
           </div>
-          {/* <div className="inventory__item-category-container"> */}
           <p className="inventory__label">
             Category
             </p>
           <p className="inventory__category">
             {inventory.category}
           </p>
-          {/* </div> */}
         </div>
 
         <div className="inventory__item-right-container">
