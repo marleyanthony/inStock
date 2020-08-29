@@ -5,6 +5,7 @@ import axios from "axios";
 import Warehouses from "./components/Warehouses";
 import WarehouseDetails from "./components/WarehouseDetails";
 import InventoryItems from "./components/InventoryItems";
+import EditItem from "./components/EditItem";
 
 class App extends React.Component {
   state = {
@@ -68,6 +69,16 @@ class App extends React.Component {
               <InventoryItems
                 {...renderProps}
                 inventories={this.state.inventories}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/edit-item"
+          render={(renderProps) => {
+            return (
+              <EditItem
+                {...renderProps}
               />
             );
           }}
