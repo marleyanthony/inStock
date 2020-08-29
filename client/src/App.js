@@ -40,44 +40,39 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="background">
-        <Switch>
-          <Route
-            path="/warehouse"
-            render={(renderProps) => {
-              return (
-                <Warehouses
-                  {...renderProps}
-                  warehouses={this.state.warehouses}
-                />
-              );
-            }}
-            exact
-          />
-          <Route
-            path="/warehouse/:name"
-            render={(renderProps) => {
-              return (
-                <WarehouseDetails
-                  {...renderProps}
-                  warehouses={this.state.warehouses}
-                />
-              );
-            }}
-          />
-          <Route
-            path="/inventory"
-            render={(renderProps) => {
-              return (
-                <InventoryItems
-                  {...renderProps}
-                  inventories={this.state.inventories}
-                />
-              );
-            }}
-          />
-        </Switch>
-      </div>
+      <Switch>
+        <Route
+          path="/warehouse"
+          render={(renderProps) => {
+            return (
+              <Warehouses {...renderProps} warehouses={this.state.warehouses} />
+            );
+          }}
+          exact
+        />
+        <Route
+          path="/warehouse/:name"
+          render={(renderProps) => {
+            return (
+              <WarehouseDetails
+                {...renderProps}
+                warehouses={this.state.warehouses}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/inventory"
+          render={(renderProps) => {
+            return (
+              <InventoryItems
+                {...renderProps}
+                inventories={this.state.inventories}
+              />
+            );
+          }}
+        />
+      </Switch>
     );
   }
 }
