@@ -23,22 +23,22 @@ function EditItem() {
           Item Details
         </h3>
         <div action="" className="inventory__item-name-container">
-          <label htmlFor="name">
+          <h5 htmlFor="name" className="inventory__item-name-input-label">
             Item Name
-          </label>
-          <input type="text" name="item-name" />
+          </h5>
+          <input type="text" name="item-name" className="inventory__item-name-input" />
         </div>
-        <div action="" className="inventory__item-name-container">
-          <label htmlFor="name">
+        <div action="" className="inventory__item-description-container">
+          <h5 htmlFor="name" className="inventory__item-description-input-label">
             Description
-          </label>
-          <textarea name="description" cols="30" rows="10"></textarea>
+          </h5>
+          <textarea name="description" className="inventory__item-description-input"></textarea>
         </div>
         <div action="" className="inventory__category-container">
-          <label htmlFor="category">
+          <h5 htmlFor="category" className="inventory__item-category-input-label">
             Category
-          </label>
-          <select name="categories">
+          </h5>
+          <select name="categories" className="inventory__category-select">
             <option value="electronics">Electronics</option>
           </select>
         </div>
@@ -49,27 +49,37 @@ function EditItem() {
           Item Availability
         </h3>
         <div className="inventory__status-container">
-          <label htmlFor="status">
+          <h5 htmlFor="status">
             Status
-          </label>
-          <label for="in-stock">In Stock</label>
-          <input type="radio" name="in-stock" />
-          <label for="out-of-stock">Out of Stock</label>
-          <input type="radio" name="out-of-stock" />
+          </h5>
+          <div className="inventory__radio-btn-container">
+            <div className="inventory__status-instock-radio">
+              <input type="radio" name="in-stock" className="inventory__status-radio-in" />
+              <label for="in-stock" className="inventory__status-label">
+                In Stock
+              </label>
+            </div>
+            <div className="inventory__status-outstock-radio">
+              <input type="radio" name="out-of-stock" className="inventory__status-radio-out" />
+              <label for="in-stock" className="inventory__status-label">
+                Out of stock
+              </label>
+            </div>
+          </div>
         </div>
         <div className="inventory__warehouse-container">
-          <label htmlFor="warehouse">
+          <h5 htmlFor="warehouse" className="inventory__warehouse-header">
             Warehouse
-          </label>
-          <select name="warehouse">
+          </h5>
+          <select name="warehouse" className="inventory__warehouse-select-list">
             <option value="electronics">Manhattan</option>
           </select>
         </div>
-        <div className="inventory__action-btn-container">
-          <button className="inventory__cancel-btn">Cancel</button>
-          <button className="inventory__save-btn">Save</button>
-        </div>
       </section>
+      <div className="inventory__action-btn-container">
+        <button className="inventory__cancel-btn">Cancel</button>
+        <button className="inventory__save-btn">Save</button>
+      </div>
     </main>
   );
 }

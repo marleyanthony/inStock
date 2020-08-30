@@ -39,9 +39,6 @@
     align-items: center;
   }
 
-  &__icon {
-  }
-
   &__icon--back {
     padding-right: 0.75rem;
   }
@@ -244,9 +241,6 @@
     @include desktop {
       width: 10.875rem;
     }
-  }
-
-  &__inv-list {
   }
 
   &__inv-item {
