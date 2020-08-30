@@ -44,6 +44,60 @@ class WarehouseDetails extends React.Component {
   render() {
     const warehouse = this.state.currentWarehouse;
     console.log("warehouse:", warehouse);
+    const inventoryList = warehouse.inventory?.map((item) => {
+      return (
+        <div className="warehouse__inv-item" key={item.itemName}>
+          <div className="warehouse__left-container">
+            <p className="warehouse__label">INVENTORY ITEM</p>
+            <a className="warehouse__link warehouse__link--item">
+              <h3 className="warehouse__text warehouse__text--link warehouse__text--item">
+                {item.itemName}
+              </h3>
+              <img
+                src={chevronIcon}
+                alt=""
+                className="warehouses__icon warehouses__icon--chevron"
+              />
+            </a>
+
+            <p className="warehouse__label">CATEGORY</p>
+            <h3 className="warehouse__text warehouse__text--category">
+              {item.category}
+            </h3>
+          </div>
+
+          <div className="warehouse__right-container">
+            <p className="warehouse__label">STATUS</p>
+            <span className="warehouse__span--status">
+              {item.status === "In Stock" ? (
+                <h3 className="warehouse__text warehouse__text--status-in">
+                  {item.status}
+                </h3>
+              ) : (
+                <h3 className="warehouse__text warehouse__text--status-out">
+                  {item.status}
+                </h3>
+              )}
+            </span>
+
+            <p className="warehouse__label">QTY</p>
+            <h3 className="warehouse__text warehouse__text--qty">
+              {item.quantity}
+            </h3>
+          </div>
+
+          <div className="warehouse__icons-container">
+            <img
+              src={deleteIcon}
+              alt=""
+              className="warehouse__icon warehouse__icon--delete"
+            />
+            <img src={editIcon} alt="" className="warehouse__icon" />
+          </div>
+        </div>
+      );
+    });
+
     return (
       <main className="warehouse">
         {!warehouse && (
@@ -160,7 +214,8 @@ class WarehouseDetails extends React.Component {
                 <p className="warehouse__sort-label sort-actions">ACTIONS</p>
               </div>
               {/* this will be populated by another map() */}
-              <div className="warehouse__inv-item">
+              {inventoryList}
+              {/* <div className="warehouse__inv-item">
                 <div className="warehouse__left-container">
                   <p className="warehouse__label">INVENTORY ITEM</p>
                   <a className="warehouse__link warehouse__link--item">
@@ -200,7 +255,7 @@ class WarehouseDetails extends React.Component {
                   />
                   <img src={editIcon} alt="" className="warehouse__icon" />
                 </div>
-              </div>
+              </div> */}
             </section>
           </>
         )}

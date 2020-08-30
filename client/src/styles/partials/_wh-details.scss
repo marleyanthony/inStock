@@ -193,8 +193,12 @@
     color: $primary-color-indigo;
   }
 
-  &__text--status {
+  &__text--status-in {
     @extend %status-in-stock;
+  }
+
+  &__text--status-out {
+    @extend %status-out-of-stock;
   }
 
   // text adjustments starting at tablet

@@ -10,42 +10,17 @@ class App extends React.Component {
   state = {
     warehouses: [],
     inventories: [],
-    currentWarehouse: {},
   };
 
   componentDidMount() {
     this.getWarehouses();
     this.getInvItems();
     console.log("component mounted");
-    // console.log("component did mount:", this.state);
   }
 
-  // shouldComponentUpdate(nextProps) {
-  //   // if (!nextProps.match.params.name) {
-  //   //   console.log("no params - please update");
-  //   //   return true;
-  //   // }
-  //   console.log("nextProps:", nextProps);
-  //   console.log("this.props:", this.props);
-  //   if (this.props.match.params.name !== nextProps.match.params.name) {
-  //     console.log("component should update");
-  //     return true;
-  //   } else {
-  //     console.log("component should not update");
-  //     return false;
-  //   }
+  // componentDidUpdate(prevProps) {
+  //   console.log("component updated");
   // }
-
-  componentDidUpdate(prevProps) {
-    console.log("prevProps:", prevProps);
-    console.log("this.props:", this.props);
-    if (this.props.match.params.name !== prevProps.match.params.name) {
-      // if new page (this.props?) has /name, get singleWarehouse
-    }
-    console.log("component updated");
-    // console.log("prevProps:", prevProps);
-    // console.log("prevState:", prevState);
-  }
 
   getInvItems() {
     axios.get("http://localhost:8080/inventory").then((res) => {
@@ -60,18 +35,6 @@ class App extends React.Component {
       this.setState({ warehouses: res.data });
     });
   }
-
-  // getSingleWarehouse = (name) => {
-  //   axios
-  //     .get(`http://localhost:8080/warehouse/${name}`)
-  //     .then((response) => {
-  //       // console.log(response.data);
-  //       this.setState({
-  //         currentWarehouse: response.data,
-  //       });
-  //     })
-  //     .catch((error) => console.log(error));
-  // };
 
   render() {
     return (
@@ -88,14 +51,7 @@ class App extends React.Component {
         <Route
           path="/warehouse/:name"
           render={(renderProps) => {
-            console.log("app renderProps:", renderProps);
-            return (
-              <WarehouseDetails
-                {...renderProps}
-                // getSingleWarehouse={this.getSingleWarehouse}
-                // currentWarehouse={this.state.currentWarehouse}
-              />
-            );
+            return <WarehouseDetails {...renderProps} />;
           }}
         />
         <Route
