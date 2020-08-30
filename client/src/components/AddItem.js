@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import backIcon from "../assets/Icons/arrow_back-24px.svg";
 
-function EditItem() {
+function AddItem() {
   return (
     <main className="inventory">
       <section className="inventory__header-container">
@@ -14,7 +14,7 @@ function EditItem() {
               className="inventory__icon inventory__icon--back"
             />
           </Link>
-          <h1 className="inventory__heading">Edit Inventory Item</h1>
+          <h1 className="inventory__heading">Add New Inventory Item</h1>
         </div>
       </section>
 
@@ -26,19 +26,20 @@ function EditItem() {
           <h5 htmlFor="name" className="inventory__item-name-input-label">
             Item Name
           </h5>
-          <input type="text" name="item-name" className="inventory__item-name-input" />
+          <input type="text" name="item-name" className="inventory__item-name-input" placeholder="Item Name" />
         </div>
         <div action="" className="inventory__item-description-container">
           <h5 htmlFor="name" className="inventory__item-description-input-label">
             Description
           </h5>
-          <textarea name="description" className="inventory__item-description-input"></textarea>
+          <textarea name="description" className="inventory__item-description-input" placeholder="Please enter a brief item description..." />
         </div>
         <div action="" className="inventory__category-container">
           <h5 htmlFor="category" className="inventory__item-category-input-label">
             Category
           </h5>
           <select name="categories" className="inventory__category-select">
+            <option>Please Select</option>
             <option value="electronics">Electronics</option>
           </select>
         </div>
@@ -67,6 +68,12 @@ function EditItem() {
             </div>
           </div>
         </div>
+        <div className="inventory__quan">
+          <h5 htmlFor="name" className="inventory__item-name-input-label">
+            Quantity
+          </h5>
+          <input type="text" name="item-name" className="inventory__item-name-input" placeholder="0" />
+        </div>
         <div className="inventory__warehouse-container">
           <h5 htmlFor="warehouse" className="inventory__warehouse-header">
             Warehouse
@@ -78,10 +85,10 @@ function EditItem() {
       </section>
       <div className="inventory__action-btn-container">
         <button className="inventory__cancel-btn">Cancel</button>
-        <button className="inventory__save-btn">Save</button>
+        <button className="inventory__save-btn">+ Add Item</button>
       </div>
     </main>
   );
 }
 
-export default EditItem
+export default AddItem
