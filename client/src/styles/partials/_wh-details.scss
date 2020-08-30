@@ -242,7 +242,7 @@
       width: 10.875rem;
     }
   }
-
+  
   &__inv-item {
     padding: 1rem 1.5rem 1.5rem;
     border-top: 1px solid $secondary-color-cloud;
@@ -253,6 +253,10 @@
       @include tablet {
         border-top: none;
       }
+    }
+
+    &:hover {
+      background: rgba(46, 102, 230, 0.07);
     }
 
     @include tablet {
@@ -268,6 +272,7 @@
   &__link {
     display: flex;
     align-items: flex-end;
+    @extend %links;
   }
 
   &__left-container {
