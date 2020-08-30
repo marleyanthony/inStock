@@ -14,6 +14,8 @@ class WarehouseDetails extends React.Component {
   };
 
   componentDidMount() {
+    const name = this.props.match.params.name;
+    console.log("name:", name);
     this.getSingleWarehouse(this.props.match.params.name);
   }
 

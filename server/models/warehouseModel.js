@@ -18,23 +18,21 @@ function list() {
   return JSON.parse(data);
 }
 
-const getWarehouseByName = (name) => {
-  // console.log("name:", name);
+const getWarehouseByName = (pathName) => {
+  // console.log("pathName:", pathName);
   const warehouseData = JSON.parse(fs.readFileSync(warehouseFile));
   // console.log("warehouseData:", warehouseData);
-  const warehouse = warehouseData.filter(
-    (warehouse) => warehouse.name.split(" ").join("") === name
-  );
+  const warehouse = warehouseData.filter(({ navLink }) => navLink === pathName);
   // console.log("warehouse:", warehouse);
   return warehouse;
 };
 
-const getWarehouseInventory = (name) => {
+const getWarehouseInventory = (pathName) => {
   // console.log("name:", name);
   const inventoryData = JSON.parse(fs.readFileSync(inventoryFile));
   const warehouseInventory = inventoryData.filter((item) => {
     // console.log("item.warehouseName:", item.warehouseName);
-    return item.warehouseName === name;
+    return item.warehouseName.split(" ").join("") === pathName;
   });
   // console.log("warehouseInventory:", warehouseInventory);
   return warehouseInventory;
