@@ -6,6 +6,7 @@ import Warehouses from "./components/Warehouses";
 import WarehouseDetails from "./components/WarehouseDetails";
 import InventoryItems from "./components/InventoryItems";
 import EditItem from "./components/EditItem";
+import AddItem from "./components/AddItem";
 
 class App extends React.Component {
   state = {
@@ -71,6 +72,16 @@ class App extends React.Component {
           render={(renderProps) => {
             return (
               <EditItem
+                {...renderProps}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/add-item"
+          render={(renderProps) => {
+            return (
+              <AddItem
                 {...renderProps}
               />
             );

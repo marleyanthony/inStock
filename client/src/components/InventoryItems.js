@@ -17,11 +17,9 @@ const InventoryItems = ({ inventories }) => {
             Inventory Item
           </p>
           <div className="inventory__item-name-container">
-            <Link to={'edit-item'} className="warehouses__link">
-              <h3 className="inventory__item-name">
-                {inventory.item}
-              </h3>
-            </Link>
+            <h3 className="inventory__item-name">
+              {inventory.item}
+            </h3>
             <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
           </div>
           <p className="inventory__label">
@@ -61,7 +59,9 @@ const InventoryItems = ({ inventories }) => {
 
         <div className="inventory__item-icons-container">
           <img src={deleteIcon} alt="" className="inventory__icon" />
-          <img src={editIcon} alt="" className="inventory__icon" />
+          <Link to={'edit-item'} className="warehouses__link">
+            <img src={editIcon} alt="" className="inventory__icon" />
+          </Link>
         </div>
       </div>
     );
@@ -78,7 +78,9 @@ const InventoryItems = ({ inventories }) => {
             <input type="search" className="inventory__searchbar" name="search" placeholder="Search..." />
             <img src={searchIcon} alt="" className="inventory__search-icon" />
           </label>
-          <button className="inventory__button">+ Add New Item</button>
+          <Link to={'add-item'} className="warehouses__link">
+            <button className="inventory__button">+ Add New Item</button>
+          </Link>
         </div>
       </section>
 
