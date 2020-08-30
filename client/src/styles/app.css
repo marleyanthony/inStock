@@ -1023,6 +1023,176 @@ a {
   }
 }
 
+@media (min-width: 375px) {
+  .editWarehouse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: 4.27%;
+    right: 4.27%;
+    z-index: 10;
+    height: auto;
+    -webkit-box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+            box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 0.1875rem;
+    background: #ffffff;
+  }
+  .editWarehouse__details-contacts-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .editWarehouse__arr-heading-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .editWarehouse__wh-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    font-style: normal;
+    color: #13182c;
+    height: 2.25rem;
+    padding-left: 0.5rem;
+  }
+  .editWarehouse__wh-details-container, .editWarehouse__wh-contacts-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 2rem;
+    border-top: 1px solid #bdc5d5;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .editWarehouse__details-heading, .editWarehouse__contacts-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 1.5rem;
+    color: #13182c;
+  }
+  .editWarehouse__wh-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 1.25rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 1rem;
+  }
+  .editWarehouse__input-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 0;
+    border: 1px solid #bdc5d5;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 1.25rem;
+    height: 2.25rem;
+    width: 18.4375rem;
+    padding-left: 1rem;
+    background: #ffffff;
+  }
+  .editWarehouse__input-field::-webkit-input-placeholder {
+    color: #13182c;
+  }
+  .editWarehouse__input-field:-ms-input-placeholder {
+    color: #13182c;
+  }
+  .editWarehouse__input-field::-ms-input-placeholder {
+    color: #13182c;
+  }
+  .editWarehouse__input-field::placeholder {
+    color: #13182c;
+  }
+  .editWarehouse__errorRequired-container {
+    display: none;
+  }
+  .editWarehouse__action-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 21.4375rem;
+    height: 4.25rem;
+    background: rgba(247, 248, 249, 0.7);
+    border-radius: 0px 0px 3px 3px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .editWarehouse__cancel-btn, .editWarehouse__add-wh-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 8.6875rem;
+    height: 2.25rem;
+    border: 1px solid #bdc5d5;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 1.25rem;
+    background: #ffffff;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .editWarehouse__cancel-btn--colorAccent, .editWarehouse__add-wh-btn--colorAccent {
+    background: #2e66e6;
+    color: #ffffff;
+  }
+}
+
 .warehouse {
   background: #ffffff;
   border-radius: 0.1875rem;

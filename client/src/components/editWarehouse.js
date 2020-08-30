@@ -10,7 +10,8 @@ class editWarehouse extends Component {
 
     render() {
         return (
-            <form className="editWarehouse" onSubmit={this.handleSubmit}>
+            // <form className="editWarehouse" onSubmit={this.handleSubmit}>
+            <form className="editWarehouse" >
                 <div className="editWarehouse__arr-heading-container">
                     <img src={arrowBack} alt="Back Arrow" />
                     <h1 className="editWarehouse__wh-heading">Edit Warehouse</h1>
@@ -30,7 +31,6 @@ class editWarehouse extends Component {
                         <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-det"
                             type="text" placeholder="469 King Street West"
                             name="address"
-                        // onChange={this.handleChange}
                         />
                         <div className="editWarehouse__errorRequired-container">
                         </div>
@@ -38,7 +38,6 @@ class editWarehouse extends Component {
                         <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-det"
                             type="text" placeholder="Toronto"
                             name="city"
-                        // onChange={this.handleChange}
                         />
                         <div className="editWarehouse__errorRequired-container">
                         </div>
@@ -46,7 +45,6 @@ class editWarehouse extends Component {
                         <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-det"
                             type="text" placeholder="CAN"
                             name="country"
-                        // onChange={this.handleChange}
                         />
                         <div className="editWarehouse__errorRequired-container">
                         </div>
@@ -58,7 +56,6 @@ class editWarehouse extends Component {
                         <input className="editWarehouse__input-field newWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="Graeme Lyon"
                             name="contactName"
-                        // onChange={this.handleChange}
                         />
                         <div className="editWarehouse__errorRequired-container">
                         </div>
@@ -66,7 +63,6 @@ class editWarehouse extends Component {
                         <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="Warehouse Manager"
                             name="position"
-                        // onChange={this.handleChange}
                         />
                         <div className="editWarehouse__errorRequired-container">
                         </div>
@@ -74,7 +70,6 @@ class editWarehouse extends Component {
                         <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="+1 (647) 504-0911"
                             name="phone"
-                        // onChange={this.handleChange}
                         />
                         <div className="editWarehouse__errorRequired-container">
                         </div>
@@ -82,7 +77,6 @@ class editWarehouse extends Component {
                         <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="glyon@insotck.com"
                             name="email"
-                        // onChange={this.handleChange}
                         />
                         <div className="editWarehouse__errorRequired-container">
                         </div>
