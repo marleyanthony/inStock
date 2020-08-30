@@ -40,12 +40,14 @@
     align-items: center;
   }
 
-  &__details-container {
+  &__details-container,
+  &__availability-container {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #BDC5D5;
   }
 
-  &__details-header {
+  &__details-header,
+  &__availability-header {
     margin-bottom: 1.5rem;
   }
 
@@ -90,5 +92,63 @@
     box-sizing: border-box;
     border-radius: 20px;
     padding: 0.5rem 1rem;
+  }
+
+
+  // item availability section 
+  &__radio-btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__status-label {
+    font-size: 0.8125rem;
+  }
+
+  &__status-outstock-radio {
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__status-container {
+    margin-bottom: 1rem;
+  }
+
+  &__warehouse-header {
+    margin-bottom: 4px;
+  }
+
+  &__warehouse-select-list {
+    width: 100%;
+    height: 2.25rem;
+    background: #FFFFFF;
+    border: 1px solid #BDC5D5;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__action-btn-container {
+    background: rgba(247, 248, 249, 0.7);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__cancel-btn,
+  &__save-btn {
+    width: 139px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #BDC5D5;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  &__save-btn {
+    background: #2E66E6;
+    color: #FFFFFF;
   }
 }
