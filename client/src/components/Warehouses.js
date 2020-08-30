@@ -43,49 +43,38 @@ class Warehouses extends React.Component {
       searchTerm,
       searchResults,
     });
+  }
 
-        <div className="warehouses__item-icons-container">
-          <Link to={'delete-warehouse'} className="warehouses__link">
-            <img src={deleteIcon} alt="" className="warehouses__icon" />
-          </Link>
-          <img src={editIcon} alt="" className="warehouses__icon" />
-        </div>
-      </div>
-    );
-  });
+  //   <div className="warehouses__item-icons-container">
+  //     <Link to={'delete-warehouse'} className="warehouses__link">
+  //       <img src={deleteIcon} alt="" className="warehouses__icon" />
+  //     </Link>
+  //     <img src={editIcon} alt="" className="warehouses__icon" />
+  //   </div>
+  // </div>
 
-  return (
-    <main className="warehouses">
-      <section className="warehouses__header-container">
-        <h1 className="warehouses__heading">Warehouses</h1>
-        <div className="warehouses__search-add">
-          <label htmlFor="search" className="warehouses__search-label">
-            <input
-              type="search"
-              className="warehouses__searchbar"
-              name="search"
-              placeholder="Search..."
-            />
-            <img src={searchIcon} alt="" className="warehouses__search-icon" />
-          </label>
-          <Link to="/newWarehouse" >
-            <button className="warehouses__button">+ Add New Warehouse</button>
-          </Link>
-        </div>
-      </section>
+  // return (
+  //   <main className="warehouses" >
+  //     <section className="warehouses__header-container">
+  //       <h1 className="warehouses__heading">Warehouses</h1>
+  //       <div className="warehouses__search-add">
+  //         <label htmlFor="search" className="warehouses__search-label">
+  //           <input
+  //             type="search"
+  //             className="warehouses__searchbar"
+  //             name="search"
+  //             placeholder="Search..."
+  //           />
+  //           <img src={searchIcon} alt="" className="warehouses__search-icon" />
+  //         </label>
+  //         <Link to="/newWarehouse" >
+  //           <button className="warehouses__button">+ Add New Warehouse</button>
+  //         </Link>
+  //       </div>
+  //     </section>
+  //   </main>
+  // );
 
-
-    // if (searchResults.length > 0) {
-    //   this.setState({
-    //     searchTerm,
-    //     searchResults,
-    //   });
-    // } else {
-    //   this.setState({
-    //     searchTerm,
-    //   });
-    // }
-  };
 
   render() {
     let warehouses = this.props.warehouses;
@@ -210,8 +199,8 @@ class Warehouses extends React.Component {
               <h3 className="warehouses__text-address">No results found</h3>
             </div>
           ) : (
-            warehouseList
-          )}
+              warehouseList
+            )}
         </section>
       </main>
     );
