@@ -75,7 +75,7 @@ class editWarehouse extends Component {
                         </div>
                         <p className="editWarehouse__wh-label">Email</p>
                         <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-cont"
-                            type="text" placeholder="glyon@insotck.com"
+                            type="text" placeholder="glyon@instock.com"
                             name="email"
                         />
                         <div className="editWarehouse__errorRequired-container">

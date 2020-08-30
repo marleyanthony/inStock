@@ -1032,9 +1032,8 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    position: absolute;
-    left: 4.27%;
-    right: 4.27%;
+    position: relative;
+    margin: 0 1rem;
     z-index: 10;
     height: auto;
     -webkit-box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
@@ -1084,7 +1083,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-top: 1px solid #bdc5d5;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1131,15 +1130,35 @@ a {
   }
   .editWarehouse__input-field::-webkit-input-placeholder {
     color: #13182c;
+    font-family: "Titillium Web";
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+    font-style: normal;
   }
   .editWarehouse__input-field:-ms-input-placeholder {
     color: #13182c;
+    font-family: "Titillium Web";
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+    font-style: normal;
   }
   .editWarehouse__input-field::-ms-input-placeholder {
     color: #13182c;
+    font-family: "Titillium Web";
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+    font-style: normal;
   }
   .editWarehouse__input-field::placeholder {
     color: #13182c;
+    font-family: "Titillium Web";
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+    font-style: normal;
   }
   .editWarehouse__errorRequired-container {
     display: none;
