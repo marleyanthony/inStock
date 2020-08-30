@@ -10,7 +10,7 @@ import editIcon from "../assets/Icons/edit-24px.svg";
 class Warehouses extends React.Component {
   state = {
     searchTerm: null,
-    searchResults: null,
+    searchResults: [],
   };
 
   componentWillUnmount() {
@@ -18,46 +18,54 @@ class Warehouses extends React.Component {
       searchTerm: null,
       searchResults: null,
     });
+
+    console.log("component unmounted", this.state);
   }
 
   searchWarehouseData = (e) => {
     const searchTerm = e.target.value;
-    console.log("searchTerm:", searchTerm);
+    // regex that will check if warehouse values contain the onChange input,
+    // is also case insensitive and searches special characters! that was a hard one
+    const regex = /\W/g;
+    const searchTermRegex = RegExp(e.target.value.replace(regex, "\\$&"), "gi");
+    // console.log("searchTermRegex:", searchTermRegex);
+    // console.log("searchTerm:", searchTerm);
     const warehouses = this.props.warehouses;
     let searchResults = warehouses.filter((warehouse) => {
-      console.log("warehouse values:", Object.values(warehouse));
-      console.log(
-        "warehouses values includes searchTerm:",
-        Object.values(warehouse).includes(searchTerm)
-      );
       return (
-        Object.values(warehouse).includes(searchTerm) ||
-        Object.values(warehouse.contact).includes(searchTerm)
+        searchTermRegex.test(Object.values(warehouse)) ||
+        searchTermRegex.test(Object.values(warehouse.contact))
       );
     });
-    // if (searchResults.length === 0 && !searchTerm) {
-    //   searchResults = warehouses;
-    // }
-    console.log("searchResults:", searchResults);
+    // console.log("searchResults:", searchResults);
 
-    if (searchResults.length > 0) {
-      this.setState({
-        searchTerm,
-        searchResults,
-      });
-    } else {
-      this.setState({
-        searchTerm,
-      });
-    }
+    this.setState({
+      searchTerm,
+      searchResults,
+    });
+
+    // if (searchResults.length > 0) {
+    //   this.setState({
+    //     searchTerm,
+    //     searchResults,
+    //   });
+    // } else {
+    //   this.setState({
+    //     searchTerm,
+    //   });
+    // }
   };
 
   render() {
+    let warehouses = this.props.warehouses;
+
     if (this.state.searchTerm !== null && this.state.searchResults.length > 0) {
-      this.props.warehouses = this.state.searchResults;
+      warehouses = this.state.searchResults;
+      // } else {
+      //   warehouses = warehouses;
     }
 
-    const warehouseList = this.props.warehouses.map((warehouse) => {
+    const warehouseList = warehouses.map((warehouse) => {
       return (
         <div className="warehouses__item" key={warehouse.id}>
           <div className="warehouses__item-left-container">
@@ -166,7 +174,13 @@ class Warehouses extends React.Component {
             </div>
             <p className="warehouses__sort-label sort-actions">ACTIONS</p>
           </div>
-          {warehouseList}
+          {this.state.searchTerm && this.state.searchResults.length < 1 ? (
+            <div className="warehouses__search-no-results">
+              <h3 className="warehouses__text-address">No results found</h3>
+            </div>
+          ) : (
+            warehouseList
+          )}
         </section>
       </main>
     );
