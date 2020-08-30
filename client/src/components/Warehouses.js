@@ -50,7 +50,9 @@ const Warehouses = ({ warehouses }) => {
         </div>
 
         <div className="warehouses__item-icons-container">
-          <img src={deleteIcon} alt="" className="warehouses__icon" />
+          <Link to={'delete-warehouse'} className="warehouses__link">
+            <img src={deleteIcon} alt="" className="warehouses__icon" />
+          </Link>
           <img src={editIcon} alt="" className="warehouses__icon" />
         </div>
       </div>
