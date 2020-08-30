@@ -103,9 +103,7 @@ class App extends React.Component {
           path="/delete-warehouse"
           render={(renderProps) => {
             return (
-              <DeleteWarehouse
-                {...renderProps}
-              />
+              <DeleteWarehouse {...renderProps} warehouses={this.state.warehouses} />
             );
           }}
         />
