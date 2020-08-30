@@ -10,12 +10,10 @@ class newWarehouse extends Component {
         address: "",
         city: "",
         country: "",
-        // contact: {
         contactName: "",
         position: "",
         phone: "",
         email: ""
-        // }
 
     };
 
@@ -148,7 +146,7 @@ class newWarehouse extends Component {
                 </div>
 
                 <div className="newWarehouse__action-btn-container">
-                    <button className="newWarehouse__cancel-btn" >Cancel</button>
+                    <button className="newWarehouse__cancel-btn" onClick={this.cancelBackToPage}>Cancel</button>
                     <button className="newWarehouse__add-wh-btn newWarehouse__add-wh-btn--colorAccent"
                         type="submit" value="submit"
                     >+ Add Warehouse</button>
