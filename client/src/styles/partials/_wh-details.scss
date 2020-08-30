@@ -39,9 +39,6 @@
     align-items: center;
   }
 
-  &__icon {
-  }
-
   &__icon--back {
     padding-right: 0.75rem;
   }
@@ -193,8 +190,12 @@
     color: $primary-color-indigo;
   }
 
-  &__text--status {
+  &__text--status-in {
     @extend %status-in-stock;
+  }
+
+  &__text--status-out {
+    @extend %status-out-of-stock;
   }
 
   // text adjustments starting at tablet
@@ -240,9 +241,6 @@
     @include desktop {
       width: 10.875rem;
     }
-  }
-
-  &__inv-list {
   }
 
   &__inv-item {

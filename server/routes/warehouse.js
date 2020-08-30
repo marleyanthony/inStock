@@ -1,9 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const warehouseController = require('../controllers/warehouseController');
+
 const warehouses = __dirname + "../../db/warehouses.json";
 const addWarehouse = require(warehouses);
 
+const warehouseController = require("../controllers/warehouseController");
+
+router.get("/", warehouseController.listWarehouses);
+router.get("/:name", warehouseController.listWarehouseDetails);
 
 
 
