@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import App from "./App";
 import Footer from "./components/Footer";
 import newWarehouse from "./components/newWarehouse";
+import editWarehouse from "./components/editWarehouse"
 import "./styles/app.css";
 
 
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Redirect to="/warehouse" />
       </Route>
       <Route path="/newwarehouse" component={newWarehouse} />
+      <Route path="/editwarehouse" component={editWarehouse} />
       <App />
       <Footer />
       <Route path="/*" to="/warehouse" />
