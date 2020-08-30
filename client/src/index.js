@@ -11,7 +11,7 @@ import "./styles/app.css";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-<<<<<<< HEAD
+      {/* <div className="background"> */}
       <Header />
       <Route path="/" exact>
         <Redirect to="/warehouse" />
@@ -19,17 +19,8 @@ ReactDOM.render(
       <Route path="/newwarehouse" component={newWarehouse} />
       <App />
       <Footer />
-=======
-      <div className="background">
-        <Header />
-        <Route path="/" exact>
-          <Redirect to="/warehouse" />
-        </Route>
-        <App />
-        <Footer />
-        <Route path="/*" to="/warehouse" />
-      </div>
->>>>>>> master
+      <Route path="/*" to="/warehouse" />
+      {/* </div> */}
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

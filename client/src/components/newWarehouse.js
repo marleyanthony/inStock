@@ -11,7 +11,7 @@ class newWarehouse extends Component {
         city: "",
         country: "",
         // contact: {
-        // name: "",
+        contactName: "",
         position: "",
         phone: "",
         email: ""
@@ -25,17 +25,20 @@ class newWarehouse extends Component {
         });
     };
 
+
     handleSubmit = (event) => {
         event.preventDefault();
-        const { name, address, city, country, position, phone, email } = event.target;
+
+        const { name, address, city, country, contactName, position, phone, email } = event.target;
 
 
         axios
-            .post("http://localhost:8080", {
+            .post("http://localhost:8080/warehouse", {
                 name: name.value,
                 address: address.value,
                 city: city.value,
                 country: country.value,
+                contactName: contactName.value,
                 position: position.value,
                 phone: phone.value,
                 email: email.value
@@ -43,7 +46,7 @@ class newWarehouse extends Component {
             .then((res) => {
                 console.log(res);
                 this.setState({
-                    videos: res.data,
+                    addWarehouse: res.data,
                 });
             })
             .catch((err) => {
@@ -69,7 +72,6 @@ class newWarehouse extends Component {
                         <input className="newWarehouse__input-field newWarehouse__input-field--tabDesk-det"
                             type="text" placeholder="Warehouse Name"
                             name="name"
-                            value={this.state.name}
                             onChange={this.handleChange}
                         />
                         <div className="newWarehouse__errorRequired-container">
@@ -79,7 +81,6 @@ class newWarehouse extends Component {
                         <input className="newWarehouse__input-field newWarehouse__input-field--tabDesk-det"
                             type="text" placeholder="Street Name"
                             name="address"
-                            value={this.state.name}
                             onChange={this.handleChange}
                         />
                         <div className="newWarehouse__errorRequired-container">
@@ -89,7 +90,6 @@ class newWarehouse extends Component {
                         <input className="newWarehouse__input-field newWarehouse__input-field--tabDesk-det"
                             type="text" placeholder="City"
                             name="city"
-                            value={this.state.name}
                             onChange={this.handleChange}
                         />
                         <div className="newWarehouse__errorRequired-container">
@@ -99,7 +99,6 @@ class newWarehouse extends Component {
                         <input className="newWarehouse__input-field newWarehouse__input-field--tabDesk-det"
                             type="text" placeholder="Country"
                             name="country"
-                            value={this.state.name}
                             onChange={this.handleChange}
                         />
                         <div className="newWarehouse__errorRequired-container">
@@ -112,8 +111,7 @@ class newWarehouse extends Component {
                         <p className="newWarehouse__wh-label">Contact Name</p>
                         <input className="newWarehouse__input-field newWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="Contact Number"
-                            name="name"
-                            value={this.state.name}
+                            name="contactName"
                             onChange={this.handleChange}
                         />
                         <div className="newWarehouse__errorRequired-container">
@@ -123,7 +121,6 @@ class newWarehouse extends Component {
                         <input className="newWarehouse__input-field newWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="Position"
                             name="position"
-                            value={this.state.name}
                             onChange={this.handleChange}
                         />
                         <div className="newWarehouse__errorRequired-container">
@@ -133,7 +130,6 @@ class newWarehouse extends Component {
                         <input className="newWarehouse__input-field newWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="Phone Number"
                             name="phone"
-                            value={this.state.name}
                             onChange={this.handleChange}
                         />
                         <div className="newWarehouse__errorRequired-container">
@@ -143,7 +139,6 @@ class newWarehouse extends Component {
                         <input className="newWarehouse__input-field newWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="Email"
                             name="email"
-                            value={this.state.name}
                             onChange={this.handleChange}
                         />
                         <div className="newWarehouse__errorRequired-container">

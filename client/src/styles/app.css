@@ -759,7 +759,6 @@ a {
   }
 }
 
-<<<<<<< HEAD
 @media (min-width: 375px) {
   .newWarehouse {
     display: -webkit-box;
@@ -1019,17 +1018,11 @@ a {
   }
 }
 
-.inv {
-  position: absolute;
-  z-index: 10;
-  background-color: white;
-=======
 .warehouse {
   background: #ffffff;
   border-radius: 0.1875rem;
   -webkit-box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
           box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
->>>>>>> master
   margin: 0 1rem;
   position: relative;
   z-index: 10;

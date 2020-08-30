@@ -14,7 +14,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    this.getWarehouses();
+    // this.getWarehouses();
     this.getInvItems();
     // console.log("component did mount:", this.state);
   }
