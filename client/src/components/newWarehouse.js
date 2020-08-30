@@ -25,10 +25,6 @@ class newWarehouse extends Component {
         });
     };
 
-    // handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     const { title, description } = event.target;
-
     handleSubmit = (event) => {
         event.preventDefault();
         const { name, address, city, country, position, phone, email } = event.target;
