@@ -206,7 +206,7 @@ a {
   }
 }
 
-.warehouse__text--status {
+.warehouse__text--status-out, .warehouse__text--status-in {
   font-family: "Titillium Web";
   font-weight: bold;
   font-size: 0.6875rem;
@@ -220,10 +220,15 @@ a {
 }
 
 @media (min-width: 768px) {
-  .warehouse__text--status {
+  .warehouse__text--status-out, .warehouse__text--status-in {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
+}
+
+.warehouse__text--status-out {
+  color: #c94515;
+  background: rgba(201, 69, 21, 0.07);
 }
 
 @media (min-width: 375px) {
