@@ -40,4 +40,9 @@
     box-sizing: border-box;
     border-radius: 20px;
   }
+
+  @include tablet {
+    width: 672px;
+    height: 262px;
+  }
 }

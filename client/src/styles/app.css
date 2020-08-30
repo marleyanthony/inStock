@@ -2434,6 +2434,13 @@ a {
   border-radius: 20px;
 }
 
+@media (min-width: 768px) {
+  .delete-modal {
+    width: 672px;
+    height: 262px;
+  }
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;

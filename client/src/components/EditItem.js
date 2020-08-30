@@ -77,7 +77,9 @@ function EditItem() {
         </div>
       </section>
       <div className="inventory__action-btn-container">
-        <button className="inventory__cancel-btn">Cancel</button>
+        <Link to="/inventory">
+          <button className="inventory__cancel-btn">Cancel</button>
+        </Link>
         <button className="inventory__save-btn">Save</button>
       </div>
     </main>

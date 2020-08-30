@@ -22,4 +22,4 @@ const listWarehouseDetails = (req, res) => {
   res.json(warehouseDetails);
 };
 
-module.exports = { listWarehouses, listWarehouseDetails, writeJSONfile };
+module.exports = { listWarehouses, listWarehouseDetails, writeJSONFile };
