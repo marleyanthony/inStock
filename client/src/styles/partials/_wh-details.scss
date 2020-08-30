@@ -39,8 +39,8 @@
     align-items: center;
   }
 
-  &__icon {
-  }
+  // &__icon {
+  // }
 
   &__icon--back {
     padding-right: 0.75rem;
@@ -246,8 +246,8 @@
     }
   }
 
-  &__inv-list {
-  }
+  // &__inv-list {
+  // }
 
   &__inv-item {
     padding: 1rem 1.5rem 1.5rem;
@@ -259,6 +259,10 @@
       @include tablet {
         border-top: none;
       }
+    }
+
+    &:hover {
+      background: rgba(46, 102, 230, 0.07);
     }
 
     @include tablet {
@@ -274,6 +278,7 @@
   &__link {
     display: flex;
     align-items: flex-end;
+    @extend %links;
   }
 
   &__left-container {

@@ -147,6 +147,12 @@ a {
   }
 }
 
+.warehouses__link:hover, .warehouse__link:hover, .warehouses__link:focus, .warehouse__link:focus {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #2e66e6;
+          text-decoration-color: #2e66e6;
+}
+
 .warehouses__searchbar, .inv__search-bar {
   font-weight: normal;
   width: 100%;
@@ -535,6 +541,10 @@ a {
   .warehouses__item:nth-child(2) {
     border-top: none;
   }
+}
+
+.warehouses__item:hover {
+  background: rgba(46, 102, 230, 0.07);
 }
 
 @media (min-width: 768px) {
@@ -1079,6 +1089,10 @@ a {
   .warehouse__inv-item:nth-child(2) {
     border-top: none;
   }
+}
+
+.warehouse__inv-item:hover {
+  background: rgba(46, 102, 230, 0.07);
 }
 
 @media (min-width: 768px) {
