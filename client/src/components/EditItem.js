@@ -28,17 +28,17 @@ function EditItem() {
           </h5>
           <input type="text" name="item-name" className="inventory__item-name-input" />
         </div>
-        <div action="" className="inventory__item-name-container">
-          <label htmlFor="name">
+        <div action="" className="inventory__item-description-container">
+          <h5 htmlFor="name" className="inventory__item-description-input-label">
             Description
-          </label>
-          <textarea name="description" cols="30" rows="10"></textarea>
+          </h5>
+          <textarea name="description" className="inventory__item-description-input"></textarea>
         </div>
         <div action="" className="inventory__category-container">
-          <label htmlFor="category">
+          <h5 htmlFor="category" className="inventory__item-category-input-label">
             Category
-          </label>
-          <select name="categories">
+          </h5>
+          <select name="categories" className="inventory__category-select">
             <option value="electronics">Electronics</option>
           </select>
         </div>

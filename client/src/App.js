@@ -16,14 +16,12 @@ class App extends React.Component {
   componentDidMount() {
     this.getWarehouses();
     this.getInvItems();
-    // console.log("component did mount:", this.state);
+    console.log("component mounted");
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    // console.log("component updated");
-    // console.log("prevProps:", prevProps);
-    // console.log("prevState:", prevState);
-  }
+  // componentDidUpdate(prevProps) {
+  //   console.log("component updated");
+  // }
 
   getInvItems() {
     axios.get("http://localhost:8080/inventory").then((res) => {
@@ -54,12 +52,7 @@ class App extends React.Component {
         <Route
           path="/warehouse/:name"
           render={(renderProps) => {
-            return (
-              <WarehouseDetails
-                {...renderProps}
-                warehouses={this.state.warehouses}
-              />
-            );
+            return <WarehouseDetails {...renderProps} />;
           }}
         />
         <Route
