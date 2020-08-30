@@ -165,4 +165,33 @@
       height: 38px;
     }
   }
+  @include desktop {
+    width: 63.75em;
+    // height: 43.75rem;
+    margin: 0 8rem;
+    &__wh-details-container {
+      width: 31.8125rem;
+    }
+    &__input-field {
+      &--tabDesk-det {
+        width: 26.8125rem;
+      }
+      &--tabDesk-cont {
+        width: 26.875rem;
+      }
+    }
+    &__wh-contacts-container {
+      width: 31.875rem;
+      border-top: none;
+    }
+    &__errorRequired-container {
+      display: flex;
+      color: $supporting-color-red;
+      font-style: normal;
+      @include fonts(0.75rem, 1.125rem, normal);
+    }
+    &__action-btn-container {
+      width: 63.75em;
+    }
+  }
 }

@@ -1282,6 +1282,39 @@ a {
   }
 }
 
+@media (min-width: 1280px) {
+  .editWarehouse {
+    width: 63.75em;
+    margin: 0 8rem;
+  }
+  .editWarehouse__wh-details-container {
+    width: 31.8125rem;
+  }
+  .editWarehouse__input-field--tabDesk-det {
+    width: 26.8125rem;
+  }
+  .editWarehouse__input-field--tabDesk-cont {
+    width: 26.875rem;
+  }
+  .editWarehouse__wh-contacts-container {
+    width: 31.875rem;
+    border-top: none;
+  }
+  .editWarehouse__errorRequired-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #c94515;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: normal;
+  }
+  .editWarehouse__action-btn-container {
+    width: 63.75em;
+  }
+}
+
 .warehouse {
   background: #ffffff;
   border-radius: 0.1875rem;
