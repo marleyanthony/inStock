@@ -5,6 +5,7 @@ import arrowBack from "../assets/Icons/arrow_back-24px.svg";
 
 
 class editWarehouse extends Component {
+    // function editWarehouse() {
 
 
     render() {
