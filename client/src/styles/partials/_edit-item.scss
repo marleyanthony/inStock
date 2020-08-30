@@ -1,0 +1,41 @@
+.inventory {
+  background: $primary-color-white;
+  border-radius: 0.1875rem;
+  box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
+  margin: 0 1rem;
+  position: relative;
+  z-index: 10;
+
+  @include tablet {
+    margin: 0 2rem;
+  }
+
+  @include desktop {
+    margin: 0 8.125rem;
+  }
+
+  &__header-container {
+    padding: 0 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      padding: 0 2rem;
+      padding-top: 2rem;
+      padding-bottom: 1.25rem;
+    }
+
+    @include desktop {
+      padding: 0 2.5rem;
+      padding-top: 2rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__back-name {
+    display: flex;
+    align-items: center;
+  }
+}

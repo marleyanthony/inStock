@@ -5,6 +5,7 @@ import axios from "axios";
 import Warehouses from "./components/Warehouses";
 import WarehouseDetails from "./components/WarehouseDetails";
 import InventoryItems from "./components/InventoryItems";
+import EditItem from "./components/EditItem";
 
 class App extends React.Component {
   state = {
@@ -40,43 +41,49 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="background">
-        <Switch>
-          <Route
-            path="/warehouse"
-            render={(renderProps) => {
-              return (
-                <Warehouses
-                  {...renderProps}
-                  warehouses={this.state.warehouses}
-                />
-              );
-            }}
-          />
-          <Route
-            path="/warehouse/:name"
-            render={(renderProps) => {
-              return (
-                <WarehouseDetails
-                  {...renderProps}
-                  warehouses={this.state.warehouses}
-                />
-              );
-            }}
-          />
-          <Route
-            path="/inventory"
-            render={(renderProps) => {
-              return (
-                <InventoryItems
-                  {...renderProps}
-                  inventories={this.state.inventories}
-                />
-              );
-            }}
-          />
-        </Switch>
-      </div>
+      <Switch>
+        <Route
+          path="/warehouse"
+          render={(renderProps) => {
+            return (
+              <Warehouses {...renderProps} warehouses={this.state.warehouses} />
+            );
+          }}
+          exact
+        />
+        <Route
+          path="/warehouse/:name"
+          render={(renderProps) => {
+            return (
+              <WarehouseDetails
+                {...renderProps}
+                warehouses={this.state.warehouses}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/inventory"
+          render={(renderProps) => {
+            return (
+              <InventoryItems
+                {...renderProps}
+                inventories={this.state.inventories}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/edit-item"
+          render={(renderProps) => {
+            return (
+              <EditItem
+                {...renderProps}
+              />
+            );
+          }}
+        />
+      </Switch>
     );
   }
 }
