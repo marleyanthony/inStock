@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    // position: absolute;
     margin: 0 1rem;
     z-index: 10;
     height: auto;
@@ -106,6 +107,62 @@
         background: $primary-color-indigo;
         color: $primary-color-white;
       }
+    }
+  }
+  @include tablet {
+    margin: 0 2rem;
+    &__details-contacts-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      justify-content: space-between;
+      border-top: 1px solid $secondary-color-cloud;
+      padding-top: 1.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &__arr-heading-container {
+      justify-content: flex-start;
+      padding-left: 1rem;
+    }
+    &__wh-details-container {
+      width: 21.9375rem;
+      border-right: 1px solid $secondary-color-cloud;
+    }
+    &__wh-contacts-container {
+      width: 22rem;
+      margin-left: 2rem;
+    }
+    &__wh-details-container,
+    &__wh-contacts-container {
+      border-top: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__details-heading,
+    &__contacts-heading {
+      margin-top: 0;
+    }
+    &__input-field {
+      &--tabDesk-det {
+        width: 17.96875rem;
+      }
+      &--tabDesk-cont {
+        width: 18rem;
+      }
+    }
+    &__action-btn-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 44rem;
+    }
+    &__cancel-btn {
+      width: 4.5rem;
+      margin-right: 1rem;
+    }
+    &__add-wh-btn {
+      width: 61px;
+      height: 38px;
     }
   }
 }

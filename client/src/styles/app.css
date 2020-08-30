@@ -1212,6 +1212,76 @@ a {
   }
 }
 
+@media (min-width: 768px) {
+  .editWarehouse {
+    margin: 0 2rem;
+  }
+  .editWarehouse__details-contacts-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 1px solid #bdc5d5;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .editWarehouse__arr-heading-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 1rem;
+  }
+  .editWarehouse__wh-details-container {
+    width: 21.9375rem;
+    border-right: 1px solid #bdc5d5;
+  }
+  .editWarehouse__wh-contacts-container {
+    width: 22rem;
+    margin-left: 2rem;
+  }
+  .editWarehouse__wh-details-container, .editWarehouse__wh-contacts-container {
+    border-top: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .editWarehouse__details-heading, .editWarehouse__contacts-heading {
+    margin-top: 0;
+  }
+  .editWarehouse__input-field--tabDesk-det {
+    width: 17.96875rem;
+  }
+  .editWarehouse__input-field--tabDesk-cont {
+    width: 18rem;
+  }
+  .editWarehouse__action-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 44rem;
+  }
+  .editWarehouse__cancel-btn {
+    width: 4.5rem;
+    margin-right: 1rem;
+  }
+  .editWarehouse__add-wh-btn {
+    width: 61px;
+    height: 38px;
+  }
+}
+
 .warehouse {
   background: #ffffff;
   border-radius: 0.1875rem;
