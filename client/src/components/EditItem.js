@@ -23,10 +23,10 @@ function EditItem() {
           Item Details
         </h3>
         <div action="" className="inventory__item-name-container">
-          <label htmlFor="name">
+          <h5 htmlFor="name" className="inventory__item-name-input-label">
             Item Name
-          </label>
-          <input type="text" name="item-name" />
+          </h5>
+          <input type="text" name="item-name" className="inventory__item-name-input" />
         </div>
         <div action="" className="inventory__item-name-container">
           <label htmlFor="name">
