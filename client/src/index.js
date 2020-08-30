@@ -15,7 +15,10 @@ ReactDOM.render(
         <Route path="/" exact>
           <Redirect to="/warehouse" />
         </Route>
-        <App />
+        <Route
+          path="/warehouse"
+          render={(renderProps) => <App {...renderProps} />}
+        />
         <Footer />
         <Route path="/*" to="/warehouse" />
       </div>
