@@ -39,9 +39,6 @@
     align-items: center;
   }
 
-  // &__icon {
-  // }
-
   &__icon--back {
     padding-right: 0.75rem;
   }
@@ -245,10 +242,7 @@
       width: 10.875rem;
     }
   }
-
-  // &__inv-list {
-  // }
-
+  
   &__inv-item {
     padding: 1rem 1.5rem 1.5rem;
     border-top: 1px solid $secondary-color-cloud;

@@ -5,6 +5,10 @@ import axios from "axios";
 import Warehouses from "./components/Warehouses";
 import WarehouseDetails from "./components/WarehouseDetails";
 import InventoryItems from "./components/InventoryItems";
+import EditItem from "./components/EditItem";
+import AddItem from "./components/AddItem";
+import DeleteItem from "./components/DeleteItem";
+import DeleteWarehouse from "./components/DeleteWarehouse";
 
 class App extends React.Component {
   state = {
@@ -13,7 +17,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    this.getWarehouses();
+    // this.getWarehouses();
     this.getInvItems();
     console.log("component mounted");
   }
@@ -61,6 +65,46 @@ class App extends React.Component {
               <InventoryItems
                 {...renderProps}
                 inventories={this.state.inventories}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/edit-item"
+          render={(renderProps) => {
+            return (
+              <EditItem
+                {...renderProps}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/add-item"
+          render={(renderProps) => {
+            return (
+              <AddItem
+                {...renderProps}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/delete-item"
+          render={(renderProps) => {
+            return (
+              <DeleteItem
+                {...renderProps}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/delete-warehouse"
+          render={(renderProps) => {
+            return (
+              <DeleteWarehouse
+                {...renderProps}
               />
             );
           }}

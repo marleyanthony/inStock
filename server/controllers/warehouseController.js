@@ -1,7 +1,14 @@
-const warehouse = require("../models/warehouseModel");
+const warehouse = require('../models/warehouseModel');
+const fs = require("fs");
 
 function listWarehouses(req, res) {
   res.json(warehouse.list());
+}
+function writeJSONFile(filename, content) {
+  fs.writeFileSync(filename, JSON.stringify(content), "utf8", err => {
+    if (err) {
+    }
+  });
 }
 
 const listWarehouseDetails = (req, res) => {
@@ -15,4 +22,4 @@ const listWarehouseDetails = (req, res) => {
   res.json(warehouseDetails);
 };
 
-module.exports = { listWarehouses, listWarehouseDetails };
+module.exports = { listWarehouses, listWarehouseDetails, writeJSONfile };

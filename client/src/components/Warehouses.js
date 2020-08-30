@@ -44,6 +44,37 @@ class Warehouses extends React.Component {
       searchResults,
     });
 
+        <div className="warehouses__item-icons-container">
+          <Link to={'delete-warehouse'} className="warehouses__link">
+            <img src={deleteIcon} alt="" className="warehouses__icon" />
+          </Link>
+          <img src={editIcon} alt="" className="warehouses__icon" />
+        </div>
+      </div>
+    );
+  });
+
+  return (
+    <main className="warehouses">
+      <section className="warehouses__header-container">
+        <h1 className="warehouses__heading">Warehouses</h1>
+        <div className="warehouses__search-add">
+          <label htmlFor="search" className="warehouses__search-label">
+            <input
+              type="search"
+              className="warehouses__searchbar"
+              name="search"
+              placeholder="Search..."
+            />
+            <img src={searchIcon} alt="" className="warehouses__search-icon" />
+          </label>
+          <Link to="/newWarehouse" >
+            <button className="warehouses__button">+ Add New Warehouse</button>
+          </Link>
+        </div>
+      </section>
+
+
     // if (searchResults.length > 0) {
     //   this.setState({
     //     searchTerm,
