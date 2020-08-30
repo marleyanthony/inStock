@@ -1326,14 +1326,14 @@ a {
   }
 }
 
-.inventory__header-container {
+.inventory__header-wrapper {
   padding: 0 1.5rem;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .inventory__header-container {
+  .inventory__header-wrapper {
     padding: 0 2rem;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
@@ -1347,7 +1347,7 @@ a {
 }
 
 @media (min-width: 1280px) {
-  .inventory__header-container {
+  .inventory__header-wrapper {
     padding: 0 2.5rem;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
@@ -2091,6 +2091,55 @@ a {
 .inventory__save-btn {
   background: #2E66E6;
   color: #FFFFFF;
+}
+
+.delete-modal {
+  background: #FFFFFF;
+  position: absolute;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.delete-modal__close-btn {
+  margin-bottom: 1.5625rem;
+}
+
+.delete-modal__header {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.delete-modal__delete-action-btn-container {
+  justify-self: flex-end;
+}
+
+.delete-modal__cancel-btn, .delete-modal__delete-btn {
+  width: 163px;
+  height: 36px;
+  left: 196px;
+  top: 607px;
+  background: #C94515;
+  color: #FFFFFF;
+  border-radius: 20px;
+  border: none;
+}
+
+.delete-modal__cancel-btn {
+  color: #5C667E;
+  background: #FFFFFF;
+  border: 1px solid #BDC5D5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
 }
 
 .footer {

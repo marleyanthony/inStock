@@ -58,7 +58,9 @@ const InventoryItems = ({ inventories }) => {
         </div>
 
         <div className="inventory__item-icons-container">
-          <img src={deleteIcon} alt="" className="inventory__icon" />
+          <Link to={'delete-item'} className="warehouses__link">
+            <img src={deleteIcon} alt="" className="inventory__icon" />
+          </Link>
           <Link to={'edit-item'} className="warehouses__link">
             <img src={editIcon} alt="" className="inventory__icon" />
           </Link>
@@ -69,7 +71,7 @@ const InventoryItems = ({ inventories }) => {
 
   return (
     <main className="inventory">
-      <section className="inventory__header-container">
+      <section className="inventory__header-wrapper">
         <h1 className="inventory__heading">
           Inventory
         </h1>

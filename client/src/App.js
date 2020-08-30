@@ -7,6 +7,7 @@ import WarehouseDetails from "./components/WarehouseDetails";
 import InventoryItems from "./components/InventoryItems";
 import EditItem from "./components/EditItem";
 import AddItem from "./components/AddItem";
+import DeleteItem from "./components/DeleteItem";
 
 class App extends React.Component {
   state = {
@@ -82,6 +83,16 @@ class App extends React.Component {
           render={(renderProps) => {
             return (
               <AddItem
+                {...renderProps}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/delete-item"
+          render={(renderProps) => {
+            return (
+              <DeleteItem
                 {...renderProps}
               />
             );
