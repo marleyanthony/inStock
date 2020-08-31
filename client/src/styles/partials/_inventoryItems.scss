@@ -105,10 +105,41 @@
     }
   }
 
+  &__sort-list {
+    border-bottom: 1px solid #bdc5d5;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+    @include tablet {
+      margin-top: unset;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 1.125rem 2rem;
+      border-bottom: 1px solid #bdc5d5;
+    }
+  }
+
+  &__sort-list-left {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    flex-direction: row;
+    }
+  }
+
   &__sort-left {
     @include tablet {
       display: flex;
       flex-grow: 1;
+    }
+
+    @include desktop {
+      max-width: 380px;
     }
   }
 
@@ -154,19 +185,6 @@
     }
   }
 
-  &__item-left-container {
-    width: 33.4375vw;
-
-    @include tablet {
-      // width: 16.875rem;
-      width: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-grow: 1;
-    }
-  }
-
   &__label {
     @extend %table-headers;
     margin-bottom: 0.25rem;
@@ -190,6 +208,19 @@
       flex-direction: row;
     }
   }
+
+  &__item-category-container {
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+
+    @include tablet {
+      margin: unset;
+    }
+  }
+
+  // &__mobile-wrapper {
+  //   display: flex;
+  // }
 
   &__link {
     display: flex;
@@ -249,6 +280,14 @@
     }
   }
 
+  &__status-container {
+    @include tablet {
+    height: 100%;
+    margin-bottom: 0;
+    width: 35%;
+    }  
+  }
+
   &__status {
     @extend %body-medium;
 
@@ -274,6 +313,21 @@
     }
   }
 
+  &__quantity-container {
+    @include tablet {
+      height: 100%;
+      width: 5%;
+    }
+    
+    @include desktop {
+      max-width: 143.75px;
+    }
+  }
+
+  &__warehouse-container {
+    height: 100%;
+  }
+
   &__quantity,
   &__warehouse {
     @extend %body-medium; 
@@ -285,6 +339,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 1.25rem;
+    padding: 0 1.6875rem 1.6875rem;
 
     @include tablet {
       width: 3.75rem;
@@ -298,6 +353,10 @@
     width: 7.375rem;
     flex-grow: 1;
   }
+
+  @include desktop {
+    max-width: 140.25px;
+  }
 }
 
 .sort-category {
@@ -308,7 +367,7 @@
   }
 
   @include desktop {
-    width: 14.375rem;
+    max-width: 240px;
   }
 }
 
@@ -318,12 +377,20 @@
     flex-grow: 1;
     text-transform: uppercase;
   }
+
+  @include desktop {
+    width: 10%;
+  }
 }
 
 .sort-qty {
   @include tablet {
     width: 3.8125rem;
     flex-grow: 1;
+  }
+
+  @include desktop {
+    // max-width: 141.75px;
   }
 }
 

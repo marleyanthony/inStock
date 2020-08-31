@@ -19,49 +19,33 @@ const InventoryItems = ({ inventories }) => {
 
   const inventoryList = inventories.map((inventory) => {
     return (
-      <div className="inventory__item">
-        <div className="inventory__item-left-container">
-          <p className="inventory__label">
-            Inventory Item
-          </p>
+      <div className="inventory__sort-list">
+        <div className="inventory__sort-list-left">
           <div className="inventory__item-name-container">
-            <h3 className="inventory__item-name">
-              {inventory.itemName}
-            </h3>
-            <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
+            <p className="inventory__label">Inventory Item</p>
+            <div className="inventory__mobile-wrapper">
+              <h3 className="inventory__item-name">{inventory.itemName}</h3>
+              <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
+            </div>
           </div>
-          <p className="inventory__label">
-            Category
-            </p>
-          <p className="inventory__category">
-            {inventory.category}
-          </p>
+          <div className="inventory__item-category-container">
+            <p className="inventory__label">Category</p>
+            <p className="inventory__category">{inventory.category}</p>
+          </div>
         </div>
 
         <div className="inventory__item-right-container">
           <div className="inventory__status-container">
-            <p className="inventory__label">
-              Status
-            </p>
-            <p className="inventory__status">
-              {inventory.status}
-            </p>
+            <p className="inventory__label">Status</p>
+            <p className="inventory__status">{inventory.status}</p>
           </div>
           <div className="inventory__quantity-container">
-            <p className="inventory__label">
-              QTY
-            </p>
-            <p className="inventory__quantity">
-              {inventory.quantity}
-            </p>
+            <p className="inventory__label">QTY</p>
+            <p className="inventory__quantity">{inventory.quantity}</p>
           </div>
           <div className="inventory__warehouse-container">
-            <p className="inventory__label">
-              Warehouse
-            </p>
-            <p className="inventory__warehouse">
-              {inventory.warehouseName}
-            </p>
+            <p className="inventory__label">Warehouse</p>
+            <p className="inventory__warehouse">{inventory.warehouseName}</p>
           </div>
         </div>
 
@@ -78,9 +62,7 @@ const InventoryItems = ({ inventories }) => {
   return (
     <main className="inventory">
       <section className="inventory__header-wrapper">
-        <h1 className="inventory__heading">
-          Inventory
-        </h1>
+        <h1 className="inventory__heading">Inventory</h1>
         <div className="inventory__search-add">
           <label htmlFor="search" className="inventory__search-label">
             <input type="search" className="inventory__searchbar" name="search" placeholder="Search..." />
@@ -96,56 +78,39 @@ const InventoryItems = ({ inventories }) => {
         <div className="inventory__sort">
           <div className="inventory__sort-left">
             <div className="inventory__sort-category sort-inventory">
-              <p className="inventory__sort-label">
-                Inventory Item
-              </p>
+              <p className="inventory__sort-label">Inventory Item</p>
               <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
             </div>
             <div className="inventory__sort-category sort-category">
-              <p className="inventory__sort-label">
-                Category
-              </p>
+              <p className="inventory__sort-label">Category</p>
               <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
             </div>
           </div>
           <div className="inventory__sort-right">
             <div className="inventory__sort-category sort-status">
-              <p className="inventory__sort-label">
-                Status
-              </p>
+              <p className="inventory__sort-label">Status</p>
               <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
             </div>
             <div className="inventory__sort-category sort-qty">
-              <p className="inventory__sort-label">
-                QTY
-              </p>
+              <p className="inventory__sort-label">QTY</p>
               <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
             </div>
             <div className="inventory__sort-category sort-inventory">
-              <p className="inventory__sort-label">
-                Warehouse
-              </p>
+              <p className="inventory__sort-label">Warehouse</p>
               <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
             </div>
           </div>
-          <p className="inventory__sort-label sort-actions">
-            ACTIONS
-          </p>
+          <p className="inventory__sort-label sort-actions">ACTIONS</p>
         </div>
         {inventoryList}
       </section>
 
-      <button onClick={() => setModalIsOpen(true)}>Button</button>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className="inventory__modal" style={{ overlay: { backgroundColor: 'rgba(19, 24, 44, 0.7)' } }}>
         <section className="delete-modal">
           <div className="delete-modal__tablet-wrapper">
             <img src={close} alt="close" className="delete-modal__close-btn" onClick={() => setModalIsOpen(false)} />
-            <h1 className="delete-modal__header">
-              Delete Television inventory item?
-           </h1>
-            <p className="delete-modal__warning">
-              Please confirm that you'd like to delete Television from the inventory list. You won't be able to undo this action.
-           </p>
+            <h1 className="delete-modal__header">Delete Television inventory item?</h1>
+            <p className="delete-modal__warning">Please confirm that you'd like to delete Television from the inventory list. You won't be able to undo this action.</p>
             <div className="delete-modal__delete-action-btn-container">
               <button className="delete-modal__cancel-btn" onClick={() => setModalIsOpen(false)}>Cancel</button>
               <button className="delete-modal__delete-btn">Delete</button>
