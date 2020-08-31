@@ -5,6 +5,7 @@ import axios from "axios";
 import Warehouses from "./components/Warehouses";
 import WarehouseDetails from "./components/WarehouseDetails";
 import InventoryItems from "./components/InventoryItems";
+import ItemDetails from "./components/ItemDetails";
 import EditItem from "./components/EditItem";
 import AddItem from "./components/AddItem";
 
@@ -26,14 +27,14 @@ class App extends React.Component {
 
   getInvItems() {
     axios.get("http://localhost:8080/inventory").then((res) => {
-      console.log("get inventories:", res.data);
+      // console.log("get inventories:", res.data);
       this.setState({ inventories: res.data });
     });
   }
 
   getWarehouses() {
     axios.get("http://localhost:8080/warehouse").then((res) => {
-      console.log("get warehouses:", res.data);
+      // console.log("get warehouses:", res.data);
       this.setState({ warehouses: res.data });
     });
   }
@@ -54,6 +55,13 @@ class App extends React.Component {
           path="/warehouse/:name"
           render={(renderProps) => {
             return <WarehouseDetails {...renderProps} />;
+          }}
+          exact
+        />
+        <Route
+          path="/warehouse/:name/:itemName"
+          render={(renderProps) => {
+            return <ItemDetails {...renderProps} />;
           }}
         />
         <Route

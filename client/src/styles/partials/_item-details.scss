@@ -1,0 +1,171 @@
+.inv-item {
+  background: $primary-color-white;
+  border-radius: 0.1875rem;
+  box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
+  margin: 0 1rem;
+  position: relative;
+  z-index: 10;
+
+  @include tablet {
+    margin: 0 2rem;
+  }
+
+  @include desktop {
+    margin: 0 8.125rem;
+  }
+
+  &__header-container {
+    padding: 0 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      padding: 0 2rem;
+      padding-top: 2rem;
+      padding-bottom: 1.25rem;
+    }
+
+    @include desktop {
+      padding: 0 2.5rem;
+      padding-top: 2rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__back-name {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__icon--back {
+    padding-right: 0.75rem;
+  }
+
+  &__icon--edit {
+    flex-shrink: 0;
+    height: 1.3rem;
+    filter: brightness(100);
+
+    @include tablet {
+      height: 1.15rem;
+      margin-right: 0.25rem;
+    }
+  }
+
+  &__heading {
+    @extend %page-header;
+  }
+
+  &__button {
+    @extend %button-primary;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      width: unset;
+    }
+  }
+
+  &__button-text {
+    display: none;
+    @extend %labels-links-buttons;
+    color: $primary-color-white;
+    font-weight: normal;
+
+    @include tablet {
+      display: inline-block;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid $secondary-color-cloud;
+
+    @include tablet {
+      padding: 1.5rem 2rem;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      padding: 1rem 2.5rem;
+    }
+  }
+
+  &__label {
+    @extend %table-headers;
+    margin-bottom: 0.25rem;
+
+    &:nth-child(n + 2) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__text {
+    @extend %body-medium;
+  }
+
+  &__text--status-in {
+    @extend %status-in-stock;
+  }
+
+  &__text--status-out {
+    @extend %status-out-of-stock;
+  }
+
+  &__span--status {
+    @include tablet {
+      width: 11.375rem;
+      flex-grow: 1;
+    }
+
+    @include desktop {
+      width: 16.25rem;
+    }
+  }
+
+  &__left-container {
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+      border-right: 1px solid $secondary-color-cloud;
+      padding-right: 1.5rem;
+    }
+
+    @include desktop {
+      padding-right: 2.5rem;
+    }
+  }
+
+  &__right-container {
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+      padding-left: 2.5rem;
+    }
+  }
+
+  &__status-qty-container {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+  }
+
+  &__status-block {
+    width: 50%;
+    flex-grow: 1;
+  }
+
+  &__qty-block {
+    width: 50%;
+    flex-grow: 1;
+  }
+}

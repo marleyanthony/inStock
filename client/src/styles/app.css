@@ -69,8 +69,7 @@ a {
           flex: 1 0 auto;
 }
 
-.warehouses__heading, .warehouse__heading, .inventory__heading, .warehouses-delete__heading,
-.inventory-delete__heading {
+.warehouses__heading, .warehouse__heading, .inventory__heading, .inv-item__heading {
   font-size: 1.75rem;
   line-height: 2rem;
   font-weight: bold;
@@ -78,36 +77,30 @@ a {
 }
 
 @media (min-width: 768px) {
-  .warehouses__heading, .warehouse__heading, .inventory__heading, .warehouses-delete__heading,
-  .inventory-delete__heading {
+  .warehouses__heading, .warehouse__heading, .inventory__heading, .inv-item__heading {
     font-size: 2rem;
     line-height: 2.5rem;
     font-weight: bold;
   }
 }
 
-.warehouses__searchbar, .inventory__searchbar, .warehouses-delete__searchbar,
-.inventory-delete__searchbar, .warehouses__button, .warehouse__button, .inventory__button, .warehouses-delete__button,
-.inventory-delete__button, .warehouse__button-text {
+.warehouses__searchbar, .inventory__searchbar, .warehouses__button, .warehouse__button, .inventory__button, .inv-item__button, .warehouse__button-text, .inv-item__button-text {
   font-size: 0.8125rem;
   line-height: 1.5rem;
   font-weight: bold;
+  font-family: "Titillium Web";
   color: #13182c;
 }
 
 @media (min-width: 768px) {
-  .warehouses__searchbar, .inventory__searchbar, .warehouses-delete__searchbar,
-  .inventory-delete__searchbar, .warehouses__button, .warehouse__button, .inventory__button, .warehouses-delete__button,
-  .inventory-delete__button, .warehouse__button-text {
+  .warehouses__searchbar, .inventory__searchbar, .warehouses__button, .warehouse__button, .inventory__button, .inv-item__button, .warehouse__button-text, .inv-item__button-text {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: bold;
   }
 }
 
-.warehouses__sort-label, .warehouses__label, .warehouse__label, .warehouse__sort-label, .inventory__sort-label, .inventory__label, .warehouses-delete__sort-label,
-.inventory-delete__sort-label, .warehouses-delete__label,
-.inventory-delete__label {
+.warehouses__sort-label, .warehouses__label, .warehouse__label, .warehouse__sort-label, .inventory__sort-label, .inventory__label, .inv-item__label {
   font-size: 0.6875rem;
   line-height: 1rem;
   font-weight: bold;
@@ -115,21 +108,14 @@ a {
 }
 
 @media (min-width: 768px) {
-  .warehouses__sort-label, .warehouses__label, .warehouse__label, .warehouse__sort-label, .inventory__sort-label, .inventory__label, .warehouses-delete__sort-label,
-  .inventory-delete__sort-label, .warehouses-delete__label,
-  .inventory-delete__label {
+  .warehouses__sort-label, .warehouses__label, .warehouse__label, .warehouse__sort-label, .inventory__sort-label, .inventory__label, .inv-item__label {
     font-size: 0.75rem;
     line-height: 1.125rem;
     font-weight: bold;
   }
 }
 
-.warehouses__text-location, .warehouses__text-address, .warehouses__text-contact-name, .warehouses__text-contact-phone, .warehouses__text-contact-email, .warehouse__text, .inventory__item-name, .inventory__category, .inventory__status, .inventory__quantity, .inventory__warehouse, .warehouses-delete__text-location,
-.inventory-delete__text-location, .warehouses-delete__text-address,
-.inventory-delete__text-address, .warehouses-delete__text-contact-name,
-.inventory-delete__text-contact-name, .warehouses-delete__text-contact-phone,
-.inventory-delete__text-contact-phone, .warehouses-delete__text-contact-email,
-.inventory-delete__text-contact-email {
+.warehouses__text-location, .warehouses__text-address, .warehouses__text-contact-name, .warehouses__text-contact-phone, .warehouses__text-contact-email, .warehouse__text, .inventory__item-name, .inventory__category, .inventory__status, .inventory__quantity, .inventory__warehouse, .inv-item__text {
   font-size: 0.8125rem;
   line-height: 1.25rem;
   font-weight: normal;
@@ -137,12 +123,7 @@ a {
 }
 
 @media (min-width: 768px) {
-  .warehouses__text-location, .warehouses__text-address, .warehouses__text-contact-name, .warehouses__text-contact-phone, .warehouses__text-contact-email, .warehouse__text, .inventory__item-name, .inventory__category, .inventory__status, .inventory__quantity, .inventory__warehouse, .warehouses-delete__text-location,
-  .inventory-delete__text-location, .warehouses-delete__text-address,
-  .inventory-delete__text-address, .warehouses-delete__text-contact-name,
-  .inventory-delete__text-contact-name, .warehouses-delete__text-contact-phone,
-  .inventory-delete__text-contact-phone, .warehouses-delete__text-contact-email,
-  .inventory-delete__text-contact-email {
+  .warehouses__text-location, .warehouses__text-address, .warehouses__text-contact-name, .warehouses__text-contact-phone, .warehouses__text-contact-email, .warehouse__text, .inventory__item-name, .inventory__category, .inventory__status, .inventory__quantity, .inventory__warehouse, .inv-item__text {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: normal;
@@ -182,29 +163,9 @@ a {
   padding: 0.5rem 1rem;
 }
 
-.warehouses__searchbar::-webkit-input-placeholder, .inventory__searchbar::-webkit-input-placeholder, .warehouses-delete__searchbar::-webkit-input-placeholder,
-.inventory-delete__searchbar::-webkit-input-placeholder {
-  font-family: "Titillium Web";
-}
 
-.warehouses__searchbar:-ms-input-placeholder, .inventory__searchbar:-ms-input-placeholder, .warehouses-delete__searchbar:-ms-input-placeholder,
-.inventory-delete__searchbar:-ms-input-placeholder {
-  font-family: "Titillium Web";
-}
+.warehouses__searchbar:active, .inventory__searchbar:active, .warehouses__searchbar:focus, .inventory__searchbar:focus {
 
-.warehouses__searchbar::-ms-input-placeholder, .inventory__searchbar::-ms-input-placeholder, .warehouses-delete__searchbar::-ms-input-placeholder,
-.inventory-delete__searchbar::-ms-input-placeholder {
-  font-family: "Titillium Web";
-}
-
-.warehouses__searchbar::placeholder, .inventory__searchbar::placeholder, .warehouses-delete__searchbar::placeholder,
-.inventory-delete__searchbar::placeholder {
-  font-family: "Titillium Web";
-}
-
-.warehouses__searchbar:active, .inventory__searchbar:active, .warehouses-delete__searchbar:active,
-.inventory-delete__searchbar:active, .warehouses__searchbar:focus, .inventory__searchbar:focus, .warehouses-delete__searchbar:focus,
-.inventory-delete__searchbar:focus {
   outline: none;
   border-color: #2e66e6;
   color: #13182c;
@@ -217,8 +178,9 @@ a {
   }
 }
 
-.warehouses__button, .warehouse__button, .inventory__button, .warehouses-delete__button,
-.inventory-delete__button {
+
+.warehouses__button, .warehouse__button, .inventory__button, .inv-item__button {
+
   width: 100%;
   height: 2.25rem;
   border-radius: 1.25rem;
@@ -228,22 +190,24 @@ a {
   color: #ffffff;
 }
 
-.warehouses__button:hover, .warehouse__button:hover, .inventory__button:hover, .warehouses-delete__button:hover,
-.inventory-delete__button:hover, .warehouses__button:focus, .warehouse__button:focus, .inventory__button:focus, .warehouses-delete__button:focus,
-.inventory-delete__button:focus {
+
+.warehouses__button:hover, .warehouse__button:hover, .inventory__button:hover, .inv-item__button:hover, .warehouses__button:focus, .warehouse__button:focus, .inventory__button:focus, .inv-item__button:focus {
+  outline: none;
+
   border-color: #232940;
   background: #232940;
 }
 
 @media (min-width: 768px) {
-  .warehouses__button, .warehouse__button, .inventory__button, .warehouses-delete__button,
-  .inventory-delete__button {
+
+  .warehouses__button, .warehouse__button, .inventory__button, .inv-item__button {
+
     width: unset;
     height: 2.375rem;
   }
 }
 
-.warehouse__text--status-out, .warehouse__text--status-in {
+.warehouse__text--status-out, .inv-item__text--status-out, .warehouse__text--status-in, .inv-item__text--status-in {
   font-family: "Titillium Web";
   font-weight: bold;
   font-size: 0.6875rem;
@@ -257,13 +221,13 @@ a {
 }
 
 @media (min-width: 768px) {
-  .warehouse__text--status-out, .warehouse__text--status-in {
+  .warehouse__text--status-out, .inv-item__text--status-out, .warehouse__text--status-in, .inv-item__text--status-in {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
-.warehouse__text--status-out {
+.warehouse__text--status-out, .inv-item__text--status-out {
   color: #c94515;
   background: rgba(201, 69, 21, 0.07);
 }
@@ -1434,9 +1398,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .warehouse__icon--back {
@@ -2370,6 +2334,215 @@ a {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.inv-item {
+  background: #ffffff;
+  border-radius: 0.1875rem;
+  -webkit-box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
+          box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
+  margin: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .inv-item {
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inv-item {
+    margin: 0 8.125rem;
+  }
+}
+
+.inv-item__header-container {
+  padding: 0 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .inv-item__header-container {
+    padding: 0 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inv-item__header-container {
+    padding: 0 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.inv-item__back-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.inv-item__icon--back {
+  padding-right: 0.75rem;
+}
+
+.inv-item__icon--edit {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 1.3rem;
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+}
+
+@media (min-width: 768px) {
+  .inv-item__icon--edit {
+    height: 1.15rem;
+    margin-right: 0.25rem;
+  }
+}
+
+.inv-item__button {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .inv-item__button {
+    width: unset;
+  }
+}
+
+.inv-item__button-text {
+  display: none;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .inv-item__button-text {
+    display: inline-block;
+  }
+}
+
+.inv-item__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #bdc5d5;
+}
+
+@media (min-width: 768px) {
+  .inv-item__details {
+    padding: 1.5rem 2rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inv-item__details {
+    padding: 1rem 2.5rem;
+  }
+}
+
+.inv-item__label {
+  margin-bottom: 0.25rem;
+}
+
+.inv-item__label:nth-child(n + 2) {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .inv-item__span--status {
+    width: 11.375rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inv-item__span--status {
+    width: 16.25rem;
+  }
+}
+
+.inv-item__left-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .inv-item__left-container {
+    width: 50%;
+    border-right: 1px solid #bdc5d5;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inv-item__left-container {
+    padding-right: 2.5rem;
+  }
+}
+
+.inv-item__right-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .inv-item__right-container {
+    width: 50%;
+    padding-left: 2.5rem;
+  }
+}
+
+.inv-item__status-qty-container {
+  width: 100%;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inv-item__status-block {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.inv-item__qty-block {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .inventory {

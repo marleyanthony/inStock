@@ -36,7 +36,7 @@
 
   &__back-name {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
 
   &__icon--back {
@@ -242,7 +242,7 @@
       width: 10.875rem;
     }
   }
-  
+
   &__inv-item {
     padding: 1rem 1.5rem 1.5rem;
     border-top: 1px solid $secondary-color-cloud;

@@ -23,9 +23,27 @@ const listWarehouseDetails = (req, res) => {
 };
 
 const listItemDetails = (req, res) => {
-  console.log("req.params:", req.params);
+  // console.log("req.params:", req.params);
   const item = warehouse.getItemDetails(req.params.name, req.params.itemName);
   res.json(item);
+};
+
+const editWarehouse = (req, res) => {
+  /** get warehouse name & edited object from req.params,
+   * pass to model function to update date in warehouses.JSON
+   * return updated warehouse.JSON
+   */
+  const updatedWarehouses = warehouse.updateWarehouse(
+    req.params.name,
+    req.body
+  );
+  if (!updatedWarehouses) {
+    res.status(400).json({
+      error: "Warehouse not found",
+    });
+  } else {
+    res.json(updatedWarehouses);
+  }
 };
 
 module.exports = {
@@ -33,4 +51,5 @@ module.exports = {
   listWarehouseDetails,
   writeJSONFile,
   listItemDetails,
+  editWarehouse,
 };

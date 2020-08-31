@@ -19,6 +19,7 @@
 
 %labels-links-buttons {
   @include fonts(0.8125rem, 1.5rem, bold);
+  font-family: "Titillium Web";
   color: $primary-color-black;
 
   @include tablet {
@@ -81,10 +82,6 @@
   border: 1px solid $secondary-color-cloud;
   padding: 0.5rem 1rem;
 
-  &::placeholder {
-    font-family: "Titillium Web";
-  }
-
   &:active,
   &:focus {
     outline: none;
@@ -110,6 +107,7 @@
 
   &:hover,
   &:focus {
+    outline: none;
     border-color: $background-color-graphite;
     background: $background-color-graphite;
   }
@@ -131,6 +129,7 @@
 
   &:hover,
   &:focus {
+    outline: none;
     border-color: $primary-color-indigo;
     color: $primary-color-indigo;
   }
@@ -153,6 +152,7 @@
 
   &:hover,
   &:focus {
+    outline: none;
     border-color: $background-color-graphite;
     background: $background-color-graphite;
   }
