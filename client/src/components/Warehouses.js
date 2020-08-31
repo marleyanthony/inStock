@@ -28,8 +28,6 @@ class Warehouses extends React.Component {
     // is also case insensitive and searches special characters! that was a hard one
     const regex = /\W/g;
     const searchTermRegex = RegExp(e.target.value.replace(regex, "\\$&"), "gi");
-    // console.log("searchTermRegex:", searchTermRegex);
-    // console.log("searchTerm:", searchTerm);
     const warehouses = this.props.warehouses;
     let searchResults = warehouses.filter((warehouse) => {
       return (
@@ -37,52 +35,18 @@ class Warehouses extends React.Component {
         searchTermRegex.test(Object.values(warehouse.contact))
       );
     });
-    // console.log("searchResults:", searchResults);
 
     this.setState({
       searchTerm,
       searchResults,
     });
-  }
-
-  //   <div className="warehouses__item-icons-container">
-  //     <Link to={'delete-warehouse'} className="warehouses__link">
-  //       <img src={deleteIcon} alt="" className="warehouses__icon" />
-  //     </Link>
-  //     <img src={editIcon} alt="" className="warehouses__icon" />
-  //   </div>
-  // </div>
-
-  // return (
-  //   <main className="warehouses" >
-  //     <section className="warehouses__header-container">
-  //       <h1 className="warehouses__heading">Warehouses</h1>
-  //       <div className="warehouses__search-add">
-  //         <label htmlFor="search" className="warehouses__search-label">
-  //           <input
-  //             type="search"
-  //             className="warehouses__searchbar"
-  //             name="search"
-  //             placeholder="Search..."
-  //           />
-  //           <img src={searchIcon} alt="" className="warehouses__search-icon" />
-  //         </label>
-  //         <Link to="/newWarehouse" >
-  //           <button className="warehouses__button">+ Add New Warehouse</button>
-  //         </Link>
-  //       </div>
-  //     </section>
-  //   </main>
-  // );
-
+  };
 
   render() {
     let warehouses = this.props.warehouses;
 
     if (this.state.searchTerm !== null && this.state.searchResults.length > 0) {
       warehouses = this.state.searchResults;
-      // } else {
-      //   warehouses = warehouses;
     }
 
     const warehouseList = warehouses.map((warehouse) => {
@@ -124,7 +88,7 @@ class Warehouses extends React.Component {
           </div>
 
           <div className="warehouses__item-icons-container">
-            <Link to="/delete-warehouse">
+            <Link to={"delete-warehouse"} className="warehouses__link">
               <img src={deleteIcon} alt="" className="warehouses__icon" />
             </Link>
             <img src={editIcon} alt="" className="warehouses__icon" />
@@ -152,7 +116,11 @@ class Warehouses extends React.Component {
                 className="warehouses__search-icon"
               />
             </label>
-            <button className="warehouses__button">+ Add New Warehouse</button>
+            <Link to="/newWarehouse">
+              <button className="warehouses__button">
+                + Add New Warehouse
+              </button>
+            </Link>
           </div>
         </section>
 

@@ -72,21 +72,13 @@ class App extends React.Component {
         <Route
           path="/edit-item"
           render={(renderProps) => {
-            return (
-              <EditItem
-                {...renderProps}
-              />
-            );
+            return <EditItem {...renderProps} />;
           }}
         />
         <Route
           path="/add-item"
           render={(renderProps) => {
-            return (
-              <AddItem
-                {...renderProps}
-              />
-            );
+            return <AddItem {...renderProps} />;
           }}
         />
         <Route
@@ -104,7 +96,10 @@ class App extends React.Component {
           path="/delete-warehouse"
           render={(renderProps) => {
             return (
-              <DeleteWarehouse {...renderProps} warehouses={this.state.warehouses} />
+              <DeleteWarehouse
+                {...renderProps}
+                warehouses={this.state.warehouses}
+              />
             );
           }}
         />
