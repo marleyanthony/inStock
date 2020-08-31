@@ -5,6 +5,8 @@ const warehouseController = require("../controllers/warehouseController");
 router.get("/", warehouseController.listWarehouses);
 router.get("/:name", warehouseController.listWarehouseDetails);
 router.get("/:name/:itemName", warehouseController.listItemDetails);
+router.put("/:name", warehouseController.editWarehouse);
+
 router.post("/", (req, res) => {
   console.log(req.body);
   const newWarehouse = {

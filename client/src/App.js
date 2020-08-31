@@ -58,6 +58,13 @@ class App extends React.Component {
             return <WarehouseDetails {...renderProps} />;
           }}
         />
+        {/* do we still need an ItemDetails component? */}
+        {/* <Route
+          path="/warehouse/:name/:itemName"
+          render={(renderProps) => {
+            return <ItemDetails {...renderProps} />;
+          }}
+        /> */}
         <Route
           path="/inventory"
           render={(renderProps) => {
