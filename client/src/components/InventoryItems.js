@@ -18,7 +18,7 @@ const InventoryItems = ({ inventories }) => {
           </p>
           <div className="inventory__item-name-container">
             <h3 className="inventory__item-name">
-              {inventory.item}
+              {inventory.itemName}
             </h3>
             <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
           </div>
@@ -52,7 +52,7 @@ const InventoryItems = ({ inventories }) => {
               Warehouse
             </p>
             <p className="inventory__warehouse">
-              {inventory.warehouse}
+              {inventory.warehouseName}
             </p>
           </div>
         </div>

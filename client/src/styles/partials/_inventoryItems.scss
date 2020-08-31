@@ -38,8 +38,12 @@
     @extend %page-header;
   }
 
-  // &__search-add {
-  // }
+  &__search-add {
+    @include tablet {
+      width: 21rem;
+      display: flex;
+    }
+  }
 
   &__search-label {
     position: relative;
@@ -51,7 +55,8 @@
 
     @include tablet {
       width: 11.5625rem;
-      margin: 0 1rem;
+      margin: 0 0.9rem 0 0;
+      // display: inline-block;
     }
 
     @include desktop {
@@ -149,7 +154,7 @@
 
     @include tablet {
       // width: 16.875rem;
-      width: unset;
+      width: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -174,6 +179,11 @@
     display: flex;
     align-items: center;
     width: 8.765625rem;
+
+    @include tablet {
+      // width: 10rem;
+      flex-direction: row;
+    }
   }
 
   &__link {
@@ -210,8 +220,8 @@
     @extend %body-medium;
 
     @include tablet {
-      width: 0.2rem;
-      // padding-right: 1rem;
+      max-width: 100px;
+      border: 1px solid red;
       flex-grow: 1;
     }
 
