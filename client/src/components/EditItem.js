@@ -18,64 +18,66 @@ function EditItem() {
         </div>
       </section>
 
-      <section className="inventory__details-container">
-        <h3 className="inventory__details-header">
-          Item Details
+      <div className="inventory__flex-container">
+        <section className="inventory__details-container">
+          <h3 className="inventory__details-header">
+            Item Details
         </h3>
-        <div action="" className="inventory__item-name-container">
-          <h5 htmlFor="name" className="inventory__item-name-input-label">
-            Item Name
+          <div action="" className="inventory__item-name-wrapper">
+            <h5 htmlFor="name" className="inventory__item-name-input-label">
+              Item Name
+            </h5>
+            <input type="text" name="item-name" className="inventory__item-name-input" />
+          </div>
+          <div action="" className="inventory__item-description-container">
+            <h5 htmlFor="name" className="inventory__item-description-input-label">
+              Description
           </h5>
-          <input type="text" name="item-name" className="inventory__item-name-input" />
-        </div>
-        <div action="" className="inventory__item-description-container">
-          <h5 htmlFor="name" className="inventory__item-description-input-label">
-            Description
+            <textarea name="description" className="inventory__item-description-input"></textarea>
+          </div>
+          <div action="" className="inventory__category-container">
+            <h5 htmlFor="category" className="inventory__item-category-input-label">
+              Category
           </h5>
-          <textarea name="description" className="inventory__item-description-input"></textarea>
-        </div>
-        <div action="" className="inventory__category-container">
-          <h5 htmlFor="category" className="inventory__item-category-input-label">
-            Category
-          </h5>
-          <select name="categories" className="inventory__category-select">
-            <option value="electronics">Electronics</option>
-          </select>
-        </div>
-      </section>
+            <select name="categories" className="inventory__category-select">
+              <option value="electronics">Electronics</option>
+            </select>
+          </div>
+        </section>
 
-      <section className="inventory__availability-container">
-        <h3 className="inventory__availability-header">
-          Item Availability
+        <section className="inventory__availability-container">
+          <h3 className="inventory__availability-header">
+            Item Availability
         </h3>
-        <div className="inventory__status-container">
-          <h5 htmlFor="status">
-            Status
+          <div className="inventory__status-container">
+            <h5 htmlFor="status">
+              Status
           </h5>
-          <div className="inventory__radio-btn-container">
-            <div className="inventory__status-instock-radio">
-              <input type="radio" name="in-stock" className="inventory__status-radio-in" />
-              <label for="in-stock" className="inventory__status-label">
-                In Stock
+            <div className="inventory__radio-btn-container">
+              <div className="inventory__status-instock-radio">
+                <input type="radio" name="in-stock" className="inventory__status-radio-in" />
+                <label for="in-stock" className="inventory__status-label">
+                  In Stock
               </label>
-            </div>
-            <div className="inventory__status-outstock-radio">
-              <input type="radio" name="out-of-stock" className="inventory__status-radio-out" />
-              <label for="in-stock" className="inventory__status-label">
-                Out of stock
+              </div>
+              <div className="inventory__status-outstock-radio">
+                <input type="radio" name="out-of-stock" className="inventory__status-radio-out" />
+                <label for="in-stock" className="inventory__status-label">
+                  Out of stock
               </label>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="inventory__warehouse-container">
-          <h5 htmlFor="warehouse" className="inventory__warehouse-header">
-            Warehouse
+          <div className="inventory__warehouse-container">
+            <h5 htmlFor="warehouse" className="inventory__warehouse-header">
+              Warehouse
           </h5>
-          <select name="warehouse" className="inventory__warehouse-select-list">
-            <option value="electronics">Manhattan</option>
-          </select>
-        </div>
-      </section>
+            <select name="warehouse" className="inventory__warehouse-select-list">
+              <option value="electronics">Manhattan</option>
+            </select>
+          </div>
+        </section>
+      </div>
       <div className="inventory__action-btn-container">
         <Link to="/inventory">
           <button className="inventory__cancel-btn">Cancel</button>

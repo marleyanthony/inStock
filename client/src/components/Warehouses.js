@@ -93,12 +93,12 @@ class Warehouses extends React.Component {
             </Link>
             <img src={editIcon} alt="" className="warehouses__icon" />
           </div>
-        </div>
+        </div >
       );
     });
 
     return (
-      <main className="warehouses">
+      <main className="warehouses" >
         <section className="warehouses__header-container">
           <h1 className="warehouses__heading">Warehouses</h1>
           <div className="warehouses__search-add">
@@ -169,8 +169,8 @@ class Warehouses extends React.Component {
               <h3 className="warehouses__text-address">No results found</h3>
             </div>
           ) : (
-            warehouseList
-          )}
+              warehouseList
+            )}
         </section>
       </main>
     );
