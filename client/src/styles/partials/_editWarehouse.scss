@@ -1,0 +1,197 @@
+.editWarehouse {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    // position: absolute;
+    margin: 0 1rem;
+    z-index: 10;
+    height: auto;
+
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 0.1875rem;
+    background: $primary-color-white;
+
+    &__details-contacts-container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__arr-heading-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    &__wh-heading {
+      display: flex;
+      @include fonts(1.75rem, 2.25rem, 600);
+      font-style: normal;
+      color: $primary-color-black;
+      height: 2.25rem;
+      padding-left: 0.5rem;
+    }
+    &__wh-details-container,
+    &__wh-contacts-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+      border-top: 1px solid $secondary-color-cloud;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &__details-heading,
+    &__contacts-heading {
+      display: flex;
+      align-items: center;
+      height: 1.75rem;
+      @include fonts(1.25rem, 1.75rem, 600);
+      font-style: normal;
+      margin-top: 1.5rem;
+      color: $primary-color-black;
+    }
+    &__wh-label {
+      display: flex;
+      height: 1.25rem;
+      @include fonts(0.8125rem, 1.25rem, 600);
+      font-style: normal;
+      margin-top: 1rem;
+    }
+    &__input-field {
+      display: flex;
+      border: 0;
+      border: 1px solid $secondary-color-cloud;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      height: 2.25rem;
+      width: 18.4375rem;
+      padding-left: 1rem;
+      background: $primary-color-white;
+    }
+    &__input-field::placeholder {
+      color: $primary-color-black;
+      font-family: "Titillium Web";
+      @include fonts(0.8125rem, 1.25rem, normal);
+      font-style: normal;
+    }
+    &__errorRequired-container {
+      display: none;
+    }
+    &__action-btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 21.4375rem;
+      height: 4.25rem;
+      background: rgba(247, 248, 249, 0.7);
+      border-radius: 0px 0px 3px 3px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &__cancel-btn,
+    &__add-wh-btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 8.6875rem;
+      height: 2.25rem;
+
+      border: 1px solid $secondary-color-cloud;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background: $primary-color-white;
+      @include fonts(0.8125rem, 1.25rem, 600);
+      font-style: normal;
+      &--colorAccent {
+        background: $primary-color-indigo;
+        color: $primary-color-white;
+      }
+    }
+  }
+  @include tablet {
+    margin: 0 2rem;
+    &__details-contacts-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      justify-content: space-between;
+      border-top: 1px solid $secondary-color-cloud;
+      padding-top: 1.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &__arr-heading-container {
+      justify-content: flex-start;
+      padding-left: 1rem;
+    }
+    &__wh-details-container {
+      width: 21.9375rem;
+      border-right: 1px solid $secondary-color-cloud;
+    }
+    &__wh-contacts-container {
+      width: 22rem;
+      margin-left: 2rem;
+    }
+    &__wh-details-container,
+    &__wh-contacts-container {
+      border-top: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__details-heading,
+    &__contacts-heading {
+      margin-top: 0;
+    }
+    &__input-field {
+      &--tabDesk-det {
+        width: 17.96875rem;
+      }
+      &--tabDesk-cont {
+        width: 18rem;
+      }
+    }
+    &__action-btn-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 44rem;
+    }
+    &__cancel-btn {
+      width: 4.5rem;
+      margin-right: 1rem;
+    }
+    &__add-wh-btn {
+      width: 61px;
+      height: 38px;
+    }
+  }
+  @include desktop {
+    width: 63.75em;
+    // height: 43.75rem;
+    margin: 0 8rem;
+    &__wh-details-container {
+      width: 31.8125rem;
+    }
+    &__input-field {
+      &--tabDesk-det {
+        width: 26.8125rem;
+      }
+      &--tabDesk-cont {
+        width: 26.875rem;
+      }
+    }
+    &__wh-contacts-container {
+      width: 31.875rem;
+      border-top: none;
+    }
+    &__errorRequired-container {
+      display: flex;
+      color: $supporting-color-red;
+      font-style: normal;
+      @include fonts(0.75rem, 1.125rem, normal);
+    }
+    &__action-btn-container {
+      width: 63.75em;
+    }
+  }
+}

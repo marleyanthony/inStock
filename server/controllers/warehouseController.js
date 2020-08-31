@@ -1,6 +1,7 @@
 const warehouse = require("../models/warehouseModel");
 const fs = require("fs");
 
+
 function listWarehouses(req, res) {
   res.json(warehouse.list());
 }
