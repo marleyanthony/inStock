@@ -8,7 +8,6 @@ import newWarehouse from "./components/newWarehouse";
 import editWarehouse from "./components/editWarehouse"
 import "./styles/app.css";
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -27,4 +26,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-

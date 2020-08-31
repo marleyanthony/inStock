@@ -126,7 +126,6 @@
 
   &__item {
     display: flex;
-    // justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 1.5rem;
     padding-top: 1rem;
@@ -157,7 +156,6 @@
     width: 33.4375vw;
 
     @include tablet {
-      // width: 16.875rem;
       width: unset;
       display: flex;
       align-items: center;
@@ -188,11 +186,6 @@
       width: 9.375rem;
       flex-grow: 1;
     }
-
-    // @include desktop {
-    //   width: 13.75rem;
-    //   flex-grow: 1;
-    // }
   }
 
   &__text-location {
@@ -200,8 +193,9 @@
     color: $primary-color-indigo;
   }
 
-  // &__icon {
-  // }
+  &__icon {
+    flex-shrink: 0;
+  }
 
   &__icon--sort {
     height: 75%;
@@ -236,7 +230,6 @@
     margin-left: 1.5rem;
 
     @include tablet {
-      // width: 19.375rem;
       width: unset;
       margin: 0;
       display: flex;

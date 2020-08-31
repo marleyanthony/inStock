@@ -49,9 +49,6 @@ body {
 }
 
 a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-decoration: none;
   padding-left: 0;
   padding-right: 0;
@@ -618,6 +615,11 @@ a {
 
 .warehouses__text-location {
   color: #2e66e6;
+}
+
+.warehouses__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .warehouses__icon--sort {
