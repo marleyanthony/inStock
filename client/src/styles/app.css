@@ -1605,6 +1605,56 @@ a {
   }
 }
 
+.inventory__sort-list-items {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.inventory__sort-list-items-left {
+  border: 1px solid green;
+  width: 50%;
+}
+
+.inventory__sort-list-items-label {
+  text-transform: uppercase;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #5C667E;
+}
+
+.inventory__sort-list-items-blue-item-name {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #2E66E6;
+}
+
+.inventory__sort-list-items-item-name {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #13182C;
+}
+
+.inventory__sort-list-items-mobile-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
 .inventory__header-wrapper {
   padding: 0 1.5rem;
   padding-top: 2rem;
@@ -2899,6 +2949,56 @@ a {
   .inventory {
     margin: 0 8.125rem;
   }
+}
+
+.inventory__sort-list-items {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.inventory__sort-list-items-left {
+  border: 1px solid green;
+  width: 50%;
+}
+
+.inventory__sort-list-items-label {
+  text-transform: uppercase;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #5C667E;
+}
+
+.inventory__sort-list-items-blue-item-name {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #2E66E6;
+}
+
+.inventory__sort-list-items-item-name {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #13182C;
+}
+
+.inventory__sort-list-items-mobile-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 .inventory__header-wrapper {

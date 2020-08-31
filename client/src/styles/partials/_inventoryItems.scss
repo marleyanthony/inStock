@@ -14,6 +14,52 @@
     margin: 0 8.125rem;
   }
 
+  // item styling
+  &__sort-list-items {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__sort-list-items-left {
+    border: 1px solid green;
+    width: 50%;
+  }
+
+  &__sort-list-items-label {
+    text-transform: uppercase;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #5C667E;
+  }
+
+  &__sort-list-items-blue-item-name {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    color: #2E66E6;
+  }
+
+  &__sort-list-items-item-name {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #13182C;
+  }
+
+  &__sort-list-items-mobile-wrapper {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
   &__header-wrapper {
     padding: 0 1.5rem;
     padding-top: 2rem;

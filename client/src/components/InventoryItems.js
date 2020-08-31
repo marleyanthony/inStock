@@ -20,33 +20,33 @@ const InventoryItems = ({ inventories }) => {
   const inventoryList = inventories.map((inventory) => {
     return (
       <>
-        <div className="inventory__sort-list">
-          <div className="inventory__sort-list-left">
-            <div className="inventory__item-name-container">
-              <p className="inventory__label">Inventory Item</p>
-              <div className="inventory__mobile-wrapper">
-                <h3 className="inventory__item-name">{inventory.itemName}</h3>
+        <div className="inventory__sort-list-items">
+          <div className="inventory__sort-list-items-left">
+            <div className="inventory__sort-list-items-container">
+              <p className="inventory__sort-list-items-label">Inventory Item</p>
+              <div className="inventory__sort-list-items-mobile-wrapper">
+                <h3 className="inventory__sort-list-items-blue-item-name">{inventory.itemName}</h3>
                 <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
               </div>
             </div>
-            <div className="inventory__item-category-container">
-              <p className="inventory__label">Category</p>
-              <p className="inventory__category">{inventory.category}</p>
+            <div className="inventory__sort-list-items-container">
+              <p className="inventory__sort-list-items-label">Category</p>
+              <p className="inventory__sort-list-items-item-name">{inventory.category}</p>
             </div>
           </div>
 
           <div className="inventory__item-right-container">
-            <div className="inventory__status-container">
-              <p className="inventory__label">Status</p>
-              <p className="inventory__status">{inventory.status}</p>
+            <div className="inventory__sort-list-items-container">
+              <p className="inventory__sort-list-items-label">Status</p>
+              <p className="inventory__sort-list-items-item-name">{inventory.status}</p>
             </div>
-            <div className="inventory__quantity-container">
-              <p className="inventory__label">QTY</p>
-              <p className="inventory__quantity">{inventory.quantity}</p>
+            <div className="inventory__sort-list-items-container">
+              <p className="inventory__sort-list-items-label">QTY</p>
+              <p className="inventory__sort-list-items-item-name">{inventory.quantity}</p>
             </div>
-            <div className="inventory__warehouse-container">
-              <p className="inventory__label">Warehouse</p>
-              <p className="inventory__warehouse">{inventory.warehouseName}</p>
+            <div className="inventory__sort-list-items-container">
+              <p className="inventory__sort-list-items-label">Warehouse</p>
+              <p className="inventory__sort-list-items-item-name">{inventory.warehouseName}</p>
             </div>
           </div>
 
