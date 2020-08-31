@@ -1965,9 +1965,9 @@ a {
 
 @media (min-width: 768px) {
   .inventory__status-container {
-    height: 100%;
     margin-bottom: 0;
-    width: 35%;
+    width: 60%;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -2104,29 +2104,69 @@ a {
   }
 }
 
+.delete-modal {
+  background: #FFFFFF;
+  position: absolute;
+  height: 100vh;
+}
+
+.delete-modal__tablet-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.delete-modal__close-btn {
+  margin-bottom: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1.3125rem 1.3125rem 0 0;
+}
+
+.delete-modal__header, .delete-modal__warning, .delete-modal__delete-action-btn-container {
+  padding: 0 1rem;
+}
+
+.delete-modal__header {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.delete-modal__warning {
+  margin-bottom: 410px;
+}
+
+.delete-modal__cancel-btn, .delete-modal__delete-btn {
+  background: #FFFFFF;
+  border: 1px solid #BDC5D5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: 10.1875rem;
+}
+
+.delete-modal__delete-btn {
+  margin-left: 1rem;
+  color: #FFFFFF;
+  background: #C94515;
+}
+
+.delete-modal__delete-action-btn-container {
+  justify-self: flex-end;
+}
+
 @media (min-width: 768px) {
   .delete-modal {
-    background: #FFFFFF;
-    position: absolute;
     top: 185px;
     left: 48px;
     width: 672px;
     height: 262px;
-  }
-  .delete-modal__tablet-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .delete-modal__close-btn {
-    margin-bottom: 5px;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    padding: 1.3125rem 1.3125rem 0 0;
   }
   .delete-modal__header, .delete-modal__warning, .delete-modal__delete-action-btn-container {
     padding: 0 4rem;
@@ -2154,6 +2194,12 @@ a {
     margin-left: 1rem;
     color: #FFFFFF;
     background: #C94515;
+  }
+}
+
+@media (min-width: 1280px) {
+  .delete-modal {
+    left: 304px;
   }
 }
 
@@ -2614,9 +2660,23 @@ a {
           align-items: center;
 }
 
+@media (min-width: 768px) {
+  .inventory__details-form-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .inventory__details-container, .inventory__availability-container {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #BDC5D5;
+}
+
+@media (min-width: 768px) {
+  .inventory__details-container, .inventory__availability-container {
+    min-width: 351px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -2650,7 +2710,7 @@ a {
 }
 
 .inventory__item-name-container {
-  width: unset;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2698,6 +2758,12 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  .inventory__item-description-input {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -3195,9 +3261,9 @@ a {
 
 @media (min-width: 768px) {
   .inventory__status-container {
-    height: 100%;
     margin-bottom: 0;
-    width: 35%;
+    width: 60%;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -3334,29 +3400,69 @@ a {
   }
 }
 
+.delete-modal {
+  background: #FFFFFF;
+  position: absolute;
+  height: 100vh;
+}
+
+.delete-modal__tablet-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.delete-modal__close-btn {
+  margin-bottom: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1.3125rem 1.3125rem 0 0;
+}
+
+.delete-modal__header, .delete-modal__warning, .delete-modal__delete-action-btn-container {
+  padding: 0 1rem;
+}
+
+.delete-modal__header {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.delete-modal__warning {
+  margin-bottom: 410px;
+}
+
+.delete-modal__cancel-btn, .delete-modal__delete-btn {
+  background: #FFFFFF;
+  border: 1px solid #BDC5D5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: 10.1875rem;
+}
+
+.delete-modal__delete-btn {
+  margin-left: 1rem;
+  color: #FFFFFF;
+  background: #C94515;
+}
+
+.delete-modal__delete-action-btn-container {
+  justify-self: flex-end;
+}
+
 @media (min-width: 768px) {
   .delete-modal {
-    background: #FFFFFF;
-    position: absolute;
     top: 185px;
     left: 48px;
     width: 672px;
     height: 262px;
-  }
-  .delete-modal__tablet-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .delete-modal__close-btn {
-    margin-bottom: 5px;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    padding: 1.3125rem 1.3125rem 0 0;
   }
   .delete-modal__header, .delete-modal__warning, .delete-modal__delete-action-btn-container {
     padding: 0 4rem;
@@ -3384,6 +3490,12 @@ a {
     margin-left: 1rem;
     color: #FFFFFF;
     background: #C94515;
+  }
+}
+
+@media (min-width: 1280px) {
+  .delete-modal {
+    left: 304px;
   }
 }
 

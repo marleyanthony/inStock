@@ -282,9 +282,9 @@
 
   &__status-container {
     @include tablet {
-    height: 100%;
     margin-bottom: 0;
-    width: 35%;
+    width: 60%;
+    margin-bottom: 1.5rem;
     }  
   }
 
@@ -407,24 +407,66 @@
 
 // modal
 .delete-modal {
-  @include tablet {
+  background: #FFFFFF;
+  position: absolute;
+  height: 100vh;
+
+  &__tablet-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  &__close-btn {
+      margin-bottom: 5px;
+      align-self: flex-end;
+      padding: 1.3125rem 1.3125rem 0 0;
+  }
+
+  &__header,
+  &__warning,
+  &__delete-action-btn-container {
+    padding: 0 1rem;
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+  }
+
+  &__warning {
+    margin-bottom: 410px;
+  }
+
+  &__cancel-btn,
+  &__delete-btn {
     background: #FFFFFF;
-    position: absolute;
+    border: 1px solid #BDC5D5;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    width: 10.1875rem;
+  }
+
+  &__delete-btn {
+    margin-left: 1rem;
+    color: #FFFFFF;
+    background: #C94515;
+  }
+
+  &__delete-action-btn-container {
+    justify-self: flex-end;
+  }
+
+    
+
+  @include tablet {
     top: 185px;
     left: 48px;
     width: 672px;
     height: 262px;
 
-    &__tablet-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__close-btn {
-      margin-bottom: 5px;
-      align-self: flex-end;
-      padding: 1.3125rem 1.3125rem 0 0;
-    }
+    
 
     &__header,
     &__warning,
@@ -459,5 +501,9 @@
       color: #FFFFFF;
       background: #C94515;
     }
+  }
+
+  @include desktop {
+    left: 304px;
   }
 }

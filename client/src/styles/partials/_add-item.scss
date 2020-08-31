@@ -40,10 +40,20 @@
     align-items: center;
   }
 
+  &__details-form-wrapper {
+    @include tablet {
+      display: flex;
+    }
+  }
+
   &__details-container,
   &__availability-container {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #BDC5D5;
+
+    @include tablet {
+     min-width: 351px;
+    }
 
     @include desktop {
       width: 31.875rem;
@@ -61,6 +71,7 @@
     @include tablet {
       border-bottom: none;
       width: 100%;
+      // display: none;
     }
 
     @include desktop {
@@ -74,7 +85,7 @@
   }
 
   &__item-name-container {
-    width: unset;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -113,6 +124,10 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
+
+    @include tablet {
+      width: 100%;
+    }
 
     @include desktop {
       width: 100%;
