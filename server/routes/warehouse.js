@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const warehouseController = require("../controllers/warehouseController");
 
+// const warehouses = __dirname + "../../db/warehouses.json";
+// const addWarehouse = require(warehouses);
+
 router.get("/", warehouseController.listWarehouses);
 router.get("/:name", warehouseController.listWarehouseDetails);
 router.get("/:name/:itemName", warehouseController.listItemDetails);
@@ -25,7 +28,7 @@ router.post("/", (req, res) => {
   }
   console.log(addWarehouse);
   JSON.parse(addWarehouse).push(newWarehouse);
-  warehouseController.writeJSONFile(warehouses, addWarehouse);
+  warehouseController.writeJSONFile(addWarehouse);
   res.json(newWarehouse);
 });
 
