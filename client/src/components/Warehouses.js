@@ -124,15 +124,17 @@ class Warehouses extends React.Component {
           </div>
 
           <div className="warehouses__item-icons-container">
-            <img src={deleteIcon} alt="" className="warehouses__icon" />
+            <Link to="/delete-warehouse">
+              <img src={deleteIcon} alt="" className="warehouses__icon" />
+            </Link>
             <img src={editIcon} alt="" className="warehouses__icon" />
           </div>
-        </div>
+        </div >
       );
     });
 
     return (
-      <main className="warehouses">
+      <main className="warehouses" >
         <section className="warehouses__header-container">
           <h1 className="warehouses__heading">Warehouses</h1>
           <div className="warehouses__search-add">

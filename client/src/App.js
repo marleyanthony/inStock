@@ -17,7 +17,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    // this.getWarehouses();
+    this.getWarehouses();
     this.getInvItems();
     console.log("component mounted");
   }
@@ -95,6 +95,7 @@ class App extends React.Component {
             return (
               <DeleteItem
                 {...renderProps}
+                inventories={this.state.inventories}
               />
             );
           }}

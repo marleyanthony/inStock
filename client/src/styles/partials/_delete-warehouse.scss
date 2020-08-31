@@ -1,6 +1,8 @@
 .delete-modal {
   background: #FFFFFF;
   position: absolute;
+  top: 185px;
+  left: 48px;
   z-index: 100;
   height: 100vh;
   width: 100vw;
@@ -44,5 +46,352 @@
   @include tablet {
     width: 672px;
     height: 262px;
+  }
+}
+
+.warehouses-delete {
+  background: $primary-color-white;
+  border-radius: 0.1875rem;
+  box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
+  margin: 0 1rem;
+  position: relative;
+  z-index: 10;
+
+
+  @include tablet {
+    margin: 0 2rem;
+  }
+
+  @include desktop {
+    margin: 0 8.125rem;
+  }
+
+  &__header-container {
+    padding: 0 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+
+    @include tablet {
+      padding: 0 2rem;
+      padding-top: 2rem;
+      padding-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      padding: 0 2.5rem;
+      padding-top: 2rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__heading {
+    @extend %page-header;
+  }
+
+  // &__search-add {
+  // }
+
+  &__search-label {
+    position: relative;
+  }
+
+  &__searchbar {
+    @extend %input;
+    margin: 1rem 0;
+
+    @include tablet {
+      width: 11.5625rem;
+      margin: 0 1rem;
+    }
+
+    @include desktop {
+      width: 17.125rem;
+    }
+  }
+
+  &__search-icon {
+    position: absolute;
+    top: 0.0625rem;
+    right: 0.75rem;
+
+    @include tablet {
+      right: 2rem;
+    }
+  }
+
+  &__button {
+    @extend %button-primary;
+    font-weight: normal;
+  }
+
+  // &__list {
+  // }
+
+  &__sort {
+    display: none;
+
+    @include tablet {
+      width: 100%;
+      height: 2.5rem;
+      background: $background-color-lightGrey;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+
+    @include desktop {
+      padding: 0 2.5rem;
+    }
+  }
+
+  &__sort-left {
+    @include tablet {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__sort-right {
+    @include tablet {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__sort-category {
+    display: flex;
+    align-items: center;
+  }
+
+  &__sort-label {
+    @extend %table-headers;
+  }
+
+  &__item {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid #bdc5d5;
+
+    &:nth-child(2) {
+      @include tablet {
+        border-top: none;
+      }
+    }
+
+    &:hover {
+      background: rgba(46, 102, 230, 0.07);
+    }
+
+    @include tablet {
+      padding: 1rem 2rem;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      padding: 1rem 2.5rem;
+    }
+  }
+
+  &__item-left-container {
+    width: 33.4375vw;
+
+    @include tablet {
+      // width: 16.875rem;
+      width: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+  }
+
+  &__label {
+    @extend %table-headers;
+    margin-bottom: 0.25rem;
+
+    &:nth-child(n + 2) {
+      margin-top: 1rem;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-end;
+    @extend %links;
+
+    @include tablet {
+      width: 9.375rem;
+      flex-grow: 1;
+    }
+
+    // @include desktop {
+    //   width: 13.75rem;
+    //   flex-grow: 1;
+    // }
+  }
+
+  &__text-location {
+    @extend %body-medium;
+    color: $primary-color-indigo;
+  }
+
+  // &__icon {
+  // }
+
+  &__icon--sort {
+    height: 75%;
+    margin-left: 0.25rem;
+  }
+
+  &__icon--chevron {
+    margin-left: 0.25rem;
+    height: 1.2rem;
+
+    @include tablet {
+      height: 1.3rem;
+    }
+  }
+
+  &__text-address {
+    @extend %body-medium;
+
+    @include tablet {
+      width: 7.5625rem;
+      padding-right: 1rem;
+      flex-grow: 1;
+    }
+
+    @include desktop {
+      width: 14.375rem;
+    }
+  }
+
+  &__item-right-container {
+    width: 33.4375vw;
+    margin-left: 1.5rem;
+
+    @include tablet {
+      // width: 19.375rem;
+      width: unset;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+  }
+
+  &__text-contact-name {
+    @extend %body-medium;
+
+    @include tablet {
+      width: 7.5rem;
+      flex-grow: 1;
+    }
+  }
+
+  &__contact-info-container {
+    & .warehouses__label {
+      margin-top: 1rem;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      width: 11.8125rem;
+      flex-grow: 1;
+    }
+  }
+
+  &__text-contact-phone {
+    @extend %body-medium;
+  }
+
+  &__text-contact-email {
+    @extend %body-medium;
+  }
+
+  &__item-icons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+
+    @include tablet {
+      width: 3.75rem;
+      margin-top: 0;
+    }
+  }
+
+  // search - no results
+  &__search-no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    @include desktop {
+      padding: 1rem 2.5rem;
+    }
+  }
+}
+
+// note that there are a number of container divs surrounding certain column elements
+// adjustments to width and flex-grow should be made the same as the
+// relevant list items/surrounding containers (eg. contact-info-container is the same size
+// as sort-info)
+// __sort-warehouse should be the same as __link, __sort-address should be
+// the same as __text-address, etc. (might help to look at the JSX relationships)
+// DO NOT adjust size of the container divs, they should adapt to the size of their children
+.sort-warehouse {
+  @include tablet {
+    width: 9.375rem;
+    flex-grow: 1;
+  }
+}
+
+.sort-address {
+  @include tablet {
+    width: 7.5625rem;
+    flex-grow: 1;
+  }
+
+  @include desktop {
+    width: 14.375rem;
+  }
+}
+
+.sort-name {
+  @include tablet {
+    width: 7.5625rem;
+    flex-grow: 1;
+  }
+}
+
+.sort-info {
+  @include tablet {
+    width: 11.8125rem;
+    flex-grow: 1;
+  }
+}
+
+.sort-actions {
+  @include tablet {
+    width: 3.75rem;
+    text-align: right;
   }
 }

@@ -8,7 +8,7 @@ import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
 
 const InventoryItems = ({ inventories }) => {
-  console.log("inventories:", inventories);
+  // console.log("inventories:", inventories);
   const inventoryList = inventories.map((inventory) => {
     return (
       <div className="inventory__item">
