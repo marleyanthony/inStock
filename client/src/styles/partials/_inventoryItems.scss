@@ -3,8 +3,8 @@
   border-radius: 0.1875rem;
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
-  position: relative;
-  z-index: 10;
+  // position: relative;
+  z-index: 0;
 
   @include tablet {
     margin: 0 2rem;
@@ -43,6 +43,10 @@
       width: 21rem;
       display: flex;
     }
+
+    @include desktop {
+      width: 25rem;
+    }
   }
 
   &__search-label {
@@ -77,10 +81,11 @@
   &__button {
     @extend %button-primary;
     font-weight: normal;
-  }
 
-  // &__list {
-  // }
+    @include desktop {
+      width: 140px;
+    }
+  }
 
   &__sort {
     display: none;
@@ -221,7 +226,6 @@
 
     @include tablet {
       max-width: 100px;
-      border: 1px solid red;
       flex-grow: 1;
     }
 
