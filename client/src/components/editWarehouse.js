@@ -53,7 +53,7 @@ class editWarehouse extends Component {
                     <div className="editWarehouse__wh-contacts-container">
                         <h3 className="editWarehouse__contacts-heading">Contact Details</h3>
                         <p className="editWarehouse__wh-label">Contact Name</p>
-                        <input className="editWarehouse__input-field newWarehouse__input-field--tabDesk-cont"
+                        <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-cont"
                             type="text" placeholder="Graeme Lyon"
                             name="contactName"
                         />
