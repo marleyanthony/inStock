@@ -89,7 +89,7 @@ function AddItem({ handleSubmit }) {
             </div>
           </div>
           <div className="inventory__quan">
-            <h5 className="inventory__item-name-input-label">
+            <h5 htmlFor="name" className="inventory__item-name-input-label">
               Quantity
           </h5>
             <input type="text" name="quantity" className="inventory__item-name-input" placeholder="0" />
