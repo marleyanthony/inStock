@@ -62,6 +62,15 @@
   }
 }
 
+// links for warehouse/inventory details
+%links {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-decoration-color: $primary-color-indigo;
+  }
+}
+
 // inputs
 %input {
   @extend %labels-links-buttons;

@@ -28,14 +28,14 @@ class App extends React.Component {
 
   getInvItems() {
     axios.get("http://localhost:8080/inventory").then((res) => {
-      // console.log("get inventories:", res.data);
+      console.log("get inventories:", res.data);
       this.setState({ inventories: res.data });
     });
   }
 
   getWarehouses() {
     axios.get("http://localhost:8080/warehouse").then((res) => {
-      // console.log("get warehouses:", res.data);
+      console.log("get warehouses:", res.data);
       this.setState({ warehouses: res.data });
     });
   }
@@ -103,9 +103,7 @@ class App extends React.Component {
           path="/delete-warehouse"
           render={(renderProps) => {
             return (
-              <DeleteWarehouse
-                {...renderProps}
-              />
+              <DeleteWarehouse {...renderProps} warehouses={this.state.warehouses} />
             );
           }}
         />
