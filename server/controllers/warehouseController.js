@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const warehouse = require('../models/warehouseModel');
 const fs = require("fs");
-=======
-const warehouse = require("../models/warehouseModel");
->>>>>>> master
-=======
-const warehouse = require('../models/warehouseModel');
-const fs = require("fs");
->>>>>>> master
+
 
 function listWarehouses(req, res) {
   res.json(warehouse.list());
@@ -20,15 +12,6 @@ function writeJSONFile(filename, content) {
   });
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {
-  listWarehouse,
-  writeJSONFile
-};
-=======
-=======
->>>>>>> master
 const listWarehouseDetails = (req, res) => {
   const warehouseName = req.params.name;
   const warehouseDetails = warehouse.getWarehouseByName(warehouseName);
@@ -40,9 +23,6 @@ const listWarehouseDetails = (req, res) => {
   res.json(warehouseDetails);
 };
 
-<<<<<<< HEAD
-module.exports = { listWarehouses, listWarehouseDetails };
->>>>>>> master
-=======
+
 module.exports = { listWarehouses, listWarehouseDetails, writeJSONFile };
->>>>>>> master
+

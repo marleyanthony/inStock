@@ -1,29 +1,14 @@
 const express = require("express");
 const router = express.Router();
-<<<<<<< HEAD
-<<<<<<< HEAD
-const warehouseController = require('../controllers/warehouseController');
-const warehouses = __dirname + "../../db/warehouses.json";
-const addWarehouse = require(warehouses);
-
-=======
-const warehouseController = require("../controllers/warehouseController");
-
-router.get("/", warehouseController.listWarehouses);
-router.get("/:name", warehouseController.listWarehouseDetails);
->>>>>>> master
-
-
-=======
 
 const warehouses = __dirname + "../../db/warehouses.json";
 const addWarehouse = require(warehouses);
 
 const warehouseController = require("../controllers/warehouseController");
->>>>>>> master
 
 router.get("/", warehouseController.listWarehouses);
 router.get("/:name", warehouseController.listWarehouseDetails);
+
 
 router.post("/", (req, res) => {
   console.log(req.body)
@@ -47,7 +32,6 @@ router.post("/", (req, res) => {
   warehouseController.writeJSONFile(warehouses, addWarehouse)
   res.json(newWarehouse);
 });
-
 
 
 module.exports = router; 
