@@ -62,7 +62,57 @@ const InventoryItems = ({ inventories }) => {
   });
 
   return (
-    <main className="inventory">
+    <>
+      <main className="inventory">
+
+
+        <section className="inventory__header-wrapper">
+          <h1 className="inventory__heading">Inventory</h1>
+          <div className="inventory__search-add">
+            <label htmlFor="search" className="inventory__search-label">
+              <input type="search" className="inventory__searchbar" name="search" placeholder="Search..." />
+              <img src={searchIcon} alt="" className="inventory__search-icon" />
+            </label>
+            <Link to={'add-item'} className="warehouses__link">
+              <button className="inventory__button">+ Add New Item</button>
+            </Link>
+          </div>
+        </section>
+
+        <section className="inventory__list">
+          <div className="inventory__sort">
+            <div className="inventory__sort-left">
+              <div className="inventory__sort-category sort-inventory">
+                <p className="inventory__sort-label">Inventory Item</p>
+                <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
+              </div>
+              <div className="inventory__sort-category sort-category">
+                <p className="inventory__sort-label">Category</p>
+                <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
+              </div>
+            </div>
+            <div className="inventory__sort-right">
+              <div className="inventory__sort-category sort-status">
+                <p className="inventory__sort-label">Status</p>
+                <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
+              </div>
+              <div className="inventory__sort-category sort-qty">
+                <p className="inventory__sort-label">QTY</p>
+                <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
+              </div>
+              <div className="inventory__sort-category sort-inventory">
+                <p className="inventory__sort-label">Warehouse</p>
+                <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
+              </div>
+            </div>
+            <p className="inventory__sort-label sort-actions">ACTIONS</p>
+          </div>
+          {inventoryList}
+        </section>
+
+
+      </main>
+
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className="inventory__modal" style={{ overlay: { backgroundColor: 'rgba(19, 24, 44, 0.7)' } }}>
         <section className="delete-modal">
           <div className="delete-modal__tablet-wrapper">
@@ -76,51 +126,7 @@ const InventoryItems = ({ inventories }) => {
           </div>
         </section>
       </Modal>
-
-      <section className="inventory__header-wrapper">
-        <h1 className="inventory__heading">Inventory</h1>
-        <div className="inventory__search-add">
-          <label htmlFor="search" className="inventory__search-label">
-            <input type="search" className="inventory__searchbar" name="search" placeholder="Search..." />
-            <img src={searchIcon} alt="" className="inventory__search-icon" />
-          </label>
-          <Link to={'add-item'} className="warehouses__link">
-            <button className="inventory__button">+ Add New Item</button>
-          </Link>
-        </div>
-      </section>
-
-      <section className="inventory__list">
-        <div className="inventory__sort">
-          <div className="inventory__sort-left">
-            <div className="inventory__sort-category sort-inventory">
-              <p className="inventory__sort-label">Inventory Item</p>
-              <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
-            </div>
-            <div className="inventory__sort-category sort-category">
-              <p className="inventory__sort-label">Category</p>
-              <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
-            </div>
-          </div>
-          <div className="inventory__sort-right">
-            <div className="inventory__sort-category sort-status">
-              <p className="inventory__sort-label">Status</p>
-              <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
-            </div>
-            <div className="inventory__sort-category sort-qty">
-              <p className="inventory__sort-label">QTY</p>
-              <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
-            </div>
-            <div className="inventory__sort-category sort-inventory">
-              <p className="inventory__sort-label">Warehouse</p>
-              <img src={sortIcon} alt="" className="inventory__icon inventory__icon--sort" />
-            </div>
-          </div>
-          <p className="inventory__sort-label sort-actions">ACTIONS</p>
-        </div>
-        {inventoryList}
-      </section>
-    </main>
+    </>
   );
 };
 
