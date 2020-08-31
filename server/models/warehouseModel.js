@@ -38,4 +38,20 @@ const getWarehouseInventory = (pathName) => {
   return warehouseInventory;
 };
 
-module.exports = { list, getWarehouseByName, getWarehouseInventory };
+const getItemDetails = (warehouseName, itemName) => {
+  const inventoryData = JSON.parse(fs.readFileSync(inventoryFile));
+  const item = inventoryData.filter((item) => {
+    return (
+      item.warehouseName.split(" ").join("") === warehouseName &&
+      item.itemName.split(" ").join("") === itemName
+    );
+  });
+  return item[0];
+};
+
+module.exports = {
+  list,
+  getWarehouseByName,
+  getWarehouseInventory,
+  getItemDetails,
+};

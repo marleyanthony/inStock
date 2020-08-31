@@ -17,7 +17,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    // this.getWarehouses();
+    this.getWarehouses();
     this.getInvItems();
     console.log("component mounted");
   }
@@ -72,38 +72,29 @@ class App extends React.Component {
         <Route
           path="/edit-item"
           render={(renderProps) => {
-            return (
-              <EditItem
-                {...renderProps}
-              />
-            );
+            return <EditItem {...renderProps} />;
           }}
         />
         <Route
           path="/add-item"
           render={(renderProps) => {
-            return (
-              <AddItem
-                {...renderProps}
-              />
-            );
+            return <AddItem {...renderProps} />;
           }}
         />
         <Route
           path="/delete-item"
           render={(renderProps) => {
-            return (
-              <DeleteItem
-                {...renderProps}
-              />
-            );
+            return <DeleteItem {...renderProps} />;
           }}
         />
         <Route
           path="/delete-warehouse"
           render={(renderProps) => {
             return (
-              <DeleteWarehouse {...renderProps} warehouses={this.state.warehouses} />
+              <DeleteWarehouse
+                {...renderProps}
+                warehouses={this.state.warehouses}
+              />
             );
           }}
         />
