@@ -19,48 +19,64 @@ const InventoryItems = ({ inventories }) => {
 
   const inventoryList = inventories.map((inventory) => {
     return (
-      <div className="inventory__sort-list">
-        <div className="inventory__sort-list-left">
-          <div className="inventory__item-name-container">
-            <p className="inventory__label">Inventory Item</p>
-            <div className="inventory__mobile-wrapper">
-              <h3 className="inventory__item-name">{inventory.itemName}</h3>
-              <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
+      <>
+        <div className="inventory__sort-list">
+          <div className="inventory__sort-list-left">
+            <div className="inventory__item-name-container">
+              <p className="inventory__label">Inventory Item</p>
+              <div className="inventory__mobile-wrapper">
+                <h3 className="inventory__item-name">{inventory.itemName}</h3>
+                <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
+              </div>
+            </div>
+            <div className="inventory__item-category-container">
+              <p className="inventory__label">Category</p>
+              <p className="inventory__category">{inventory.category}</p>
             </div>
           </div>
-          <div className="inventory__item-category-container">
-            <p className="inventory__label">Category</p>
-            <p className="inventory__category">{inventory.category}</p>
-          </div>
-        </div>
 
-        <div className="inventory__item-right-container">
-          <div className="inventory__status-container">
-            <p className="inventory__label">Status</p>
-            <p className="inventory__status">{inventory.status}</p>
+          <div className="inventory__item-right-container">
+            <div className="inventory__status-container">
+              <p className="inventory__label">Status</p>
+              <p className="inventory__status">{inventory.status}</p>
+            </div>
+            <div className="inventory__quantity-container">
+              <p className="inventory__label">QTY</p>
+              <p className="inventory__quantity">{inventory.quantity}</p>
+            </div>
+            <div className="inventory__warehouse-container">
+              <p className="inventory__label">Warehouse</p>
+              <p className="inventory__warehouse">{inventory.warehouseName}</p>
+            </div>
           </div>
-          <div className="inventory__quantity-container">
-            <p className="inventory__label">QTY</p>
-            <p className="inventory__quantity">{inventory.quantity}</p>
-          </div>
-          <div className="inventory__warehouse-container">
-            <p className="inventory__label">Warehouse</p>
-            <p className="inventory__warehouse">{inventory.warehouseName}</p>
-          </div>
-        </div>
 
-        <div className="inventory__item-icons-container">
-          <img src={deleteIcon} alt="" className="inventory__icon" onClick={() => setModalIsOpen(true)} />
-          <Link to={'edit-item'} className="warehouses__link">
-            <img src={editIcon} alt="" className="inventory__icon" />
-          </Link>
+          <div className="inventory__item-icons-container">
+            <img src={deleteIcon} alt="" className="inventory__icon" onClick={() => setModalIsOpen(true)} />
+            <Link to={'edit-item'} className="warehouses__link">
+              <img src={editIcon} alt="" className="inventory__icon" />
+            </Link>
+          </div>
         </div>
-      </div>
+      </>
     );
   });
 
   return (
     <main className="inventory">
+      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className="inventory__modal" style={{ overlay: { backgroundColor: 'rgba(19, 24, 44, 0.7)' } }}>
+        <section className="delete-modal">
+          <div className="delete-modal__tablet-wrapper">
+            <img src={close} alt="close" className="delete-modal__close-btn" onClick={() => setModalIsOpen(false)} />
+            <h1 className="delete-modal__header">Delete Television inventory item?</h1>
+            <p className="delete-modal__warning">Please confirm that you'd like to delete Television from the inventory list. You won't be able to undo this action.</p>
+            <div className="delete-modal__delete-action-btn-container">
+              <button className="delete-modal__cancel-btn" onClick={() => setModalIsOpen(false)}>Cancel</button>
+              <button className="delete-modal__delete-btn">Delete</button>
+            </div>
+          </div>
+        </section>
+      </Modal>
+
       <section className="inventory__header-wrapper">
         <h1 className="inventory__heading">Inventory</h1>
         <div className="inventory__search-add">
@@ -104,21 +120,7 @@ const InventoryItems = ({ inventories }) => {
         </div>
         {inventoryList}
       </section>
-
-      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className="inventory__modal" style={{ overlay: { backgroundColor: 'rgba(19, 24, 44, 0.7)' } }}>
-        <section className="delete-modal">
-          <div className="delete-modal__tablet-wrapper">
-            <img src={close} alt="close" className="delete-modal__close-btn" onClick={() => setModalIsOpen(false)} />
-            <h1 className="delete-modal__header">Delete Television inventory item?</h1>
-            <p className="delete-modal__warning">Please confirm that you'd like to delete Television from the inventory list. You won't be able to undo this action.</p>
-            <div className="delete-modal__delete-action-btn-container">
-              <button className="delete-modal__cancel-btn" onClick={() => setModalIsOpen(false)}>Cancel</button>
-              <button className="delete-modal__delete-btn">Delete</button>
-            </div>
-          </div>
-        </section>
-      </Modal>
-    </main >
+    </main>
   );
 };
 
