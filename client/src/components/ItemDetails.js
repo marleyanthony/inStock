@@ -35,13 +35,18 @@ class ItemDetails extends React.Component {
       <main className="inv-item">
         <section className="inv-item__header-container">
           <div className="inv-item__back-name">
-            <Link to={`/warehouse/${this.props.match.params.name}`}>
+            {/* <Link to={`/warehouse/${this.props.match.params.name}`}> */}
+            <button
+              className="inv-item__button-back"
+              onClick={() => this.props.history.goBack()}
+            >
               <img
                 src={backIcon}
                 alt=""
                 className="inv-item__icon inv-item__icon--back"
               />
-            </Link>
+            </button>
+            {/* </Link> */}
             <h1 className="inv-item__heading">{itemInfo.itemName}</h1>
           </div>
           <button className="inv-item__button">

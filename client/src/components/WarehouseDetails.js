@@ -33,7 +33,10 @@ class WarehouseDetails extends React.Component {
     const warehouse = this.state.currentWarehouse;
     const inventoryList = warehouse.inventory?.map((item) => {
       return (
-        <div className="warehouse__inv-item" key={item.itemName}>
+        <div
+          className="warehouse__inv-item"
+          key={`${item.itemName}-${item.warehouseName}`}
+        >
           <div className="warehouse__left-container">
             <p className="warehouse__label">INVENTORY ITEM</p>
             <Link
