@@ -36,7 +36,12 @@ class WarehouseDetails extends React.Component {
         <div className="warehouse__inv-item" key={item.itemName}>
           <div className="warehouse__left-container">
             <p className="warehouse__label">INVENTORY ITEM</p>
-            <a className="warehouse__link warehouse__link--item">
+            <Link
+              to={`/warehouse/${item.warehouseName
+                .split(" ")
+                .join("")}/${item.itemName.split(" ").join("")}`}
+              className="warehouse__link warehouse__link--item"
+            >
               <h3 className="warehouse__text warehouse__text--link warehouse__text--item">
                 {item.itemName}
               </h3>
@@ -45,7 +50,7 @@ class WarehouseDetails extends React.Component {
                 alt=""
                 className="warehouses__icon warehouses__icon--chevron"
               />
-            </a>
+            </Link>
 
             <p className="warehouse__label">CATEGORY</p>
             <h3 className="warehouse__text warehouse__text--category">
