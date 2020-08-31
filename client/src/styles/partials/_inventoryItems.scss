@@ -3,8 +3,8 @@
   border-radius: 0.1875rem;
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
-  position: relative;
-  z-index: 10;
+  // position: relative;
+  z-index: 0;
 
   @include tablet {
     margin: 0 2rem;
@@ -38,8 +38,16 @@
     @extend %page-header;
   }
 
-  // &__search-add {
-  // }
+  &__search-add {
+    @include tablet {
+      width: 21rem;
+      display: flex;
+    }
+
+    @include desktop {
+      width: 25rem;
+    }
+  }
 
   &__search-label {
     position: relative;
@@ -51,7 +59,8 @@
 
     @include tablet {
       width: 11.5625rem;
-      margin: 0 1rem;
+      margin: 0 0.9rem 0 0;
+      // display: inline-block;
     }
 
     @include desktop {
@@ -72,10 +81,11 @@
   &__button {
     @extend %button-primary;
     font-weight: normal;
-  }
 
-  // &__list {
-  // }
+    @include desktop {
+      width: 140px;
+    }
+  }
 
   &__sort {
     display: none;
@@ -149,7 +159,7 @@
 
     @include tablet {
       // width: 16.875rem;
-      width: unset;
+      width: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -174,6 +184,11 @@
     display: flex;
     align-items: center;
     width: 8.765625rem;
+
+    @include tablet {
+      // width: 10rem;
+      flex-direction: row;
+    }
   }
 
   &__link {
@@ -210,8 +225,7 @@
     @extend %body-medium;
 
     @include tablet {
-      width: 0.2rem;
-      // padding-right: 1rem;
+      max-width: 100px;
       flex-grow: 1;
     }
 

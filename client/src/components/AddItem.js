@@ -37,6 +37,7 @@ function AddItem({ handleSubmit }) {
           <h1 className="inventory__heading">Add New Inventory Item</h1>
         </div>
       </section>
+
       <form onSubmit={handleSubmit}>
         <section className="inventory__details-container">
           <h3 className="inventory__details-header">
@@ -54,7 +55,7 @@ function AddItem({ handleSubmit }) {
           </h5>
             <textarea name="description" className="inventory__item-description-input" placeholder="Please enter a brief item description..." />
           </div>
-          <div action="" className="inventory__category-container">
+          <div className="inventory__category-container">
             <h5 htmlFor="category" className="inventory__item-category-input-label">
               Category
           </h5>
