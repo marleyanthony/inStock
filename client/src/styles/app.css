@@ -2143,6 +2143,12 @@ a {
   border-bottom: 1px solid #BDC5D5;
 }
 
+@media (min-width: 1280px) {
+  .inventory__details-container, .inventory__availability-container {
+    width: 31.875rem;
+  }
+}
+
 @media (min-width: 768px) {
   .inventory__details-container {
     border-bottom: none;
@@ -2154,6 +2160,12 @@ a {
   .inventory__availability-container {
     border-bottom: none;
     width: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inventory__availability-container {
+    width: 31.875rem;
   }
 }
 
@@ -2210,6 +2222,12 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
+}
+
+@media (min-width: 1280px) {
+  .inventory__item-description-input {
+    width: 100%;
+  }
 }
 
 .inventory__category-select {
@@ -2276,6 +2294,14 @@ a {
       justify-content: space-around;
 }
 
+@media (min-width: 768px) {
+  .inventory__action-btn-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .inventory__cancel-btn, .inventory__save-btn {
   width: 139px;
   height: 36px;
@@ -2286,9 +2312,22 @@ a {
   border-radius: 20px;
 }
 
+@media (min-width: 768px) {
+  .inventory__cancel-btn {
+    width: 72px;
+    margin-right: 1rem;
+  }
+}
+
 .inventory__save-btn {
   background: #2E66E6;
   color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .inventory__save-btn {
+    width: 98px;
+  }
 }
 
 @media (min-width: 768px) {

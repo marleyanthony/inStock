@@ -86,7 +86,9 @@ function AddItem() {
         </section>
       </div>
       <div className="inventory__action-btn-container">
-        <button className="inventory__cancel-btn">Cancel</button>
+        <Link to="/inventory">
+          <button className="inventory__cancel-btn">Cancel</button>
+        </Link>
         <button className="inventory__save-btn">+ Add Item</button>
       </div>
     </main>

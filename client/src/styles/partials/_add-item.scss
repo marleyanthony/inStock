@@ -44,6 +44,10 @@
   &__availability-container {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #BDC5D5;
+
+    @include desktop {
+      width: 31.875rem;
+    }
   }
 
   &__details-container {
@@ -57,6 +61,10 @@
     @include tablet {
       border-bottom: none;
       width: 100%;
+    }
+
+    @include desktop {
+      width: 31.875rem;
     }
   }
 
@@ -105,6 +113,10 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
+
+    @include desktop {
+      width: 100%;
+    }
   }
 
   &__category-select {
@@ -158,6 +170,10 @@
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-around;
+
+    @include tablet {
+      justify-content: flex-end;
+    }
   }
 
   &__cancel-btn,
@@ -170,9 +186,20 @@
     border-radius: 20px;
   }
 
+  &__cancel-btn {
+    @include tablet {
+      width: 72px;
+      margin-right: 1rem;
+    }
+  }
+
   &__save-btn {
     background: #2E66E6;
     color: #FFFFFF;
+
+    @include tablet {
+      width: 98px;
+    }
   }
 
   // mobile styling 
