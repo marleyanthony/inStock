@@ -49,9 +49,23 @@ const getItemDetails = (warehouseName, itemName) => {
   return item[0];
 };
 
+const updateWarehouse = (warehouseName, updatedData) => {
+  const warehouses = JSON.parse(fs.readFileSync(warehouseFile));
+  let match = warehouses.findIndex(
+    (warehouse) => warehouse.navLink === warehouseName
+  );
+  if (!match) {
+    return false;
+  } else {
+    warehouses[match] = updatedData;
+    return warehouses;
+  }
+};
+
 module.exports = {
   list,
   getWarehouseByName,
   getWarehouseInventory,
   getItemDetails,
+  updateWarehouse,
 };

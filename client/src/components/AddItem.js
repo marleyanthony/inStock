@@ -1,8 +1,28 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import backIcon from "../assets/Icons/arrow_back-24px.svg";
+import axios from "axios";
 
-function AddItem() {
+function AddItem({ handleSubmit }) {
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    let newInventory = {
+      itemName: event.target.itemName.value,
+      description: event.target.description.value,
+      categories: event.target.categories.value,
+      quantity: event.target.quantity.value,
+      warehouse: event.target.warehouse.value,
+    }
+    axios.post("http://localhost:8080/inventory", newInventory)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    event.target.reset();
+  }
   return (
     <main className="inventory">
       <section className="inventory__header-container">
@@ -18,18 +38,18 @@ function AddItem() {
         </div>
       </section>
 
-      <div className="inventory__flex-container">
+      <form onSubmit={handleSubmit}>
         <section className="inventory__details-container">
           <h3 className="inventory__details-header">
             Item Details
         </h3>
-          <div className="inventory__item-name-container">
+          <div action="" className="inventory__item-name-container">
             <h5 htmlFor="name" className="inventory__item-name-input-label">
               Item Name
-            </h5>
-            <input type="text" name="item-name" className="inventory__item-name-input" placeholder="Item Name" />
+          </h5>
+            <input type="text" name="itemName" className="inventory__item-name-input" placeholder="Item Name" />
           </div>
-          <div className="inventory__item-description-container">
+          <div action="" className="inventory__item-description-container">
             <h5 htmlFor="name" className="inventory__item-description-input-label">
               Description
           </h5>
@@ -73,7 +93,7 @@ function AddItem() {
             <h5 htmlFor="name" className="inventory__item-name-input-label">
               Quantity
           </h5>
-            <input type="text" name="item-name" className="inventory__item-name-input" placeholder="0" />
+            <input type="text" name="quantity" className="inventory__item-name-input" placeholder="0" />
           </div>
           <div className="inventory__warehouse-container">
             <h5 htmlFor="warehouse" className="inventory__warehouse-header">
@@ -84,13 +104,11 @@ function AddItem() {
             </select>
           </div>
         </section>
-      </div>
-      <div className="inventory__action-btn-container">
-        <Link to="/inventory">
+        <div className="inventory__action-btn-container">
           <button className="inventory__cancel-btn">Cancel</button>
-        </Link>
-        <button className="inventory__save-btn">+ Add Item</button>
-      </div>
+          <button className="inventory__save-btn">+ Add Item</button>
+        </div>
+      </form>
     </main>
   );
 }
