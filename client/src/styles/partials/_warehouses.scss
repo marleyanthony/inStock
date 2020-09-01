@@ -1,10 +1,4 @@
 .warehouses {
-  // position: absolute;
-  // left: 4.27%;
-  // right: 4.27%;
-  // top: 7.53%;
-  // bottom: 5.31%;
-
   background: $primary-color-white;
   border-radius: 0.1875rem;
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
@@ -44,9 +38,6 @@
     @extend %page-header;
   }
 
-  // &__search-add {
-  // }
-
   &__search-label {
     position: relative;
   }
@@ -79,9 +70,6 @@
     @extend %button-primary;
     font-weight: normal;
   }
-
-  // &__list {
-  // }
 
   &__sort {
     display: none;

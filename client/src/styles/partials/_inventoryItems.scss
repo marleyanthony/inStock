@@ -3,7 +3,6 @@
   border-radius: 0.1875rem;
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
-  // position: relative;
   z-index: 0;
 
   @include tablet {
@@ -14,8 +13,7 @@
     margin: 0 8.125rem;
   }
 
-  
-  // item styling
+
   &__sort-list-items {
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +30,10 @@
       padding: 1rem 2rem;
       align-items: center;
     }
+
+    @include desktop {
+
+    }
   }
 
   &__sort-list-items-left {
@@ -40,9 +42,7 @@
     @include tablet {
       display: flex;
       align-items: center;
-      // justify-content: space-between;
       width: 40%;
-      // border: 1px solid red;
     }
   }
 
@@ -52,9 +52,24 @@
     }
   }
 
-  &__sort-list-items-container-category {
+  &__sort-list-items-container-status {
     @include tablet {
-      // min-width: 240px;
+      width: 120px;
+    }
+
+    @include desktop {
+      width: 175px;
+    }
+  }
+
+  &__sort-list-items-container-quantity {
+    @include tablet {
+      width: 70px;
+      height: 100%;
+    }
+
+    @include desktop {
+      width: 85px;
     }
   }
 
@@ -94,6 +109,10 @@
     @include tablet {
       margin-bottom: 0;
     }
+
+    @include desktop {
+      width: 200px;
+    }
   }
 
   &__sort-list-right-container {
@@ -101,7 +120,6 @@
 
     @include tablet {
       display: flex;
-      // justify-content: space-between;
       width: 43%;
     }
   }
@@ -213,7 +231,6 @@
     @include tablet {
       width: 11.5625rem;
       margin: 0 0.9rem 0 0;
-      // display: inline-block;
     }
 
     @include desktop {
@@ -314,7 +331,6 @@
 
   &__item {
     display: flex;
-    // justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 1.5rem;
     padding-top: 1rem;
@@ -357,7 +373,6 @@
     width: 8.765625rem;
 
     @include tablet {
-      // width: 10rem;
       flex-direction: row;
     }
   }
@@ -370,10 +385,6 @@
       margin: unset;
     }
   }
-
-  // &__mobile-wrapper {
-  //   display: flex;
-  // }
 
   &__link {
     display: flex;
@@ -423,12 +434,10 @@
     margin-left: 1.5rem;
 
     @include tablet {
-      // width: 19.375rem;
       width: unset;
       margin: 0;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       flex-grow: 1;
     }
   }
@@ -461,7 +470,6 @@
     }
 
     @include tablet {
-      // width: 11.8125rem;
       flex-grow: 1;
     }
   }
@@ -497,7 +505,12 @@
     @include tablet {
       width: 3.75rem;
       margin-top: 0;
+      padding-bottom: 0;
     }
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
   }
 
   // in stock or out of stock styling 
@@ -513,6 +526,11 @@
     border-radius: 20px;
     margin-bottom: 1rem;
     margin-top: 4px;
+
+    @include tablet {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__outstock {
@@ -528,6 +546,11 @@
     border-radius: 20px;
     margin-bottom: 1rem;
     margin-top: 4px;
+
+    @include tablet {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -538,7 +561,7 @@
   }
 
   @include desktop {
-    max-width: 140.25px;
+    max-width: 190px;
   }
 }
 
@@ -550,7 +573,7 @@
   }
 
   @include desktop {
-    max-width: 240px;
+    max-width: 200px;
   }
 }
 
@@ -562,7 +585,7 @@
   }
 
   @include desktop {
-    width: 10%;
+    max-width: 175px;
   }
 }
 
@@ -573,7 +596,7 @@
   }
 
   @include desktop {
-    // max-width: 141.75px;
+    max-width: 80px;
   }
 }
 
@@ -615,7 +638,6 @@
 
   &__header {
     z-index: 10;
-    // background: green; // temp 
     margin-bottom: 1rem;
     font-size: 1.75rem;
   }

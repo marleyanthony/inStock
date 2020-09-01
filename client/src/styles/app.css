@@ -1953,6 +1953,31 @@ a {
   }
 }
 
+@media (min-width: 768px) {
+  .inventory__sort-list-items-container-status {
+    width: 120px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inventory__sort-list-items-container-status {
+    width: 175px;
+  }
+}
+
+@media (min-width: 768px) {
+  .inventory__sort-list-items-container-quantity {
+    width: 70px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inventory__sort-list-items-container-quantity {
+    width: 85px;
+  }
+}
+
 .inventory__sort-list-items-label {
   text-transform: uppercase;
   font-family: Titillium Web;
@@ -1992,6 +2017,12 @@ a {
 @media (min-width: 768px) {
   .inventory__sort-list-items-mobile-wrapper {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inventory__sort-list-items-mobile-wrapper {
+    width: 200px;
   }
 }
 
@@ -2432,9 +2463,6 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -2512,7 +2540,12 @@ a {
   .inventory__item-icons-container {
     width: 3.75rem;
     margin-top: 0;
+    padding-bottom: 0;
   }
+}
+
+.inventory__icon {
+  margin-right: 1.5rem;
 }
 
 .inventory__instock {
@@ -2527,6 +2560,13 @@ a {
   border-radius: 20px;
   margin-bottom: 1rem;
   margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  .inventory__instock {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .inventory__outstock {
@@ -2547,6 +2587,13 @@ a {
 }
 
 @media (min-width: 768px) {
+  .inventory__outstock {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
   .sort-inventory {
     width: 7.375rem;
     -webkit-box-flex: 1;
@@ -2557,7 +2604,7 @@ a {
 
 @media (min-width: 1280px) {
   .sort-inventory {
-    max-width: 140.25px;
+    max-width: 190px;
   }
 }
 
@@ -2573,7 +2620,7 @@ a {
 
 @media (min-width: 1280px) {
   .sort-category {
-    max-width: 240px;
+    max-width: 200px;
   }
 }
 
@@ -2589,7 +2636,7 @@ a {
 
 @media (min-width: 1280px) {
   .sort-status {
-    width: 10%;
+    max-width: 175px;
   }
 }
 
@@ -2599,6 +2646,12 @@ a {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sort-qty {
+    max-width: 80px;
   }
 }
 
@@ -3467,6 +3520,31 @@ a {
   }
 }
 
+@media (min-width: 768px) {
+  .inventory__sort-list-items-container-status {
+    width: 120px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inventory__sort-list-items-container-status {
+    width: 175px;
+  }
+}
+
+@media (min-width: 768px) {
+  .inventory__sort-list-items-container-quantity {
+    width: 70px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inventory__sort-list-items-container-quantity {
+    width: 85px;
+  }
+}
+
 .inventory__sort-list-items-label {
   text-transform: uppercase;
   font-family: Titillium Web;
@@ -3506,6 +3584,12 @@ a {
 @media (min-width: 768px) {
   .inventory__sort-list-items-mobile-wrapper {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inventory__sort-list-items-mobile-wrapper {
+    width: 200px;
   }
 }
 
@@ -3946,9 +4030,6 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -4026,7 +4107,12 @@ a {
   .inventory__item-icons-container {
     width: 3.75rem;
     margin-top: 0;
+    padding-bottom: 0;
   }
+}
+
+.inventory__icon {
+  margin-right: 1.5rem;
 }
 
 .inventory__instock {
@@ -4041,6 +4127,13 @@ a {
   border-radius: 20px;
   margin-bottom: 1rem;
   margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  .inventory__instock {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .inventory__outstock {
@@ -4061,6 +4154,13 @@ a {
 }
 
 @media (min-width: 768px) {
+  .inventory__outstock {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
   .sort-inventory {
     width: 7.375rem;
     -webkit-box-flex: 1;
@@ -4071,7 +4171,7 @@ a {
 
 @media (min-width: 1280px) {
   .sort-inventory {
-    max-width: 140.25px;
+    max-width: 190px;
   }
 }
 
@@ -4087,7 +4187,7 @@ a {
 
 @media (min-width: 1280px) {
   .sort-category {
-    max-width: 240px;
+    max-width: 200px;
   }
 }
 
@@ -4103,7 +4203,7 @@ a {
 
 @media (min-width: 1280px) {
   .sort-status {
-    width: 10%;
+    max-width: 175px;
   }
 }
 
@@ -4113,6 +4213,12 @@ a {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sort-qty {
+    max-width: 80px;
   }
 }
 
