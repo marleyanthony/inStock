@@ -1,19 +1,18 @@
 import React, { Component } from "react";
-// import React from "react";
-// import { Link } from "react-router-dom";
 import arrowBack from "../assets/Icons/arrow_back-24px.svg";
+import { Link } from "react-router-dom";
 
 
 class editWarehouse extends Component {
-    // function editWarehouse() {
 
 
     render() {
         return (
-            // <form className="editWarehouse" onSubmit={this.handleSubmit}>
             <form className="editWarehouse" >
                 <div className="editWarehouse__arr-heading-container">
-                    <img src={arrowBack} alt="Back Arrow" />
+                    <Link to="/warehouse" className="editWarehouse__link-back-arrow">
+                        <img src={arrowBack} alt="Back Arrow" />
+                    </Link>
                     <h1 className="editWarehouse__wh-heading">Edit Warehouse</h1>
                 </div>
                 <div className="editWarehouse__details-contacts-container">
@@ -23,7 +22,6 @@ class editWarehouse extends Component {
                         <input className="editWarehouse__input-field editWarehouse__input-field--tabDesk-det"
                             type="text" placeholder="King West"
                             name="name"
-                        // onChange={this.handleChange}
                         />
                         <div className="editWarehouse__errorRequired-container">
                         </div>

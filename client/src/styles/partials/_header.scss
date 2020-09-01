@@ -1,13 +1,10 @@
 .header {
   @include mobile {
     display: flex;
-    // position: absolute;
     flex-direction: column;
     align-items: center;
-    // height: 12.5rem;
     width: 100%;
     padding-bottom: 1.5rem;
-    // background-color: $background-color-graphite;
 
     &__colour-block {
       position: absolute;
@@ -39,7 +36,6 @@
     &__wh-inv-container {
       display: flex;
       height: 2.25rem;
-      //   padding-top: 0;
       position: relative;
       z-index: 10;
 
@@ -89,7 +85,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // height: 11.625rem;
     padding: 0;
   }
 
@@ -104,8 +99,4 @@
       padding-left: 8.125rem;
     }
   }
-  //   &__wh-inv-container {
-  //     // padding: 1.8rem 0;
-  //     height: 50%;
-  //   }
 }

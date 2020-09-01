@@ -4,8 +4,6 @@ const inventoryController = require('../controllers/inventoryController');
 const addInventory = require("../db/inventories-short.json")
 
 
-
-
 router.get('/', inventoryController.listInventory);
 
 
