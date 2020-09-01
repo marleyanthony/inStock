@@ -9,6 +9,8 @@ import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
 
+Modal.setAppElement('#root');
+
 class InventoryItems extends React.Component {
   state = {
     searchTerm: null,
@@ -63,7 +65,7 @@ class InventoryItems extends React.Component {
     const inventoryList = inventoryItems.map((inventory) => {
       return (
         <>
-          <div className="inventory__sort-list-items">
+          <div className="inventory__sort-list-items" key={inventory.warehouseID}>
             <div className="inventory__sort-list-items-left">
               <div className="inventory__sort-list-items-container">
                 <p className="inventory__sort-list-items-label">
@@ -96,13 +98,13 @@ class InventoryItems extends React.Component {
             </div>
 
             <div className="inventory__item-right-container">
-              <div className="inventory__sort-list-items-container">
+              <div className="inventory__sort-list-items-container-status">
                 <p className="inventory__sort-list-items-label">Status</p>
-                <p className="inventory__sort-list-items-item-name">
+                <p className="inventory__sort-list-items-item-name inventory__instock" className={inventory.status === "In Stock" ? 'inventory__instock' : 'inventory__outstock'}>
                   {inventory.status}
                 </p>
               </div>
-              <div className="inventory__sort-list-items-container">
+              <div className="inventory__sort-list-items-container-quantity">
                 <p className="inventory__sort-list-items-label">QTY</p>
                 <p className="inventory__sort-list-items-item-name">
                   {inventory.quantity}
@@ -241,8 +243,8 @@ class InventoryItems extends React.Component {
               <h3 className="warehouses__text-address">No results found</h3>
             </div>
           ) : (
-            inventoryList
-          )}
+              inventoryList
+            )}
         </section>
       </main>
     );

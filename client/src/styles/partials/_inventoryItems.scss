@@ -3,8 +3,7 @@
   border-radius: 0.1875rem;
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
-  // position: relative;
-  z-index: 10;
+  z-index: 0;
 
   @include tablet {
     margin: 0 2rem;
@@ -14,16 +13,64 @@
     margin: 0 8.125rem;
   }
 
-  // item styling
+
   &__sort-list-items {
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
+    padding: 1rem 1rem 0 1.5rem;
+    border-bottom: 1px solid #BDC5D5;
+    border-top: 1px solid #BDC5D5;
+
+    &:nth-child(1) {
+      border: 1px solid green;
+    }
+
+    @include tablet {
+      flex-wrap: nowrap;
+      padding: 1rem 2rem;
+      align-items: center;
+    }
+
+    @include desktop {
+
+    }
   }
 
   &__sort-list-items-left {
-    border: 1px solid green;
     width: 50%;
+    
+    @include tablet {
+      display: flex;
+      align-items: center;
+      width: 40%;
+    }
+  }
+
+  &__sort-list-items-mobile-wrapper {
+    @include tablet {
+      width: 140px;
+    }
+  }
+
+  &__sort-list-items-container-status {
+    @include tablet {
+      width: 120px;
+    }
+
+    @include desktop {
+      width: 175px;
+    }
+  }
+
+  &__sort-list-items-container-quantity {
+    @include tablet {
+      width: 70px;
+      height: 100%;
+    }
+
+    @include desktop {
+      width: 85px;
+    }
   }
 
   &__sort-list-items-label {
@@ -58,6 +105,84 @@
   &__sort-list-items-mobile-wrapper {
     display: flex;
     margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      width: 200px;
+    }
+  }
+
+  &__sort-list-right-container {
+    width: 50%;
+
+    @include tablet {
+      display: flex;
+      width: 43%;
+    }
+  }
+
+  &__sort-list-items-item-name {
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sort-list-items-item-name-status {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #13182C;
+
+    @include tablet {
+      width: 120px;
+    }
+  }
+
+  &__sort-list-items-item-name-quantity {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #13182C;
+
+    @include tablet {
+      width: 75px;
+    }
+  }
+
+   &__sort-list-items-item-name-warehouse {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #13182C;
+  }
+
+  &__sort-list-item-icons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tablet {
+      width: 15%; 
+      display: flex;
+      padding-left: 4rem;
+    }
+  }
+
+  &__sort-list-items-label {
+    @include tablet {
+      display: none;
+    }
   }
 
   &__header-wrapper {
@@ -106,7 +231,6 @@
     @include tablet {
       width: 11.5625rem;
       margin: 0 0.9rem 0 0;
-      // display: inline-block;
     }
 
     @include desktop {
@@ -207,7 +331,6 @@
 
   &__item {
     display: flex;
-    // justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 1.5rem;
     padding-top: 1rem;
@@ -250,7 +373,6 @@
     width: 8.765625rem;
 
     @include tablet {
-      // width: 10rem;
       flex-direction: row;
     }
   }
@@ -263,10 +385,6 @@
       margin: unset;
     }
   }
-
-  // &__mobile-wrapper {
-  //   display: flex;
-  // }
 
   &__link {
     display: flex;
@@ -316,12 +434,10 @@
     margin-left: 1.5rem;
 
     @include tablet {
-      // width: 19.375rem;
       width: unset;
       margin: 0;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       flex-grow: 1;
     }
   }
@@ -354,7 +470,6 @@
     }
 
     @include tablet {
-      // width: 11.8125rem;
       flex-grow: 1;
     }
   }
@@ -385,11 +500,56 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 1.25rem;
-    padding: 0 1.6875rem 1.6875rem;
+    padding: 0 0 1.6875rem;
 
     @include tablet {
       width: 3.75rem;
       margin-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
+  }
+
+  // in stock or out of stock styling 
+  &__instock {
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #158463;
+    width: 61px;
+    height: 24px;
+    padding: 0.2rem 0.5rem;
+    background: rgba(21, 132, 99, 0.07);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    margin-top: 4px;
+
+    @include tablet {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__outstock {
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #C94515;
+    align-self: center;
+    width: 90px;
+    height: 24px;
+    padding: 0.2rem 0.5rem;
+    background: rgba(201, 69, 21, 0.07);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    margin-top: 4px;
+
+    @include tablet {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -401,7 +561,7 @@
   }
 
   @include desktop {
-    max-width: 140.25px;
+    max-width: 190px;
   }
 }
 
@@ -413,7 +573,7 @@
   }
 
   @include desktop {
-    max-width: 240px;
+    max-width: 200px;
   }
 }
 
@@ -425,7 +585,7 @@
   }
 
   @include desktop {
-    width: 10%;
+    max-width: 175px;
   }
 }
 
@@ -436,7 +596,7 @@
   }
 
   @include desktop {
-    // max-width: 141.75px;
+    max-width: 80px;
   }
 }
 
@@ -456,6 +616,7 @@
   background: #ffffff;
   position: absolute;
   height: 100vh;
+  z-index: 1010000000;
 
   &__tablet-wrapper {
     display: flex;
@@ -476,6 +637,7 @@
   }
 
   &__header {
+    z-index: 10;
     margin-bottom: 1rem;
     font-size: 1.75rem;
   }
