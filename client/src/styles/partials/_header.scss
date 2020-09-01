@@ -1,10 +1,13 @@
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 1.5rem;
-  // background: white;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    // background-color: $background-color-graphite;
+    position: relative;
+    z-index: 0;
 
   &__colour-block {
     position: absolute;
@@ -33,11 +36,11 @@
     width: 8rem;
   }
 
-  &__wh-inv-container {
-    display: flex;
-    height: 2.25rem;
-    position: relative;
-    // z-index: 10;
+    &__wh-inv-container {
+      display: flex;
+      height: 2.25rem;
+      position: relative;
+      z-index: 10;
 
     @include desktop {
       padding-right: 3.875rem;
@@ -100,4 +103,5 @@
       padding-left: 8.125rem;
     }
   }
+}
 }

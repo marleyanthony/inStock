@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import arrowBack from "../assets/Icons/arrow_back-24px.svg";
 import errorIcon from "../assets/Icons/error-24px.svg";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class newWarehouse extends Component {
     state = {
@@ -10,10 +10,12 @@ class newWarehouse extends Component {
         address: "",
         city: "",
         country: "",
-        contactName: "",
-        position: "",
-        phone: "",
-        email: ""
+        contact: {
+            name: "",
+            position: "",
+            phone: "",
+            email: ""
+        },
 
     };
 
@@ -32,14 +34,17 @@ class newWarehouse extends Component {
 
         axios
             .post("http://localhost:8080/warehouse", {
+
                 name: name.value,
                 address: address.value,
                 city: city.value,
                 country: country.value,
-                contactName: contactName.value,
-                position: position.value,
-                phone: phone.value,
-                email: email.value
+                contact: {
+                    name: contactName.value,
+                    position: position.value,
+                    phone: phone.value,
+                    email: email.value
+                },
             })
             .then((res) => {
                 console.log(res);
@@ -60,7 +65,9 @@ class newWarehouse extends Component {
             <form className="newWarehouse" onSubmit={this.handleSubmit}>
 
                 <div className="newWarehouse__arr-heading-container">
-                    <img src={arrowBack} alt="Back Arrow" />
+                    <Link to="/warehouse" className="newWarehouse__link-back-arrow">
+                        <img src={arrowBack} alt="Back Arrow" />
+                    </Link>
                     <h1 className="newWarehouse__wh-heading">Add New Warehouse</h1>
                 </div>
                 <div className="newWarehouse__details-contacts-container">

@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const warehouseController = require("../controllers/warehouseController");
+const addWarehouse = require("../db/warehouses.json");
 
-// const warehouses = __dirname + "../../db/warehouses.json";
-// const addWarehouse = require(warehouses);
 
 router.get("/", warehouseController.listWarehouses);
 router.get("/:name", warehouseController.listWarehouseDetails);
@@ -11,27 +10,33 @@ router.get("/:name/:itemName", warehouseController.listItemDetails);
 router.put("/:name", warehouseController.editWarehouse);
 
 
+
 router.post("/", (req, res) => {
   console.log(req.body);
-  const newWarehouse = {
-    name: req.body.name,
-    address: req.body.address,
-    city: req.body.city,
-    country: req.body.country,
-    contactName: req.body.contactName,
-    position: req.body.position,
-    phone: req.body.phone,
-    email: req.body.email,
-  };
-  if (!newWarehouse.name || !newWarehouse.phone) {
-    return res.status(400).json({
-      errorMessage: "Please fill all fields",
+  const {
+    name,
+    address,
+    city,
+    country,
+    contact
+
+  } = req.body;
+
+  if (
+    req.body.name === "" ||
+    req.body.address === "" ||
+    req.body.phone === "" ||
+    req.body.email === ""
+  ) {
+    return res.status(400).json("Please fill all required fields");
+  } else {
+    // res.status(200);
+    addWarehouse.push({
+      name, address, city, country,
+      contact
     });
   }
-  console.log(addWarehouse);
-  JSON.parse(addWarehouse).push(newWarehouse);
-  warehouseController.writeJSONFile(addWarehouse);
-  res.json(newWarehouse);
+  res.json(addWarehouse);
 });
 
 module.exports = router;

@@ -6,12 +6,12 @@ function listWarehouses(req, res) {
   res.json(warehouse.list());
 }
 
-function writeJSONFile(filename, content) {
-  fs.writeFileSync(filename, JSON.stringify(content), "utf8", (err) => {
-    if (err) {
-    }
-  });
-}
+// function writeJSONFile(filename, content) {
+//   fs.writeFileSync(filename, JSON.stringify(content), "utf8", (err) => {
+//     if (err) {
+//     }
+//   });
+// }
 
 const listWarehouseDetails = (req, res) => {
   const warehouseName = req.params.name;
@@ -49,7 +49,7 @@ const editWarehouse = (req, res) => {
 module.exports = {
   listWarehouses,
   listWarehouseDetails,
-  writeJSONFile,
+  // writeJSONFile,
   listItemDetails,
   editWarehouse,
 };

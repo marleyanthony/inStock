@@ -98,7 +98,7 @@ class InventoryItems extends React.Component {
             <div className="inventory__item-right-container">
               <div className="inventory__sort-list-items-container">
                 <p className="inventory__sort-list-items-label">Status</p>
-                <p className="inventory__sort-list-items-item-name">
+                <p className="inventory__sort-list-items-item-name inventory__instock" className={inventory.status === "In Stock" ? 'inventory__instock' : 'inventory__outstock'}>
                   {inventory.status}
                 </p>
               </div>
