@@ -4,7 +4,7 @@
   box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
   // position: relative;
-  z-index: 0;
+  z-index: 10;
 
   @include tablet {
     margin: 0 2rem;
@@ -34,7 +34,7 @@
     font-size: 11px;
     line-height: 16px;
     text-transform: uppercase;
-    color: #5C667E;
+    color: #5c667e;
   }
 
   &__sort-list-items-blue-item-name {
@@ -43,7 +43,7 @@
     font-weight: 600;
     font-size: 13px;
     line-height: 20px;
-    color: #2E66E6;
+    color: #2e66e6;
   }
 
   &__sort-list-items-item-name {
@@ -52,7 +52,7 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
-    color: #13182C;
+    color: #13182c;
   }
 
   &__sort-list-items-mobile-wrapper {
@@ -171,10 +171,10 @@
     flex-direction: column;
 
     @include tablet {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    flex-direction: row;
+      display: flex;
+      align-items: center;
+      width: 40%;
+      flex-direction: row;
     }
   }
 
@@ -328,10 +328,10 @@
 
   &__status-container {
     @include tablet {
-    margin-bottom: 0;
-    width: 60%;
-    margin-bottom: 1.5rem;
-    }  
+      margin-bottom: 0;
+      width: 60%;
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__status {
@@ -364,7 +364,7 @@
       height: 100%;
       width: 5%;
     }
-    
+
     @include desktop {
       max-width: 143.75px;
     }
@@ -376,7 +376,7 @@
 
   &__quantity,
   &__warehouse {
-    @extend %body-medium; 
+    @extend %body-medium;
   }
 
   &__item-icons-container {
@@ -453,7 +453,7 @@
 
 // modal
 .delete-modal {
-  background: #FFFFFF;
+  background: #ffffff;
   position: absolute;
   height: 100vh;
 
@@ -464,9 +464,9 @@
   }
 
   &__close-btn {
-      margin-bottom: 5px;
-      align-self: flex-end;
-      padding: 1.3125rem 1.3125rem 0 0;
+    margin-bottom: 5px;
+    align-self: flex-end;
+    padding: 1.3125rem 1.3125rem 0 0;
   }
 
   &__header,
@@ -486,8 +486,8 @@
 
   &__cancel-btn,
   &__delete-btn {
-    background: #FFFFFF;
-    border: 1px solid #BDC5D5;
+    background: #ffffff;
+    border: 1px solid #bdc5d5;
     box-sizing: border-box;
     border-radius: 20px;
     padding: 0.5rem 1rem;
@@ -496,23 +496,19 @@
 
   &__delete-btn {
     margin-left: 1rem;
-    color: #FFFFFF;
-    background: #C94515;
+    color: #ffffff;
+    background: #c94515;
   }
 
   &__delete-action-btn-container {
     justify-self: flex-end;
   }
 
-    
-
   @include tablet {
     top: 185px;
     left: 48px;
     width: 672px;
     height: 262px;
-
-    
 
     &__header,
     &__warning,
@@ -535,8 +531,8 @@
 
     &__cancel-btn,
     &__delete-btn {
-      background: #FFFFFF;
-      border: 1px solid #BDC5D5;
+      background: #ffffff;
+      border: 1px solid #bdc5d5;
       box-sizing: border-box;
       border-radius: 20px;
       padding: 0.5rem 1rem;
@@ -544,8 +540,8 @@
 
     &__delete-btn {
       margin-left: 1rem;
-      color: #FFFFFF;
-      background: #C94515;
+      color: #ffffff;
+      background: #c94515;
     }
   }
 
