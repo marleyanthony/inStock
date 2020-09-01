@@ -362,7 +362,7 @@
     margin-left: 0.25rem;
   }
 
-  .sort-inv-item {
+  .wh-sort-inv-item {
     @include tablet {
       width: 9.375rem;
       flex-grow: 1;
@@ -373,7 +373,7 @@
     }
   }
 
-  .sort-category {
+  .wh-sort-category {
     @include tablet {
       width: 7.5rem;
       flex-grow: 1;
@@ -384,7 +384,7 @@
     }
   }
 
-  .sort-status {
+  .wh-sort-status {
     @include tablet {
       width: 11.375rem;
       flex-grow: 1;
@@ -395,7 +395,7 @@
     }
   }
 
-  .sort-qty {
+  .wh-sort-qty {
     @include tablet {
       width: 5.875rem;
       flex-grow: 1;
@@ -406,7 +406,7 @@
     }
   }
 
-  .sort-actions {
+  .wh-sort-actions {
     @include tablet {
       width: 5.75rem;
       text-align: right;
@@ -414,7 +414,6 @@
   }
 }
 
-// .route-link {
-//   padding: 0;
-//   margin: 0;
-// }
+.route-link {
+  display: flex;
+}

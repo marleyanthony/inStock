@@ -13,13 +13,12 @@
     margin: 0 8.125rem;
   }
 
-
   &__sort-list-items {
     display: flex;
     flex-wrap: wrap;
     padding: 1rem 1rem 0 1.5rem;
-    border-bottom: 1px solid #BDC5D5;
-    border-top: 1px solid #BDC5D5;
+    border-bottom: 1px solid #bdc5d5;
+    border-top: 1px solid #bdc5d5;
 
     &:nth-child(1) {
       border: 1px solid green;
@@ -32,13 +31,12 @@
     }
 
     @include desktop {
-
     }
   }
 
   &__sort-list-items-left {
     width: 50%;
-    
+
     @include tablet {
       display: flex;
       align-items: center;
@@ -138,7 +136,7 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
-    color: #13182C;
+    color: #13182c;
 
     @include tablet {
       width: 120px;
@@ -151,20 +149,20 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
-    color: #13182C;
+    color: #13182c;
 
     @include tablet {
       width: 75px;
     }
   }
 
-   &__sort-list-items-item-name-warehouse {
+  &__sort-list-items-item-name-warehouse {
     font-family: Titillium Web;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 20px;
-    color: #13182C;
+    color: #13182c;
   }
 
   &__sort-list-item-icons-container {
@@ -173,7 +171,7 @@
     width: 100%;
 
     @include tablet {
-      width: 15%; 
+      width: 15%;
       display: flex;
       padding-left: 4rem;
     }
@@ -511,9 +509,10 @@
 
   &__icon {
     margin-right: 1.5rem;
+    flex-shrink: 0;
   }
 
-  // in stock or out of stock styling 
+  // in stock or out of stock styling
   &__instock {
     font-weight: 600;
     font-size: 11px;
@@ -537,7 +536,7 @@
     font-weight: 600;
     font-size: 11px;
     text-transform: uppercase;
-    color: #C94515;
+    color: #c94515;
     align-self: center;
     width: 90px;
     height: 24px;
@@ -710,4 +709,8 @@
   @include desktop {
     left: 304px;
   }
+}
+
+.route-link {
+  display: flex;
 }

@@ -780,6 +780,12 @@ a {
   }
 }
 
+.route-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (min-width: 375px) {
   .newWarehouse {
     display: -webkit-box;
@@ -1818,7 +1824,7 @@ a {
 }
 
 @media (min-width: 768px) {
-  .warehouse .sort-inv-item {
+  .warehouse .wh-sort-inv-item {
     width: 9.375rem;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -1827,13 +1833,13 @@ a {
 }
 
 @media (min-width: 1280px) {
-  .warehouse .sort-inv-item {
+  .warehouse .wh-sort-inv-item {
     width: 13.75rem;
   }
 }
 
 @media (min-width: 768px) {
-  .warehouse .sort-category {
+  .warehouse .wh-sort-category {
     width: 7.5rem;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -1842,13 +1848,13 @@ a {
 }
 
 @media (min-width: 1280px) {
-  .warehouse .sort-category {
+  .warehouse .wh-sort-category {
     width: 10.875rem;
   }
 }
 
 @media (min-width: 768px) {
-  .warehouse .sort-status {
+  .warehouse .wh-sort-status {
     width: 11.375rem;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -1857,13 +1863,13 @@ a {
 }
 
 @media (min-width: 1280px) {
-  .warehouse .sort-status {
+  .warehouse .wh-sort-status {
     width: 16.25rem;
   }
 }
 
 @media (min-width: 768px) {
-  .warehouse .sort-qty {
+  .warehouse .wh-sort-qty {
     width: 5.875rem;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -1872,16 +1878,22 @@ a {
 }
 
 @media (min-width: 1280px) {
-  .warehouse .sort-qty {
+  .warehouse .wh-sort-qty {
     width: 10.875rem;
   }
 }
 
 @media (min-width: 768px) {
-  .warehouse .sort-actions {
+  .warehouse .wh-sort-actions {
     width: 5.75rem;
     text-align: right;
   }
+}
+
+.route-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .inventory {
@@ -1912,8 +1924,8 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1rem 1rem 0 1.5rem;
-  border-bottom: 1px solid #BDC5D5;
-  border-top: 1px solid #BDC5D5;
+  border-bottom: 1px solid #bdc5d5;
+  border-top: 1px solid #bdc5d5;
 }
 
 .inventory__sort-list-items:nth-child(1) {
@@ -2055,7 +2067,7 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  color: #13182C;
+  color: #13182c;
 }
 
 @media (min-width: 768px) {
@@ -2070,7 +2082,7 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  color: #13182C;
+  color: #13182c;
 }
 
 @media (min-width: 768px) {
@@ -2085,7 +2097,7 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  color: #13182C;
+  color: #13182c;
 }
 
 .inventory__sort-list-item-icons-container {
@@ -2546,6 +2558,8 @@ a {
 
 .inventory__icon {
   margin-right: 1.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .inventory__instock {
@@ -2573,7 +2587,7 @@ a {
   font-weight: 600;
   font-size: 11px;
   text-transform: uppercase;
-  color: #C94515;
+  color: #c94515;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -2765,6 +2779,12 @@ a {
   .delete-modal {
     left: 304px;
   }
+}
+
+.route-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .inv-item {
@@ -3479,8 +3499,8 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1rem 1rem 0 1.5rem;
-  border-bottom: 1px solid #BDC5D5;
-  border-top: 1px solid #BDC5D5;
+  border-bottom: 1px solid #bdc5d5;
+  border-top: 1px solid #bdc5d5;
 }
 
 .inventory__sort-list-items:nth-child(1) {
@@ -3622,7 +3642,7 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  color: #13182C;
+  color: #13182c;
 }
 
 @media (min-width: 768px) {
@@ -3637,7 +3657,7 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  color: #13182C;
+  color: #13182c;
 }
 
 @media (min-width: 768px) {
@@ -3652,7 +3672,7 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  color: #13182C;
+  color: #13182c;
 }
 
 .inventory__sort-list-item-icons-container {
@@ -4113,6 +4133,8 @@ a {
 
 .inventory__icon {
   margin-right: 1.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .inventory__instock {
@@ -4140,7 +4162,7 @@ a {
   font-weight: 600;
   font-size: 11px;
   text-transform: uppercase;
-  color: #C94515;
+  color: #c94515;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -4332,6 +4354,12 @@ a {
   .delete-modal {
     left: 304px;
   }
+}
+
+.route-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer {

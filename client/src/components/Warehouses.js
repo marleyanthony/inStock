@@ -9,7 +9,7 @@ import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 class Warehouses extends React.Component {
   state = {
@@ -98,11 +98,13 @@ class Warehouses extends React.Component {
           </div>
 
           <div className="warehouses__item-icons-container">
-            <img src={deleteIcon}
+            <img
+              src={deleteIcon}
               alt=""
-              className="inventory__icon"
-              onClick={() => this.setModalIsOpen(true)} />
-            <Link to="/editWarehouse">
+              className="warehouses__icon"
+              onClick={() => this.setModalIsOpen(true)}
+            />
+            <Link to="/editWarehouse" className="route-link">
               <img src={editIcon} alt="" className="warehouses__icon" />
             </Link>
           </div>
@@ -217,8 +219,8 @@ class Warehouses extends React.Component {
               <h3 className="warehouses__text-address">No results found</h3>
             </div>
           ) : (
-              warehouseList
-            )}
+            warehouseList
+          )}
         </section>
       </main>
     );

@@ -173,7 +173,7 @@ class WarehouseDetails extends React.Component {
             <section className="warehouse__inv-list">
               <div className="warehouse__sort">
                 <div className="warehouse__sort-left">
-                  <div className="warehouse__sort-category-bar sort-inv-item">
+                  <div className="warehouse__sort-category-bar wh-sort-inv-item">
                     <p className="warehouse__sort-label">INVENTORY ITEM</p>
                     <img
                       src={sortIcon}
@@ -181,7 +181,7 @@ class WarehouseDetails extends React.Component {
                       className="warehouse__icon warehouse__icon--sort"
                     />
                   </div>
-                  <div className="warehouse__sort-category-bar sort-category">
+                  <div className="warehouse__sort-category-bar wh-sort-category">
                     <p className="warehouse__sort-label">CATEGORY</p>
                     <img
                       src={sortIcon}
@@ -191,7 +191,7 @@ class WarehouseDetails extends React.Component {
                   </div>
                 </div>
                 <div className="warehouse__sort-right">
-                  <div className="warehouse__sort-category-bar sort-status">
+                  <div className="warehouse__sort-category-bar wh-sort-status">
                     <p className="warehouse__sort-label">STATUS</p>
                     <img
                       src={sortIcon}
@@ -199,7 +199,7 @@ class WarehouseDetails extends React.Component {
                       className="warehouse__icon warehouse__icon--sort"
                     />
                   </div>
-                  <div className="warehouse__sort-category-bar sort-qty">
+                  <div className="warehouse__sort-category-bar wh-sort-qty">
                     <p className="warehouse__sort-label">QUANTITY</p>
                     <img
                       src={sortIcon}
@@ -208,7 +208,7 @@ class WarehouseDetails extends React.Component {
                     />
                   </div>
                 </div>
-                <p className="warehouse__sort-label sort-actions">ACTIONS</p>
+                <p className="warehouse__sort-label wh-sort-actions">ACTIONS</p>
               </div>
               {inventoryList}
             </section>
