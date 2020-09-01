@@ -91,7 +91,9 @@ class Warehouses extends React.Component {
             <Link to={"delete-warehouse"} className="warehouses__link">
               <img src={deleteIcon} alt="" className="warehouses__icon" />
             </Link>
-            <img src={editIcon} alt="" className="warehouses__icon" />
+            <Link to="/editWarehouse">
+              <img src={editIcon} alt="" className="warehouses__icon" />
+            </Link>
           </div>
         </div>
       );
