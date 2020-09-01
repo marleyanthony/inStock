@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
-import close from "../assets/Icons/close-24px.svg";
 
+import close from "../assets/Icons/close-24px.svg";
 import searchIcon from "../assets/Icons/search-24px.svg";
 import sortIcon from "../assets/Icons/sort-24px.svg";
 import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
-import { render } from "react-dom";
 
 class InventoryItems extends React.Component {
   state = {
@@ -20,9 +19,10 @@ class InventoryItems extends React.Component {
     this.setState({
       searchTerm: null,
       searchResults: null,
+      modalIsOpen: false,
     });
 
-    console.log("component unmounted", this.state);
+    // console.log("component unmounted", this.state);
   }
 
   searchInventoryData = (e) => {
@@ -42,12 +42,16 @@ class InventoryItems extends React.Component {
     });
   };
 
-  // const [modalIsOpen, setModalIsOpen] = useState(false);
-  // console.log("inventories:", inventories);
-  // function deleteItem(e) {
-  //   e.preventDefault();
-  //   console.log("The delete was clicked");
-  // }
+  setModalIsOpen(modalIsOpen) {
+    this.setState({
+      modalIsOpen,
+    });
+  }
+
+  deleteItem(e) {
+    e.preventDefault();
+    console.log("The delete was clicked");
+  }
 
   render() {
     let inventoryItems = this.props.inventories;
@@ -117,7 +121,7 @@ class InventoryItems extends React.Component {
                 src={deleteIcon}
                 alt=""
                 className="inventory__icon"
-                // onClick={() => setModalIsOpen(true)}
+                onClick={() => this.setModalIsOpen(true)}
               />
               <Link to={"edit-item"} className="warehouses__link">
                 <img src={editIcon} alt="" className="inventory__icon" />
@@ -131,8 +135,8 @@ class InventoryItems extends React.Component {
     return (
       <main className="inventory">
         <Modal
-          // isOpen={modalIsOpen}
-          // onRequestClose={() => setModalIsOpen(false)}
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={() => this.setModalIsOpen(false)}
           className="inventory__modal"
           style={{ overlay: { backgroundColor: "rgba(19, 24, 44, 0.7)" } }}
         >
@@ -142,7 +146,7 @@ class InventoryItems extends React.Component {
                 src={close}
                 alt="close"
                 className="delete-modal__close-btn"
-                // onClick={() => setModalIsOpen(false)}
+                onClick={() => this.setModalIsOpen(false)}
               />
               <h1 className="delete-modal__header">
                 Delete Television inventory item?
@@ -154,7 +158,7 @@ class InventoryItems extends React.Component {
               <div className="delete-modal__delete-action-btn-container">
                 <button
                   className="delete-modal__cancel-btn"
-                  // onClick={() => setModalIsOpen(false)}
+                  onClick={() => this.setModalIsOpen(false)}
                 >
                   Cancel
                 </button>
