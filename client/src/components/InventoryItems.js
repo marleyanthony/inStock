@@ -29,28 +29,28 @@ const InventoryItems = ({ inventories }) => {
                 <img src={chevronIcon} alt="" className="inventory__icon inventory__icon--chevron" />
               </div>
             </div>
-            <div className="inventory__sort-list-items-container">
+            <div className="inventory__sort-list-items-container-category">
               <p className="inventory__sort-list-items-label">Category</p>
               <p className="inventory__sort-list-items-item-name">{inventory.category}</p>
             </div>
           </div>
 
-          <div className="inventory__item-right-container">
+          <div className="inventory__sort-list-right-container">
             <div className="inventory__sort-list-items-container">
               <p className="inventory__sort-list-items-label">Status</p>
-              <p className="inventory__sort-list-items-item-name">{inventory.status}</p>
+              <p className="inventory__sort-list-items-item-name-status">{inventory.status}</p>
             </div>
             <div className="inventory__sort-list-items-container">
               <p className="inventory__sort-list-items-label">QTY</p>
-              <p className="inventory__sort-list-items-item-name">{inventory.quantity}</p>
+              <p className="inventory__sort-list-items-item-name-quantity">{inventory.quantity}</p>
             </div>
             <div className="inventory__sort-list-items-container">
               <p className="inventory__sort-list-items-label">Warehouse</p>
-              <p className="inventory__sort-list-items-item-name">{inventory.warehouseName}</p>
+              <p className="inventory__sort-list-items-item-name-warehouse">{inventory.warehouseName}</p>
             </div>
           </div>
 
-          <div className="inventory__item-icons-container">
+          <div className="inventory__sort-list-item-icons-container">
             <img src={deleteIcon} alt="" className="inventory__icon" onClick={() => setModalIsOpen(true)} />
             <Link to={'edit-item'} className="warehouses__link">
               <img src={editIcon} alt="" className="inventory__icon" />

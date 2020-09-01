@@ -16,14 +16,40 @@
 
   // item styling
   &__sort-list-items {
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #BDC5D5;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      padding: 1rem 2rem;
+      align-items: center;
+    }
   }
 
   &__sort-list-items-left {
-    border: 1px solid green;
     width: 50%;
+    
+    @include tablet {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      width: 40%;
+      // border: 1px solid red;
+    }
+  }
+
+  &__sort-list-items-mobile-wrapper {
+    @include tablet {
+      width: 140px;
+    }
+  }
+
+  &__sort-list-items-container-category {
+    @include tablet {
+      // min-width: 240px;
+    }
   }
 
   &__sort-list-items-label {
@@ -58,6 +84,81 @@
   &__sort-list-items-mobile-wrapper {
     display: flex;
     margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sort-list-right-container {
+    width: 50%;
+
+    @include tablet {
+      display: flex;
+      // justify-content: space-between;
+      width: 43%;
+    }
+  }
+
+  &__sort-list-items-item-name {
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sort-list-items-item-name-status {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #13182C;
+
+    @include tablet {
+      width: 120px;
+    }
+  }
+
+  &__sort-list-items-item-name-quantity {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #13182C;
+
+    @include tablet {
+      width: 75px;
+    }
+  }
+
+   &__sort-list-items-item-name-warehouse {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #13182C;
+  }
+
+  &__sort-list-item-icons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tablet {
+      width: 15%; 
+      display: flex;
+      padding-left: 4rem;
+    }
+  }
+
+  &__sort-list-items-label {
+    @include tablet {
+      display: none;
+    }
   }
 
   &__header-wrapper {
