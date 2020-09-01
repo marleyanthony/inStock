@@ -199,6 +199,7 @@
   }
 
   // text adjustments starting at tablet
+  // need to match relevant sort bar containers in size & grow
   &__link--item {
     @include tablet {
       width: 9.375rem;
@@ -312,6 +313,7 @@
   }
 
   // category sort bar, only displays on tablet & desktop
+  // need to match relevant text boxes in size & grow
   &__sort {
     display: none;
 
@@ -360,7 +362,7 @@
     margin-left: 0.25rem;
   }
 
-  .sort-inv-item {
+  .wh-sort-inv-item {
     @include tablet {
       width: 9.375rem;
       flex-grow: 1;
@@ -371,7 +373,7 @@
     }
   }
 
-  .sort-category {
+  .wh-sort-category {
     @include tablet {
       width: 7.5rem;
       flex-grow: 1;
@@ -382,7 +384,7 @@
     }
   }
 
-  .sort-status {
+  .wh-sort-status {
     @include tablet {
       width: 11.375rem;
       flex-grow: 1;
@@ -393,7 +395,7 @@
     }
   }
 
-  .sort-qty {
+  .wh-sort-qty {
     @include tablet {
       width: 5.875rem;
       flex-grow: 1;
@@ -404,10 +406,14 @@
     }
   }
 
-  .sort-actions {
+  .wh-sort-actions {
     @include tablet {
       width: 5.75rem;
       text-align: right;
     }
   }
+}
+
+.route-link {
+  display: flex;
 }

@@ -9,7 +9,7 @@ import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 class InventoryItems extends React.Component {
   state = {
@@ -65,7 +65,10 @@ class InventoryItems extends React.Component {
     const inventoryList = inventoryItems.map((inventory) => {
       return (
         <>
-          <div className="inventory__sort-list-items" key={inventory.warehouseID}>
+          <div
+            className="inventory__sort-list-items"
+            key={inventory.warehouseID}
+          >
             <div className="inventory__sort-list-items-left">
               <div className="inventory__sort-list-items-container">
                 <p className="inventory__sort-list-items-label">
@@ -100,7 +103,14 @@ class InventoryItems extends React.Component {
             <div className="inventory__item-right-container">
               <div className="inventory__sort-list-items-container-status">
                 <p className="inventory__sort-list-items-label">Status</p>
-                <p className="inventory__sort-list-items-item-name inventory__instock" className={inventory.status === "In Stock" ? 'inventory__instock' : 'inventory__outstock'}>
+                <p
+                  className="inventory__sort-list-items-item-name inventory__instock"
+                  className={
+                    inventory.status === "In Stock"
+                      ? "inventory__instock"
+                      : "inventory__outstock"
+                  }
+                >
                   {inventory.status}
                 </p>
               </div>
@@ -125,7 +135,7 @@ class InventoryItems extends React.Component {
                 className="inventory__icon"
                 onClick={() => this.setModalIsOpen(true)}
               />
-              <Link to={"edit-item"} className="warehouses__link">
+              <Link to={"edit-item"} className="route-link">
                 <img src={editIcon} alt="" className="inventory__icon" />
               </Link>
             </div>
@@ -183,7 +193,7 @@ class InventoryItems extends React.Component {
               />
               <img src={searchIcon} alt="" className="inventory__search-icon" />
             </label>
-            <Link to={"add-item"} className="warehouses__link">
+            <Link to={"add-item"} className="route-link">
               <button className="inventory__button">+ Add New Item</button>
             </Link>
           </div>
@@ -243,8 +253,8 @@ class InventoryItems extends React.Component {
               <h3 className="warehouses__text-address">No results found</h3>
             </div>
           ) : (
-              inventoryList
-            )}
+            inventoryList
+          )}
         </section>
       </main>
     );
