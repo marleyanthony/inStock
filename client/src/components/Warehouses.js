@@ -19,7 +19,7 @@ class Warehouses extends React.Component {
       searchResults: null,
     });
 
-    console.log("component unmounted", this.state);
+    // console.log("component unmounted", this.state);
   }
 
   searchWarehouseData = (e) => {
@@ -95,12 +95,12 @@ class Warehouses extends React.Component {
               <img src={editIcon} alt="" className="warehouses__icon" />
             </Link>
           </div>
-        </div >
+        </div>
       );
     });
 
     return (
-      <main className="warehouses" >
+      <main className="warehouses">
         <section className="warehouses__header-container">
           <h1 className="warehouses__heading">Warehouses</h1>
           <div className="warehouses__search-add">
@@ -166,13 +166,14 @@ class Warehouses extends React.Component {
             </div>
             <p className="warehouses__sort-label sort-actions">ACTIONS</p>
           </div>
+          {/* if search is made & no results found, render an error, else render the full list */}
           {this.state.searchTerm && this.state.searchResults.length < 1 ? (
             <div className="warehouses__search-no-results">
               <h3 className="warehouses__text-address">No results found</h3>
             </div>
           ) : (
-              warehouseList
-            )}
+            warehouseList
+          )}
         </section>
       </main>
     );
