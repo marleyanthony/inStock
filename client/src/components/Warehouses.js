@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Modal from "react-modal";
 
+import close from "../assets/Icons/close-24px.svg";
 import searchIcon from "../assets/Icons/search-24px.svg";
 import sortIcon from "../assets/Icons/sort-24px.svg";
 import chevronIcon from "../assets/Icons/chevron_right-24px.svg";
 import deleteIcon from "../assets/Icons/delete_outline-24px.svg";
 import editIcon from "../assets/Icons/edit-24px.svg";
+
+Modal.setAppElement('#root');
 
 class Warehouses extends React.Component {
   state = {
@@ -41,6 +45,12 @@ class Warehouses extends React.Component {
       searchResults,
     });
   };
+
+  setModalIsOpen(modalIsOpen) {
+    this.setState({
+      modalIsOpen,
+    });
+  }
 
   render() {
     let warehouses = this.props.warehouses;
@@ -88,9 +98,10 @@ class Warehouses extends React.Component {
           </div>
 
           <div className="warehouses__item-icons-container">
-            <Link to={"delete-warehouse"} className="warehouses__link">
-              <img src={deleteIcon} alt="" className="warehouses__icon" />
-            </Link>
+            <img src={deleteIcon}
+              alt=""
+              className="inventory__icon"
+              onClick={() => this.setModalIsOpen(true)} />
             <Link to="/editWarehouse">
               <img src={editIcon} alt="" className="warehouses__icon" />
             </Link>
@@ -101,6 +112,40 @@ class Warehouses extends React.Component {
 
     return (
       <main className="warehouses">
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={() => this.setModalIsOpen(false)}
+          className="inventory__modal"
+          style={{ overlay: { backgroundColor: "rgba(19, 24, 44, 0.7)" } }}
+        >
+          <section className="delete-modal">
+            <div className="delete-modal__tablet-wrapper">
+              <img
+                src={close}
+                alt="close"
+                className="delete-modal__close-btn"
+                onClick={() => this.setModalIsOpen(false)}
+              />
+              <h1 className="delete-modal__header">
+                Delete Television inventory item?
+              </h1>
+              <p className="delete-modal__warning">
+                Please confirm that you'd like to delete Television from the
+                inventory list. You won't be able to undo this action.
+              </p>
+              <div className="delete-modal__delete-action-btn-container">
+                <button
+                  className="delete-modal__cancel-btn"
+                  onClick={() => this.setModalIsOpen(false)}
+                >
+                  Cancel
+                </button>
+                <button className="delete-modal__delete-btn">Delete</button>
+              </div>
+            </div>
+          </section>
+        </Modal>
+
         <section className="warehouses__header-container">
           <h1 className="warehouses__heading">Warehouses</h1>
           <div className="warehouses__search-add">
@@ -172,8 +217,8 @@ class Warehouses extends React.Component {
               <h3 className="warehouses__text-address">No results found</h3>
             </div>
           ) : (
-            warehouseList
-          )}
+              warehouseList
+            )}
         </section>
       </main>
     );
