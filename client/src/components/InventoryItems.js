@@ -63,6 +63,7 @@ class InventoryItems extends React.Component {
     }
 
     const inventoryList = inventoryItems.map((inventory) => {
+      // console.log(inventory);
       return (
         <>
           <div className="inventory__sort-list-items" key={inventory.warehouseID}>
@@ -151,10 +152,10 @@ class InventoryItems extends React.Component {
                 onClick={() => this.setModalIsOpen(false)}
               />
               <h1 className="delete-modal__header">
-                Delete Television inventory item?
+                Delete inventory item?
               </h1>
               <p className="delete-modal__warning">
-                Please confirm that you'd like to delete Television from the
+                Please confirm that you'd like to delete item from the
                 inventory list. You won't be able to undo this action.
               </p>
               <div className="delete-modal__delete-action-btn-container">
