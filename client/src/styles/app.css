@@ -64,9 +64,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
 }
 
 .warehouses__heading, .warehouse__heading, .inventory__heading, .inv-item__heading {
@@ -1588,7 +1585,7 @@ a {
   -webkit-box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
           box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
-  z-index: 0;
+  z-index: 10;
 }
 
 @media (min-width: 768px) {
@@ -1654,7 +1651,7 @@ a {
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #5C667E;
+  color: #5c667e;
 }
 
 .inventory__sort-list-items-blue-item-name {
@@ -1663,7 +1660,7 @@ a {
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
-  color: #2E66E6;
+  color: #2e66e6;
 }
 
 .inventory__sort-list-items-item-name {
@@ -1672,7 +1669,7 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  color: #13182C;
+  color: #13182c;
 }
 
 .inventory__sort-list-items-mobile-wrapper {
@@ -2276,7 +2273,7 @@ a {
 }
 
 .delete-modal {
-  background: #FFFFFF;
+  background: #ffffff;
   position: absolute;
   height: 100vh;
   z-index: 1000000000;
@@ -2315,8 +2312,8 @@ a {
 }
 
 .delete-modal__cancel-btn, .delete-modal__delete-btn {
-  background: #FFFFFF;
-  border: 1px solid #BDC5D5;
+  background: #ffffff;
+  border: 1px solid #bdc5d5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 20px;
@@ -2326,8 +2323,8 @@ a {
 
 .delete-modal__delete-btn {
   margin-left: 1rem;
-  color: #FFFFFF;
-  background: #C94515;
+  color: #ffffff;
+  background: #c94515;
 }
 
 .delete-modal__delete-action-btn-container {
@@ -2356,8 +2353,8 @@ a {
     margin-bottom: 2rem;
   }
   .delete-modal__cancel-btn, .delete-modal__delete-btn {
-    background: #FFFFFF;
-    border: 1px solid #BDC5D5;
+    background: #ffffff;
+    border: 1px solid #bdc5d5;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border-radius: 20px;
@@ -2365,8 +2362,8 @@ a {
   }
   .delete-modal__delete-btn {
     margin-left: 1rem;
-    color: #FFFFFF;
-    background: #C94515;
+    color: #ffffff;
+    background: #c94515;
   }
 }
 
@@ -2430,9 +2427,16 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.inv-item__button-back {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .inv-item__icon--back {
@@ -3059,7 +3063,7 @@ a {
   -webkit-box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
           box-shadow: 0 2px 5px rgba(19, 22, 44, 0.1);
   margin: 0 1rem;
-  z-index: 0;
+  z-index: 10;
 }
 
 @media (min-width: 768px) {
@@ -3125,7 +3129,7 @@ a {
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #5C667E;
+  color: #5c667e;
 }
 
 .inventory__sort-list-items-blue-item-name {
@@ -3134,7 +3138,7 @@ a {
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
-  color: #2E66E6;
+  color: #2e66e6;
 }
 
 .inventory__sort-list-items-item-name {
@@ -3143,7 +3147,7 @@ a {
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  color: #13182C;
+  color: #13182c;
 }
 
 .inventory__sort-list-items-mobile-wrapper {
@@ -3747,7 +3751,7 @@ a {
 }
 
 .delete-modal {
-  background: #FFFFFF;
+  background: #ffffff;
   position: absolute;
   height: 100vh;
   z-index: 1000000000;
@@ -3786,8 +3790,8 @@ a {
 }
 
 .delete-modal__cancel-btn, .delete-modal__delete-btn {
-  background: #FFFFFF;
-  border: 1px solid #BDC5D5;
+  background: #ffffff;
+  border: 1px solid #bdc5d5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 20px;
@@ -3797,8 +3801,8 @@ a {
 
 .delete-modal__delete-btn {
   margin-left: 1rem;
-  color: #FFFFFF;
-  background: #C94515;
+  color: #ffffff;
+  background: #c94515;
 }
 
 .delete-modal__delete-action-btn-container {
@@ -3827,8 +3831,8 @@ a {
     margin-bottom: 2rem;
   }
   .delete-modal__cancel-btn, .delete-modal__delete-btn {
-    background: #FFFFFF;
-    border: 1px solid #BDC5D5;
+    background: #ffffff;
+    border: 1px solid #bdc5d5;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border-radius: 20px;
@@ -3836,8 +3840,8 @@ a {
   }
   .delete-modal__delete-btn {
     margin-left: 1rem;
-    color: #FFFFFF;
-    background: #C94515;
+    color: #ffffff;
+    background: #c94515;
   }
 }
 
