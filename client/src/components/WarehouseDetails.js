@@ -122,14 +122,16 @@ class WarehouseDetails extends React.Component {
                 </Link>
                 <h1 className="warehouse__heading">{warehouse.name}</h1>
               </div>
-              <button className="warehouse__button">
-                <img
-                  src={editIcon}
-                  alt=""
-                  className="warehouse__icon warehouse__icon--edit"
-                />
-                <h3 className="warehouse__button-text">Edit</h3>
-              </button>
+              <Link to="/editWarehouse" className="route-link">
+                <button className="warehouse__button">
+                  <img
+                    src={editIcon}
+                    alt=""
+                    className="warehouse__icon warehouse__icon--edit"
+                  />
+                  <h3 className="warehouse__button-text">Edit</h3>
+                </button>
+              </Link>
             </section>
 
             <section className="warehouse__details">

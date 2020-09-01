@@ -199,6 +199,7 @@
   }
 
   // text adjustments starting at tablet
+  // need to match relevant sort bar containers in size & grow
   &__link--item {
     @include tablet {
       width: 9.375rem;
@@ -312,6 +313,7 @@
   }
 
   // category sort bar, only displays on tablet & desktop
+  // need to match relevant text boxes in size & grow
   &__sort {
     display: none;
 
@@ -411,3 +413,8 @@
     }
   }
 }
+
+// .route-link {
+//   padding: 0;
+//   margin: 0;
+// }

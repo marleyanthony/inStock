@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import backIcon from "../assets/Icons/arrow_back-24px.svg";
@@ -49,14 +49,16 @@ class ItemDetails extends React.Component {
             {/* </Link> */}
             <h1 className="inv-item__heading">{itemInfo.itemName}</h1>
           </div>
-          <button className="inv-item__button">
-            <img
-              src={editIcon}
-              alt=""
-              className="inv-item__icon inv-item__icon--edit"
-            />
-            <h3 className="inv-item__button-text">Edit</h3>
-          </button>
+          <Link to="/edit-item" className="route-link">
+            <button className="inv-item__button">
+              <img
+                src={editIcon}
+                alt=""
+                className="inv-item__icon inv-item__icon--edit"
+              />
+              <h3 className="inv-item__button-text">Edit</h3>
+            </button>
+          </Link>
         </section>
 
         <section className="inv-item__details">
